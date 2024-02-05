@@ -1,0 +1,31 @@
+/*
+Theme Name: theme-gr2
+Theme URI: https://referenced.ca
+Author: Vincent Genest
+Author URI: https://wordpress.org/
+Description: Thème de base développer dans le cadre du cours 4w4
+Version: 1.0
+
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: theme-gr2
+Ce thème a été développé dans le cadre du cours 4w4
+*/
+
+// https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
+
+/* ////////////////////////////////////////////////////////// */
+/*                       Variables css                        */
+/* ////////////////////////////////////////////////////////// */
+@import "variables";
+
+/* ////////////////////////////////////////////////////////// */
+/*                  Règles de normalisation                   */
+/* ////////////////////////////////////////////////////////// */
+@import "normalize";
+
+/* ////////////////////////////////////////////////////////// */
+/*                      Règles de base                        */
+/* ////////////////////////////////////////////////////////// */
+@import "base/h";
