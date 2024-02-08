@@ -19,6 +19,7 @@ Ce thème a été développé dans le cadre du cours 4w4
 :root {
     --couleur-arriere-entete: #ccc;
     --couleur-arriere-accueil: #ddd;
+    --couleur-arriere-accueil: #aa3;
     --couleur-arriere-evenement: #dd1;
     --couleur-arriere-footer: #aaa;
 }
@@ -366,4 +367,44 @@ h6 {
 
 p {
     font-size: clamp(1rem, -0.5714rem + 5.7143vw, 1.25rem);
+}
+
+/* ////////////////////////////////////////////////////////// */
+/*                 Règles de la pagination                    */
+/* ////////////////////////////////////////////////////////// */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.global {
+    display: flex;
+    justify-content: center;
+}
+
+.global > section,
+.global > header,
+.global > footer {
+    width: 1100px;
+    border: 1px dotted var(--couleur-arriere-entete);
+}
+
+#entete {
+    background-color: var(--couleur-arriere-entete);
+}
+
+#accueil {
+    background-color: var(--couleur-arriere-accueil);
+}
+
+#galerie {
+    background-color: var(--couleur-arriere-accueil);
+}
+
+#evenement {
+    background-color: var(--couleur-arriere-evenement);
+}
+
+#footer {
+    background-color: var(--couleur-arriere-footer);
 } /*# sourceMappingURL=style.css.map */
