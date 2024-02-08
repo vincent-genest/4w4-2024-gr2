@@ -1,7 +1,7 @@
 body {
     display: flex;
     flex-direction: column;
-    font-family: "prompt", arial, sans-serif;
+    font-family: "raleway", arial, sans-serif;
 }
 .global {
     display: flex;
@@ -11,9 +11,9 @@ body {
 .global > section,
 .global > header,
 .global > footer {
-    flex: 0 1 900px;
+    flex: 0 1 var(--flex-basis-contenu);
     // border: 1px dotted var(--couleur-arriere-entete);
-    background-color: rgba(#00249c, 0.3);
+    background-color: rgba(#00249c, var(--transparence-arriere-contenu));
     padding: 5rem 1.5rem;
 }
 #entete {
