@@ -1,8 +1,8 @@
 // https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 :root {
-    --couleur-arriere-entete: #ccc;
-    --couleur-arriere-accueil: #ddd;
-    --couleur-arriere-accueil: #aa3;
-    --couleur-arriere-evenement: #dd1;
-    --couleur-arriere-footer: #aaa;
+    --couleur-arriere-entete: rgb(3, 6, 55);
+    --couleur-arriere-accueil: rgb(60, 7, 83);
+    --couleur-arriere-galerie: rgb(114, 4, 85);
+    --couleur-arriere-evenement: rgb(145, 10, 103);
+    --couleur-arriere-footer: rgb(224, 28, 162);
 }

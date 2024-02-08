@@ -3,26 +3,28 @@
 
 // Sélecteur textuel de base
 h1 {
-    font-size: clamp(1rem, -0.5714rem + 6.2857vw, 3.75rem);
+    font-size: clamp(1.5rem, -2.875rem + 14vw, 5rem);
+    color: rgba(#ffffff, 0.8);
 }
 h2 {
-    font-size: clamp(1rem, -0.5714rem + 5.7143vw, 3rem);
+    font-size: clamp(1rem, -0.5714rem + 6.2857vw, 3.75rem);
+    color: rgba(#ffffff, 0.7);
 }
 h3 {
-    font-size: clamp(1rem, -0.5714rem + 5.7143vw, 2.25rem);
+    color: rgba(#ffffff, 0.6);
 }
 h4 {
-    font-size: clamp(1rem, -0.5714rem + 5.7143vw, 1.5rem);
+    color: rgba(#ffffff, 0.5);
 }
 h5 {
-    font-size: clamp(1rem, -0.5714rem + 5.7143vw, 1.25rem);
+    color: rgba(#ffffff, 0.4);
 }
 h6 {
-    font-size: clamp(1rem, -0.5714rem + 5.7143vw, 1rem);
+    color: rgba(#ffffff, 0.3);
 }
 
 p {
-    font-size: clamp(1rem, -0.5714rem + 5.7143vw, 1.25rem);
+    color: rgba(#ffffff, 0.5);
 }
 
 hr {
