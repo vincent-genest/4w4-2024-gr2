@@ -13,22 +13,26 @@ body {
 .global > footer {
     flex: 0 1 var(--flex-basis-contenu);
     // border: 1px dotted var(--couleur-arriere-entete);
-    background-color: rgba(#00249c, var(--transparence-arriere-contenu));
+    background-color: rgba(#000b2f, var(--transparence-arriere-contenu));
     padding: 5rem 1.5rem;
 }
 #entete {
     background-color: var(--couleur-arriere-entete);
+    color: var(--couleur-entete);
 }
 #accueil {
     background-color: var(--couleur-arriere-accueil);
+    color: var(--couleur-accueil);
 }
 #galerie {
     background-color: var(--couleur-arriere-galerie);
+    color: var(--couleur-galerie);
 }
 #evenement {
     background-color: var(--couleur-arriere-evenement);
+    color: var(--couleur-evenement);
 }
 #footer {
     background-color: var(--couleur-arriere-footer);
+    color: var(--couleur-footer);
 }
-

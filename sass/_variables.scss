@@ -1,12 +1,28 @@
 // https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 :root {
+    /*
     --couleur-arriere-entete: rgb(3, 6, 55);
     --couleur-arriere-accueil: rgb(60, 7, 83);
     --couleur-arriere-galerie: rgb(114, 4, 85);
     --couleur-arriere-evenement: rgb(145, 10, 103);
     --couleur-arriere-footer: rgb(224, 28, 162);
     --couleur-arriere-contenu: rgb(0, 36, 156);
-
     --transparence-arriere-contenu: 0.3;
     --flex-basis-contenu: 900px;
+*/
+
+    --couleur-arriere-entete: hsl(0, 100%, 50%);
+    --couleur-arriere-accueil: hsl(60, 100%, 50%);
+    --couleur-arriere-galerie: hsl(120, 100%, 50%);
+    --couleur-arriere-evenement: hsl(180, 100%, 50%);
+    --couleur-arriere-footer: hsl(240, 100%, 50%);
+    --couleur-arriere-contenu: hsl(300, 100%, 50%);
+    --transparence-arriere-contenu: 0.3;
+    --flex-basis-contenu: 900px;
+
+    --couleur-entete: hsl(0, 100%, 90%);
+    --couleur-accueil: hsl(60, 100%, 15%);
+    --couleur-galerie: hsl(120, 100%, 90%);
+    --couleur-evenement: hsl(180, 100%, 90%);
+    --couleur-footer: hsl(240, 100%, 90%);
 }
