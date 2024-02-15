@@ -17,48 +17,77 @@ Ce thème a été développé dans le cadre du cours 4w4
 /*                       Variables css                        */
 /* ////////////////////////////////////////////////////////// */
 :root {
+  --nb-element: 5;
+  --l-initial: 80%;
+  --increment-angle: 15%;
+  --hu1: 180;
+  --hu2: calc(var(--hu1) + 180);
+  --s-couleur-arriere: 100%;
+  --l1: var(--l-initial);
+  --l2: calc(var(--l1) - var(--increment-angle));
+  --l3: calc(var(--l2) - var(--increment-angle));
+  --l4: calc(var(--l3) - var(--increment-angle));
+  --l5: calc(var(--l4) - var(--increment-angle));
+  --s-couleur: 100%;
+  --l-couleur: 15%;
+  --couleur-arriere-entete: hsl(var(--hu1), var(--s-couleur-arriere), var(--l1));
+  --couleur-arriere-accueil: hsl(var(--hu1), var(--s-couleur-arriere), var(--l2));
+  --couleur-arriere-galerie: hsl(var(--hu2), var(--s-couleur-arriere), var(--l3));
+  --couleur-arriere-evenement: hsl(var(--hu1), var(--s-couleur-arriere), var(--l4));
+  --couleur-arriere-footer: hsl(var(--hu1), var(--s-couleur-arriere), var(--l5));
+  --couleur-entete: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l1)));
+  --couleur-accueil: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l2)));
+  --couleur-galerie: hsl(var(--hu2), var(--s-couleur), calc(100% - var(--l5)));
+  --couleur-evenement: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l4)));
+  --couleur-footer: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l5)));
+  --couleur-arriere-contenu: hsl(300, 100%, 50%);
+  --couleur-liens: white;
+  --couleur-liens-suvrvol: var(--hu1);
+  --transparence-arriere-contenu: 0.3;
+  --flex-basis-contenu: 900px;
   /*
-      --couleur-arriere-entete: rgb(3, 6, 55);
-      --couleur-arriere-accueil: rgb(60, 7, 83);
-      --couleur-arriere-galerie: rgb(114, 4, 85);
-      --couleur-arriere-evenement: rgb(145, 10, 103);
-      --couleur-arriere-footer: rgb(224, 28, 162);
-      --couleur-arriere-contenu: rgb(0, 36, 156);
+   --nb-element: 5;
+      --increment-angle: calc(360 / var(--nb-element));
+      // 360/5 = 72
+      --angle-initial: 180;
+      // Couleur arrière plan
+      --s-couleur-arriere: 100%; // saturation
+      --l-couleur-arriere: 50%; // luminosité
+      // Couleur texte
+      --s-couleur: 100%; // saturation
+      --l-couleur: 80%; // luminosité
+
+      --hu1: var(--angle-initial);
+      --hu2: calc(var(--hu1) + 180);
+      --hu3: calc(var(--hu2) + var(--increment-angle));
+      --hu4: calc(var(--hu3) + var(--increment-angle));
+      --hu5: calc(var(--hu4) + var(--increment-angle));
+
+      --couleur-arriere-entete: hsl(var(--hu1), var(--s-couleur-arriere), 60%);
+      --couleur-arriere-accueil: hsl(var(--hu1), var(--s-couleur-arriere), 65%);
+      --couleur-arriere-galerie: hsl(var(--hu2), var(--s-couleur-arriere), 70%);
+      --couleur-arriere-evenement: hsl(var(--hu1), var(--s-couleur-arriere), 75%);
+      --couleur-arriere-footer: hsl(var(--hu1), var(--s-couleur-arriere), 80%);
+
+      --couleur-entete: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
+      --couleur-accueil: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
+      --couleur-galerie: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
+      --couleur-evenement: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
+      --couleur-footer: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
+
+      --couleur-arriere-contenu: hsl(300, 100%, 50%);
       --transparence-arriere-contenu: 0.3;
       --flex-basis-contenu: 900px;
   */
-  --nb-element: 5;
-  --increment-angle: calc(360 / var(--nb-element));
-  --angle-initial: 180;
-  --s-couleur-arriere: 100%;
-  --l-couleur-arriere: 50%;
-  --s-couleur: 100%;
-  --l-couleur: 15%;
-  --hu1: var(--angle-initial);
-  --hu2: calc(var(--hu1) + var(--increment-angle));
-  --hu3: calc(var(--hu2) + var(--increment-angle));
-  --hu4: calc(var(--hu3) + var(--increment-angle));
-  --hu5: calc(var(--hu4) + var(--increment-angle));
-  --couleur-arriere-entete: hsl(var(--hu1), var(--s-couleur-arriere), var(--l-couleur-arriere));
-  --couleur-arriere-accueil: hsl(var(--hu2), var(--s-couleur-arriere), var(--l-couleur-arriere));
-  --couleur-arriere-galerie: hsl(var(--hu3), var(--s-couleur-arriere), var(--l-couleur-arriere));
-  --couleur-arriere-evenement: hsl(var(--hu4), var(--s-couleur-arriere), var(--l-couleur-arriere));
-  --couleur-arriere-footer: hsl(var(--hu5), var(--s-couleur-arriere), var(--l-couleur-arriere));
-  --couleur-entete: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
-  --couleur-accueil: hsl(var(--hu2), var(--s-couleur), var(--l-couleur));
-  --couleur-galerie: hsl(var(--hu3), var(--s-couleur), var(--l-couleur));
-  --couleur-evenement: hsl(var(--hu4), var(--s-couleur), var(--l-couleur));
-  --couleur-footer: hsl(var(--hu5), var(--s-couleur), var(--l-couleur));
-  --couleur-arriere-contenu: hsl(300, 100%, 50%);
-  --transparence-arriere-contenu: 0.3;
-  --flex-basis-contenu: 900px;
 }
 
 /* ////////////////////////////////////////////////////////// */
 /*                      Règles de base                        */
 /* ////////////////////////////////////////////////////////// */
 h1 {
-  font-size: clamp(1.5rem, -2.875rem + 14vw, 5rem);
+  font-size: clamp(2rem, -2.875rem + 14vw, 6rem);
+  text-shadow: 5px 5px 5px hsla(var(--hu1), 0%, var(--l5), 40%);
+  margin-left: -7vw;
 }
 
 h2 {
@@ -85,6 +114,36 @@ p {
   font-size: clamp(1rem, 0.8438rem + 0.5vw, 1.125rem);
 }
 
+blockquote {
+  font-size: clamp(1rem, 0.8438rem + 0.5vw, 1.125rem);
+  width: 60%;
+  margin: 50px auto;
+  font-style: italic;
+  color: var(--couleur-arriere-footer);
+  padding: 1.2em 30px 1.2em 75px;
+  border-left: 8px solid var(--couleur-arriere-footer);
+  line-height: 1.6;
+  position: relative;
+  background: var(--couleur-arriere-entete);
+}
+
+blockquote::before {
+  content: "“";
+  color: var(--couleur-arriere-footer);
+  font-size: 4em;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+}
+
+blockquote span {
+  display: block;
+  color: var(--couleur-arriere-footer);
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
 /* ////////////////////////////////////////////////////////// */
 /*                 Règles de la pagination                    */
 /* ////////////////////////////////////////////////////////// */
@@ -104,13 +163,13 @@ body {
 .global > header,
 .global > footer {
   flex: 0 1 var(--flex-basis-contenu);
-  background-color: rgba(0, 11, 47, var(--transparence-arriere-contenu));
   padding: 5rem 1.5rem;
 }
 
 #entete {
   background-color: var(--couleur-arriere-entete);
   color: var(--couleur-entete);
+  position: relative;
 }
 
 #accueil {
@@ -119,16 +178,145 @@ body {
 }
 
 #galerie {
-  background-color: var(--couleur-arriere-galerie);
+  background: linear-gradient(180deg, var(--couleur-arriere-accueil) 50%, var(--couleur-arriere-evenement) 0%);
   color: var(--couleur-galerie);
+  z-index: 1;
 }
 
 #evenement {
   background-color: var(--couleur-arriere-evenement);
   color: var(--couleur-evenement);
+  position: relative;
 }
 
 #footer {
   background-color: var(--couleur-arriere-footer);
   color: var(--couleur-footer);
+}
+
+.footer__section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ////////////////////////////////////////////////////////// */
+/*                    Règles des vagues                       */
+/* ////////////////////////////////////////////////////////// */
+.vague {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.vague svg {
+  position: relative;
+  display: block;
+  width: calc(183% + 1.3px);
+  height: 84px;
+}
+
+/* ////////////////////////////////////////////////////////// */
+/*                  Règles des diagonales                     */
+/* ////////////////////////////////////////////////////////// */
+.diagonal {
+  position: relative;
+  isolation: isolate;
+}
+
+.diagonal::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  transform: skewY(-5deg);
+  background-color: var(--couleur-arriere-galerie);
+}
+
+/* ////////////////////////////////////////////////////////// */
+/*                      Règles images                         */
+/* ////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////// */
+/*                    Règles des liens                        */
+/* ////////////////////////////////////////////////////////// */
+a {
+  text-decoration: underline;
+  color: var(--couleur-liens);
+  font-size: clamp(0.5rem, -0.75rem + 4vw, 1.5rem);
+}
+
+a:hover {
+  color: var(--couleur-liens-survol);
+}
+
+/* ////////////////////////////////////////////////////////// */
+/*                   Règles des boutons                       */
+/* ////////////////////////////////////////////////////////// */
+button {
+  background-color: var(--couleur-arriere-entete);
+  border: solid 3px var(--couleur-arriere-footer);
+  border-radius: 10px;
+  color: var(--couleur-entete);
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+}
+
+button:hover {
+  background-color: hsl(var(--hu1), var(--s-couleur-arriere), var(--l5));
+  color: var(--couleur-arriere-entete);
+}
+
+/* ////////////////////////////////////////////////////////// */
+/*                    Règles du menu                          */
+/* ////////////////////////////////////////////////////////// */
+.entete__menu {
+  width: 100%;
+  position: fixed;
+  height: 10vh;
+  background-color: var(--couleur-arriere-entete);
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.entete__menu ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-bottom: 2px solid var(--couleur-arriere-footer);
+}
+
+.entete__menu li {
+  flex: 1 1 auto;
+  border-left: 2px solid var(--couleur-arriere-footer);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.entete__menu li:first-of-type {
+  border-left: none;
+}
+
+.entete__menu a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.entete__menu a:hover {
+  color: #ff0000;
 }/*# sourceMappingURL=style.css.map */

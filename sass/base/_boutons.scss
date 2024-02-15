@@ -1,0 +1,14 @@
+button {
+    background-color: var(--couleur-arriere-entete);
+    border: solid 3px var(--couleur-arriere-footer);
+    border-radius: 10px;
+    color: var(--couleur-entete);
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+}
+
+button:hover {
+    background-color: hsl(var(--hu1), var(--s-couleur-arriere), var(--l5));
+    color: var(--couleur-arriere-entete);
+}
