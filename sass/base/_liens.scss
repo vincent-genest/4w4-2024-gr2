@@ -1,8 +1,44 @@
 a {
-    text-decoration: underline;
-    color: var(--couleur-liens);
+    text-decoration: none;
     font-size: clamp(0.5rem, -0.75rem + 4vw, 1.5rem);
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
 }
-a:hover {
-    color: var(--couleur-liens-survol);
+
+#entete a {
+    color: var(--couleur-liens-entete);
+    &:visited {
+        color: var(--couleur-liens-visited-entete);
+    }
+}
+
+#accueil a {
+    color: var(--couleur-liens-accueil);
+    &:visited {
+        color: var(--couleur-liens-visited-accueil);
+    }
+}
+
+#galerie a {
+    color: var(--couleur-liens-galerie);
+    &:visited {
+        color: var(--couleur-liens-visited-galerie);
+    }
+}
+
+#evenement a {
+    color: var(--couleur-liens-evenement);
+    &:visited {
+        color: var(--couleur-liens-visited-evenement);
+    }
+}
+
+#footer a {
+    color: var(--couleur-liens-footer);
+    &:visited {
+        color: var(--couleur-liens-visited-footer);
+        text-decoration: overline;
+    }
 }

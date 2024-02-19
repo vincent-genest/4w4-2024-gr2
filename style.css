@@ -20,7 +20,7 @@ Ce thème a été développé dans le cadre du cours 4w4
   --nb-element: 5;
   --l-initial: 80%;
   --increment-angle: 15%;
-  --hu1: 180;
+  --hu1: 380;
   --hu2: calc(var(--hu1) + 180);
   --s-couleur-arriere: 100%;
   --l1: var(--l-initial);
@@ -40,11 +40,20 @@ Ce thème a été développé dans le cadre du cours 4w4
   --couleur-galerie: hsl(var(--hu2), var(--s-couleur), calc(100% - var(--l5)));
   --couleur-evenement: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l4)));
   --couleur-footer: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l5)));
-  --couleur-arriere-contenu: hsl(300, 100%, 50%);
-  --couleur-liens: white;
-  --couleur-liens-suvrvol: var(--hu1);
+  --couleur-liens-entete: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l1) - 15%));
+  --couleur-liens-accueil: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l2) - 15%));
+  --couleur-liens-galerie: hsl(var(--hu2), var(--s-couleur), calc(100% - var(--l5) + 15%));
+  --couleur-liens-evenement: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l4) + 15%));
+  --couleur-liens-footer: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l5) + 15%));
+  --couleur-liens-visited-entete: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l1) + 15%));
+  --couleur-liens-visited-accueil: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l2) + 15%));
+  --couleur-liens-visited-galerie: hsl(var(--hu2), var(--s-couleur), calc(100% - var(--l5) - 15%));
+  --couleur-liens-visited-evenement: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l4) - 15%));
+  --couleur-liens-visited-footer: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l5) - 15%));
   --transparence-arriere-contenu: 0.3;
-  --flex-basis-contenu: 900px;
+  --largeur-max-tel: 600px;
+  --largeur-max-tablette: 900px;
+  --flex-basis-contenu: 1100px;
   /*
    --nb-element: 5;
       --increment-angle: calc(360 / var(--nb-element));
@@ -85,9 +94,8 @@ Ce thème a été développé dans le cadre du cours 4w4
 /*                      Règles de base                        */
 /* ////////////////////////////////////////////////////////// */
 h1 {
-  font-size: clamp(2rem, -2.875rem + 14vw, 6rem);
+  font-size: clamp(2rem, -2.875rem + 13vw, 5.5rem);
   text-shadow: 5px 5px 5px hsla(var(--hu1), 0%, var(--l5), 40%);
-  margin-left: -7vw;
 }
 
 h2 {
@@ -144,138 +152,72 @@ blockquote span {
   margin-top: 1em;
 }
 
-/* ////////////////////////////////////////////////////////// */
-/*                 Règles de la pagination                    */
-/* ////////////////////////////////////////////////////////// */
-body {
-  display: flex;
-  flex-direction: column;
-  font-family: "raleway", arial, sans-serif;
-}
-
-.global {
-  display: flex;
-  justify-content: center;
-  min-height: 30vh;
-}
-
-.global > section,
-.global > header,
-.global > footer {
-  flex: 0 1 var(--flex-basis-contenu);
-  padding: 5rem 1.5rem;
-}
-
-#entete {
-  background-color: var(--couleur-arriere-entete);
-  color: var(--couleur-entete);
-  position: relative;
-}
-
-#accueil {
-  background-color: var(--couleur-arriere-accueil);
-  color: var(--couleur-accueil);
-}
-
-#galerie {
-  background: linear-gradient(180deg, var(--couleur-arriere-accueil) 50%, var(--couleur-arriere-evenement) 0%);
-  color: var(--couleur-galerie);
-  z-index: 1;
-}
-
-#evenement {
-  background-color: var(--couleur-arriere-evenement);
-  color: var(--couleur-evenement);
-  position: relative;
-}
-
-#footer {
-  background-color: var(--couleur-arriere-footer);
-  color: var(--couleur-footer);
-}
-
-.footer__section {
-  display: flex;
-  flex-direction: column;
-}
-
-/* ////////////////////////////////////////////////////////// */
-/*                    Règles des vagues                       */
-/* ////////////////////////////////////////////////////////// */
-.vague {
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
-.vague svg {
-  position: relative;
-  display: block;
-  width: calc(183% + 1.3px);
-  height: 84px;
-}
-
-/* ////////////////////////////////////////////////////////// */
-/*                  Règles des diagonales                     */
-/* ////////////////////////////////////////////////////////// */
-.diagonal {
-  position: relative;
-  isolation: isolate;
-}
-
-.diagonal::after {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  transform: skewY(-5deg);
-  background-color: var(--couleur-arriere-galerie);
-}
-
-/* ////////////////////////////////////////////////////////// */
-/*                      Règles images                         */
-/* ////////////////////////////////////////////////////////// */
-/* ////////////////////////////////////////////////////////// */
-/*                    Règles des liens                        */
-/* ////////////////////////////////////////////////////////// */
 a {
-  text-decoration: underline;
-  color: var(--couleur-liens);
+  text-decoration: none;
   font-size: clamp(0.5rem, -0.75rem + 4vw, 1.5rem);
 }
-
-a:hover {
-  color: var(--couleur-liens-survol);
+a:hover, a:focus {
+  text-decoration: underline;
 }
 
-/* ////////////////////////////////////////////////////////// */
-/*                   Règles des boutons                       */
-/* ////////////////////////////////////////////////////////// */
+#entete a {
+  color: var(--couleur-liens-entete);
+}
+#entete a:visited {
+  color: var(--couleur-liens-visited-entete);
+}
+
+#accueil a {
+  color: var(--couleur-liens-accueil);
+}
+#accueil a:visited {
+  color: var(--couleur-liens-visited-accueil);
+}
+
+#galerie a {
+  color: var(--couleur-liens-galerie);
+}
+#galerie a:visited {
+  color: var(--couleur-liens-visited-galerie);
+}
+
+#evenement a {
+  color: var(--couleur-liens-evenement);
+}
+#evenement a:visited {
+  color: var(--couleur-liens-visited-evenement);
+}
+
+#footer a {
+  color: var(--couleur-liens-footer);
+}
+#footer a:visited {
+  color: var(--couleur-liens-visited-footer);
+  text-decoration: overline;
+}
+
 button {
-  background-color: var(--couleur-arriere-entete);
+  font-size: clamp(1.375rem, 0.4375rem + 3vw, 2.5rem);
+  background-image: linear-gradient(45deg, var(--couleur-arriere-entete) 0%, var(--couleur-arriere-entete) 100%);
+  color: var(--couleur-entete);
   border: solid 3px var(--couleur-arriere-footer);
   border-radius: 10px;
-  color: var(--couleur-entete);
-  cursor: pointer;
-  font-size: 1.5rem;
   padding: 1rem 2rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+  transform: translateY(0px);
 }
-
 button:hover {
-  background-color: hsl(var(--hu1), var(--s-couleur-arriere), var(--l5));
+  background-image: linear-gradient(45deg, var(--couleur-arriere-footer) 0%, var(--couleur-arriere-footer) 100%);
   color: var(--couleur-arriere-entete);
+  transform: translateY(-2px);
+}
+button:active {
+  background-image: linear-gradient(45deg, var(--couleur-arriere-evenement) 0%, var(--couleur-arriere-footer) 100%);
+  color: var(--couleur-arriere-entete);
+  transform: translateY(5px);
 }
 
-/* ////////////////////////////////////////////////////////// */
-/*                    Règles du menu                          */
-/* ////////////////////////////////////////////////////////// */
 .entete__menu {
   width: 100%;
   position: fixed;
@@ -313,10 +255,138 @@ button:hover {
 
 .entete__menu a {
   text-decoration: none;
-  color: #000;
+  color: var(--couleur-arriere-footer);
   font-weight: bold;
 }
 
 .entete__menu a:hover {
-  color: #ff0000;
+  color: var(--couleur-arriere-accueil);
+}
+
+/* ////////////////////////////////////////////////////////// */
+/*                     Règles générale                        */
+/* ////////////////////////////////////////////////////////// */
+.entete__header {
+  background-image: url("images/logo.png");
+  background-repeat: no-repeat;
+  background-position: 90% 50%;
+}
+
+.entete__header span {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .entete__header {
+    background-position: 50% 50%;
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "raleway", arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.global {
+  display: flex;
+  justify-content: center;
+  min-height: 30vh;
+}
+
+.global > section,
+.global > footer {
+  flex: 0 1 var(--flex-basis-contenu);
+  padding: 5rem 1.5rem;
+}
+
+.global > header {
+  flex: 0 1 1300px;
+  padding: 5rem 1.5rem;
+}
+
+#entete {
+  background-color: var(--couleur-arriere-entete);
+  color: var(--couleur-entete);
+  position: relative;
+  line-height: 1.5;
+}
+
+#accueil {
+  background-color: var(--couleur-arriere-accueil);
+  color: var(--couleur-accueil);
+}
+
+#galerie {
+  background: linear-gradient(180deg, var(--couleur-arriere-accueil) 50%, var(--couleur-arriere-evenement) 0%);
+  color: var(--couleur-galerie);
+  z-index: 1;
+}
+
+#evenement {
+  background-color: var(--couleur-arriere-evenement);
+  color: var(--couleur-evenement);
+  position: relative;
+}
+
+#footer {
+  background-color: var(--couleur-arriere-footer);
+  color: var(--couleur-footer);
+}
+
+.footer__section {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+/* ////////////////////////////////////////////////////////// */
+/*                    Règles des effets                       */
+/* ////////////////////////////////////////////////////////// */
+.vague {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  pointer-events: none;
+}
+
+.vague svg {
+  position: relative;
+  display: block;
+  width: calc(183% + 1.3px);
+  height: 84px;
+}
+
+.diagonal {
+  position: relative;
+  isolation: isolate;
+}
+
+.diagonal::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  transform: skewY(-5deg);
+  background-color: var(--couleur-arriere-galerie);
 }/*# sourceMappingURL=style.css.map */

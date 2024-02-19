@@ -1,0 +1,15 @@
+.entete__header {
+    background-image: url("images/logo.png");
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+}
+
+.entete__header span {
+    display: block;
+}
+
+@media screen and (max-width: 600px) {
+    .entete__header {
+        background-position: 50% 50%;
+    }
+}
