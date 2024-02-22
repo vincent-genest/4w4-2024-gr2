@@ -20,7 +20,7 @@ Ce thème a été développé dans le cadre du cours 4w4
   --nb-element: 5;
   --l-initial: 80%;
   --increment-angle: 15%;
-  --hu1: 380;
+  --hu1: 200;
   --hu2: calc(var(--hu1) + 180);
   --s-couleur-arriere: 100%;
   --l1: var(--l-initial);
