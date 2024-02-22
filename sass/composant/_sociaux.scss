@@ -20,3 +20,6 @@
 .sociaux svg:hover path {
     fill: var(--couleur-arriere-accueil);
 }
+.sociaux svg:active path {
+    fill: var(--couleur-arriere-galerie);
+}

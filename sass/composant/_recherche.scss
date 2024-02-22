@@ -37,4 +37,7 @@
 .recherche__button:hover {
     background-color: var(--couleur-arriere-accueil);
 }
+.recherche__button:active {
+    background-color: var(--couleur-arriere-galerie);
+}
 

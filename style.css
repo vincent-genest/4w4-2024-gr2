@@ -494,6 +494,10 @@ body {
   background-color: var(--couleur-arriere-accueil);
 }
 
+.recherche__button:active {
+  background-color: var(--couleur-arriere-galerie);
+}
+
 .sociaux {
   display: flex;
   justify-content: center;
@@ -516,4 +520,8 @@ body {
 
 .sociaux svg:hover path {
   fill: var(--couleur-arriere-accueil);
+}
+
+.sociaux svg:active path {
+  fill: var(--couleur-arriere-galerie);
 }/*# sourceMappingURL=style.css.map */
