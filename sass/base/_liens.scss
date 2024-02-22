@@ -6,7 +6,7 @@ a {
     }
 }
 
-#entete a {
+#entete .entete__header a {
     //color: var(--couleur-liens-entete);
     &:visited {
         color: var(--couleur-liens-visited-entete);

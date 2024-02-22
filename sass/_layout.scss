@@ -3,12 +3,13 @@
 *::after {
     box-sizing: border-box;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     display: flex;
     flex-direction: column;
     font-family: "raleway", arial, sans-serif;
-    scroll-behavior: smooth;
 }
 .global {
     display: flex;

@@ -165,7 +165,7 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
-#entete a:visited {
+#entete .entete__header a:visited {
   color: var(--couleur-liens-visited-entete);
 }
 
@@ -274,11 +274,14 @@ button.entete__button:active {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   flex-direction: column;
   font-family: "raleway", arial, sans-serif;
-  scroll-behavior: smooth;
 }
 
 .global {
