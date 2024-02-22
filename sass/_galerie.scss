@@ -1,9 +1,12 @@
 .galerie__img {
     margin: auto;
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
 }
 .galerie__section img {
-    width: 40%;
+    width: 30%;
     height: auto;
     border-radius: 5px;
     box-shadow: 0 0 5px 0 var(--couleur-arriere-entete);
