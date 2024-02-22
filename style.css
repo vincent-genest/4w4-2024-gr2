@@ -370,7 +370,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 2rem;
+  gap: 2rem 0;
 }
 
 .galerie__section img {
@@ -378,7 +378,11 @@ body {
   height: auto;
   border-radius: 5px;
   box-shadow: 0 0 5px 0 var(--couleur-arriere-entete);
-  transition: box-shadow 0.25s;
+  transition: box-shadow 0.25s, width 0.25s;
+}
+
+.galerie__section img:active {
+  width: 35%;
 }
 
 /* ////////////////////////////////////////////////////////// */
