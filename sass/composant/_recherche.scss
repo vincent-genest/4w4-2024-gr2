@@ -1,0 +1,40 @@
+.recherche {
+    display: flex;
+    justify-content: center;
+    background-color: var(--couleur-arriere-entete);
+    border-radius: 10px;
+}
+
+.recherche__input {
+    padding: 1rem 1.5rem;
+    display: block;
+    border: none;
+    background-color: var(--couleur-arriere-entete);
+    border-radius: 10px;
+    width: 10rem;
+    transition: width 0.5s ease-in-out;
+}
+.recherche__input::placeholder {
+    color: var(--couleur-arriere-footer);
+}
+.recherche__input:focus {
+    outline: none;
+    width: 30vw;
+}
+.recherche__input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    content: URL(https://s2.svgbox.net/materialui.svg?ic=cancel);
+    cursor: pointer;
+}
+
+.recherche__button {
+    border: none;
+    background-color: var(--couleur-arriere-entete);
+    border-radius: 0 10px 10px 0;
+    padding: 1rem;
+    transition: background-color 0.2s ease-in-out;
+}
+.recherche__button:hover {
+    background-color: var(--couleur-arriere-accueil);
+}
+

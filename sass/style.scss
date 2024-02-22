@@ -30,13 +30,25 @@ Ce thème a été développé dans le cadre du cours 4w4
 @import "base/menu";
 
 /* ////////////////////////////////////////////////////////// */
-/*                     Règles générale                        */
+/*                    Règles de pagination                    */
+/* ////////////////////////////////////////////////////////// */
+@import "layout";
+
+/* ////////////////////////////////////////////////////////// */
+/*                    Règles des sections                     */
 /* ////////////////////////////////////////////////////////// */
 @import "entete";
-@import "layout";
+@import "footer";
+@import "galerie";
 
 /* ////////////////////////////////////////////////////////// */
 /*                    Règles des effets                       */
 /* ////////////////////////////////////////////////////////// */
 @import "effet/vague";
 @import "effet/diagonal";
+
+/* ////////////////////////////////////////////////////////// */
+/*                  Règles des composants                     */
+/* ////////////////////////////////////////////////////////// */
+@import "composant/recherche";
+@import "composant/sociaux";

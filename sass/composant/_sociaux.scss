@@ -1,0 +1,22 @@
+.sociaux {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.sociaux path {
+    fill: var(--couleur-arriere-entete);
+    transition: fill 0.25s;
+}
+
+.sociaux svg {
+    transform: scale(1);
+    transition: transform 0.25s;
+}
+
+.sociaux svg:hover {
+    transform: scale(1.5);
+}
+
+.sociaux svg:hover path {
+    fill: var(--couleur-arriere-accueil);
+}

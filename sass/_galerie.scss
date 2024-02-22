@@ -1,0 +1,11 @@
+.galerie__img {
+    margin: auto;
+    width: 100%;
+}
+.galerie__section img {
+    width: 40%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 var(--couleur-arriere-entete);
+    transition: box-shadow 0.25s;
+}

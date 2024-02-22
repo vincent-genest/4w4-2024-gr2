@@ -31,17 +31,17 @@
     --couleur-evenement: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l4)));
     --couleur-footer: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l5)));
 
-    --couleur-liens-entete: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l1) - 15%));
-    --couleur-liens-accueil: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l2) - 15%));
-    --couleur-liens-galerie: hsl(var(--hu2), var(--s-couleur), calc(100% - var(--l5) + 15%));
-    --couleur-liens-evenement: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l4) + 15%));
-    --couleur-liens-footer: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l5) + 15%));
+    --couleur-liens-entete: hsl(var(--hu1), var(--s-couleur), 80%);
+    --couleur-liens-accueil: hsl(var(--hu1), var(--s-couleur), 80%);
+    --couleur-liens-galerie: hsl(var(--hu2), var(--s-couleur), 80%);
+    --couleur-liens-evenement: hsl(var(--hu1), var(--s-couleur), 80%);
+    --couleur-liens-footer: hsl(var(--hu1), var(--s-couleur), 80%);
 
-    --couleur-liens-visited-entete: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l1) + 15%));
-    --couleur-liens-visited-accueil: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l2) + 15%));
-    --couleur-liens-visited-galerie: hsl(var(--hu2), var(--s-couleur), calc(100% - var(--l5) - 15%));
-    --couleur-liens-visited-evenement: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l4) - 15%));
-    --couleur-liens-visited-footer: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l5) - 15%));
+    --couleur-liens-visited-entete: hsl(var(--hu1), var(--s-couleur), 20%);
+    --couleur-liens-visited-accueil: hsl(var(--hu1), var(--s-couleur), 20%);
+    --couleur-liens-visited-galerie: hsl(var(--hu2), var(--s-couleur), 20%);
+    --couleur-liens-visited-evenement: hsl(var(--hu1), var(--s-couleur), 20%);
+    --couleur-liens-visited-footer: hsl(var(--hu1), var(--s-couleur), 20%);
 
     --transparence-arriere-contenu: 0.3;
     --largeur-max-tel: 600px;

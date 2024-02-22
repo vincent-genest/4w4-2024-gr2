@@ -1,14 +1,13 @@
 a {
-    text-decoration: none;
-    font-size: clamp(0.5rem, -0.75rem + 4vw, 1.5rem);
+    text-decoration: underline;
     &:hover,
     &:focus {
-        text-decoration: underline;
+        text-decoration: none;
     }
 }
 
 #entete a {
-    color: var(--couleur-liens-entete);
+    //color: var(--couleur-liens-entete);
     &:visited {
         color: var(--couleur-liens-visited-entete);
     }
@@ -39,6 +38,5 @@ a {
     color: var(--couleur-liens-footer);
     &:visited {
         color: var(--couleur-liens-visited-footer);
-        text-decoration: overline;
     }
 }

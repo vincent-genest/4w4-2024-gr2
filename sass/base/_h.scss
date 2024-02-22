@@ -28,7 +28,7 @@ p {
 
 blockquote {
     font-size: clamp(1rem, 0.8438rem + 0.5vw, 1.125rem);
-    width: 60%;
+    width: 80%;
     margin: 50px auto;
     font-style: italic;
     color: var(--couleur-arriere-footer);
@@ -37,6 +37,11 @@ blockquote {
     line-height: 1.6;
     position: relative;
     background: var(--couleur-arriere-entete);
+}
+blockquote::first-letter {
+    font-size: 3em;
+    color: var(--couleur-arriere-footer);
+    line-height: 0.9;
 }
 
 blockquote::before {
