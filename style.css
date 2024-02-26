@@ -524,4 +524,20 @@ body {
 
 .sociaux svg:active path {
   fill: var(--couleur-arriere-galerie);
+}
+
+.section__cours {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.carte {
+  background-color: var(--couleur-arriere-entete);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 1rem;
+  flex: 0 1 23%;
 }/*# sourceMappingURL=style.css.map */
