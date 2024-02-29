@@ -57,10 +57,8 @@
                     <?php if(have_posts()):
                         while(have_posts()): the_post(); ?>
                             <div class="carte">
-                                <!-- <details> -->
                                 <h5><?php the_title(); ?></h5>
                                 <p><?= wp_trim_words(get_the_content(), 10); ?></p>
-                                <!-- </details> -->
                             </div>
                         <?php endwhile; ?>
                         <?php endif; ?>

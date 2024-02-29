@@ -1,4 +1,4 @@
-# Exercice #1
+# Labo #3
 
 ## Reproduire et améliorer la maquette exemple présenter au cours
 
