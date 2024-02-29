@@ -99,23 +99,23 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(1rem, -0.5714rem + 6.2857vw, 3.75rem);
+  font-size: clamp(3.25rem, -0.5714rem + 6.2857vw, 3.75rem);
 }
 
 h3 {
-  font-size: clamp(0.75rem, -1.4375rem + 7vw, 2.5rem);
+  font-size: clamp(2rem, -1.4375rem + 7vw, 2.5rem);
 }
 
 h4 {
-  font-size: clamp(0.625rem, -0.9375rem + 5vw, 1.875rem);
+  font-size: clamp(1.175rem, -0.7188rem + 4.5vw, 1.675rem);
 }
 
 h5 {
-  font-size: clamp(0.5rem, -0.75rem + 4vw, 1.5rem);
+  font-size: clamp(1rem, -0.75rem + 4vw, 1.5rem);
 }
 
 h6 {
-  font-size: clamp(0.375rem, -0.7188rem + 3.5vw, 1.25rem);
+  font-size: clamp(0.75rem, -0.7188rem + 3.5vw, 1.25rem);
 }
 
 p {
@@ -529,15 +529,29 @@ body {
 .section__cours {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
 }
 
 .carte {
+  min-width: 200px;
   background-color: var(--couleur-arriere-entete);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 0 1rem;
+  justify-content: flex-start;
+  padding: 2rem;
   flex: 0 1 23%;
+}
+.carte h5 {
+  margin: 0rem;
+  margin-top: 1rem;
+  color: var(--couleur-entete);
+}
+.carte h6 {
+  margin: 0rem;
+}
+.carte h6:last-of-type {
+  flex-grow: 1;
+  margin-top: 1rem;
 }/*# sourceMappingURL=style.css.map */

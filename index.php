@@ -4,8 +4,12 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Thème gr2</title>
+        <!-- <link rel="stylesheet" href="normalize.css"> -->
+        <!-- <link rel="stylesheet" href="style.css"> -->
+
         <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/normalize.css';?>" />
         <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/style.css';?>" />
+        
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;1,500&display=swap" rel="stylesheet" />
@@ -55,9 +59,17 @@
                     } -->
                     
                     <?php if(have_posts()):
-                        while(have_posts()): the_post(); ?>
+                        while(have_posts()): the_post();
+                            $titre = get_the_title();
+                            $sigle = substr($titre, 0, 7);
+                            $duree = substr($titre, strpos( $titre, '('), 6);
+                            $nom = trim(substr($titre, 7), $duree)
+                            // strpos()
+                            ?>
                             <div class="carte">
-                                <h5><?php the_title(); ?></h5>
+                                <h5><?= $sigle; ?></h5>
+                                <h4><?= $nom; ?></h4>
+                                <h6>Durée : <?= $duree; ?></h6>
                                 <p><?= wp_trim_words(get_the_content(), 10); ?></p>
                             </div>
                         <?php endwhile; ?>

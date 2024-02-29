@@ -1,15 +1,31 @@
 .section__cours {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
 }
 
 .carte {
+    min-width: 200px;
+
     background-color: var(--couleur-arriere-entete);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 0 1rem;
+    justify-content: flex-start;
+    padding: 2rem;
     flex: 0 1 23%;
+
+    h5 {
+        margin: 0rem;
+        margin-top: 1rem;
+        color: var(--couleur-entete);
+    }
+    h6 {
+        margin: 0rem;
+        &:last-of-type {
+            flex-grow: 1;
+            margin-top: 1rem;
+        }
+    }
 }
