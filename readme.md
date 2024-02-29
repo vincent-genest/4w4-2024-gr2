@@ -1,30 +1,32 @@
 # Labo #3
 
-## Reproduire et améliorer la maquette exemple présenter au cours
+## Auteur
+
+-   [Vincent Genest](https://github.com/vincent-genest)
+
+## Création d'un site WP.
 
 ### Continuer la version du Laboratiore #2 :
 
--   Amélioration du dossier Sass
--   Ajouts dans style.scss
--   Utilisation de différentes techniques pour élaborer une palette de couleur
-    -   monochrome (un seul hu (teinte) et on fait varier la saturation et la luminosité)
-    -   complémentaire (deux teintes à 180deg)
-    -   triade (trois teintes de +- 120deg)
--   Utilisation de la règle 60-30-10
--   Améliorer l'entête en ajoutant une image en background qui s'enligne horizontalement avec les titres de l'entête
--   Création d'un bouton utilisant les variables, la propriété background-image, linear-gradient. Le bouton réagit aux événements :hover et :active
--   Création de liens réagissant aux évènements :hover, :visited, :focus
--   Amélioration générale de la pagination
--   Ajout de nouveaux éléments HTML
+-   Adaptation du thème de exercice #1
+-   Création du modèle index.php
+-   Création de la branche labo3
+-   minimum 3 commits
+-   Décomposition le titre de chaque cours:
+
+    -   sigle du cours ex: 582-4W4
+    -   le titre du cours ex: Conception d'interface et développement Web
+    -   la durée du cours : 90h
+
+-   Garder les 30 premiers mots de la description du cours.
+-   La liste doit s'adapter aux différentes largeurs de fenêtre en mobile une seule colonne.
+-   Chacune des cartes de cours sera formatés en en utilisant les flex box
 
 À réaliser :
 
--   Améliorer l'entête
--   Ajouter une image
--   Ajouter un bouton
--   Ajouter des liens
--   Améliorer la pagination
--   Ajouter de nouveaux éléments HTML
+-   Mise en place de la page sur WP
+-   Rendre la page adaptable
+-   Décompser les titres
 -   Créer plusieurs commit
 -   Une github-page
 

@@ -70,7 +70,7 @@
                                 <h5><?= $sigle; ?></h5>
                                 <h4><?= $nom; ?></h4>
                                 <h6>Durée : <?= $duree; ?></h6>
-                                <p><?= wp_trim_words(get_the_content(), 10); ?></p>
+                                <p><?= wp_trim_words(get_the_content(), 30); ?></p>
                             </div>
                         <?php endwhile; ?>
                         <?php endif; ?>
@@ -86,12 +86,20 @@
                     voluptatem? Expedita officiis repellendus in dicta molestiae voluptatibus veniam eaque ipsa!
                 </p>
                 <div class="galerie__img">
+                    <img src="<?php echo get_template_directory_uri() . '/images/galerie1.webp';?>" alt="galerie 1">
+                    <img src="<?php echo get_template_directory_uri() . '/images/galerie2.webp';?>" alt="galerie 2">
+                    <img src="<?php echo get_template_directory_uri() . '/images/galerie3.webp';?>" alt="galerie 3">
+                    <img src="<?php echo get_template_directory_uri() . '/images/galerie4.webp';?>" alt="galerie 4">
+                    <img src="<?php echo get_template_directory_uri() . '/images/galerie5.webp';?>" alt="galerie 5">
+                    <img src="<?php echo get_template_directory_uri() . '/images/galerie6.webp';?>" alt="galerie 6">
+                    <!-- 
                     <img src="images/galerie1.webp" alt="galerie 1">
                     <img src="images/galerie2.webp" alt="galerie 2">
                     <img src="images/galerie3.webp" alt="galerie 3">
                     <img src="images/galerie4.webp" alt="galerie 4">
                     <img src="images/galerie5.webp" alt="galerie 5">
                     <img src="images/galerie6.webp" alt="galerie 6">
+                     -->
                 </div>
                 <blockquote>
                     Quelle galerie incroyable!

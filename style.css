@@ -543,15 +543,17 @@ body {
   padding: 2rem;
   flex: 0 1 23%;
 }
-.carte h5 {
+.carte h4 {
   margin: 0rem;
   margin-top: 1rem;
   color: var(--couleur-entete);
 }
-.carte h6 {
+.carte h5 {
   margin: 0rem;
 }
-.carte h6:last-of-type {
+.carte h6 {
+  margin: 0rem;
   flex-grow: 1;
   margin-top: 1rem;
+  margin-bottom: 2rem;
 }/*# sourceMappingURL=style.css.map */

@@ -7,7 +7,6 @@
 
 .carte {
     min-width: 200px;
-
     background-color: var(--couleur-arriere-entete);
     border-radius: 10px;
     display: flex;
@@ -16,16 +15,18 @@
     padding: 2rem;
     flex: 0 1 23%;
 
-    h5 {
+    h4 {
         margin: 0rem;
         margin-top: 1rem;
         color: var(--couleur-entete);
     }
+    h5 {
+        margin: 0rem;
+    }
     h6 {
         margin: 0rem;
-        &:last-of-type {
-            flex-grow: 1;
-            margin-top: 1rem;
-        }
+        flex-grow: 1;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
     }
 }
