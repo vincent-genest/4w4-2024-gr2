@@ -17,13 +17,14 @@ body {
     min-height: 30vh;
 }
 .global > section,
-.global > footer {
+.global > footer,
+.global > header,
+.global > .entete__menu {
     flex: 0 1 var(--flex-basis-contenu);
     padding: 5rem 1.5rem;
 }
 .global > header {
-    flex: 0 1 1300px;
-    padding: 5rem 1.5rem;
+    padding-top: 0;
 }
 #entete {
     background-color: var(--couleur-arriere-entete);
@@ -60,6 +61,12 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+    header * {
+        text-align: center;
+    }
+    .entete__header {
+        align-items: center !important;
     }
 }
 

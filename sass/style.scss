@@ -21,13 +21,17 @@ Ce thème a été développé dans le cadre du cours 4w4
 @import "variables";
 
 /* ////////////////////////////////////////////////////////// */
+/*                 Règles des trucs utiles                    */
+/* ////////////////////////////////////////////////////////// */
+@import "utile/local";
+
+/* ////////////////////////////////////////////////////////// */
 /*                      Règles de base                        */
 /* ////////////////////////////////////////////////////////// */
 @import "base/h";
 @import "base/images";
 @import "base/liens";
 @import "base/boutons";
-@import "base/menu";
 
 /* ////////////////////////////////////////////////////////// */
 /*                    Règles de pagination                    */
@@ -53,3 +57,4 @@ Ce thème a été développé dans le cadre du cours 4w4
 @import "composant/recherche";
 @import "composant/sociaux";
 @import "composant/carte";
+@import "composant/menu";

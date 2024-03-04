@@ -1,19 +1,20 @@
 .section__cours {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    // justify-content: center;
     gap: 1rem;
 }
 
 .carte {
-    min-width: 200px;
-    background-color: var(--couleur-arriere-entete);
-    border-radius: 10px;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    padding: 2rem;
-    flex: 0 1 23%;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+    flex: 1 0 calc((var(--flex-basis-contenu) - 100px) / 4);
+    border-radius: 10px;
+    background-color: var(--couleur-arriere-entete);
 
     h4 {
         margin: 0rem;
@@ -25,8 +26,8 @@
     }
     h6 {
         margin: 0rem;
-        flex-grow: 1;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
     }
+}
+.carte * {
+    text-align: center;
 }

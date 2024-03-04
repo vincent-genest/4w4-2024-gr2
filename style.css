@@ -91,6 +91,19 @@ Ce thème a été développé dans le cadre du cours 4w4
 }
 
 /* ////////////////////////////////////////////////////////// */
+/*                 Règles des trucs utiles                    */
+/* ////////////////////////////////////////////////////////// */
+.bgc-texte {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+}
+@media screen and (min-width: 1100px) {
+  .bgc-texte {
+    background-color: transparent;
+  }
+}
+
+/* ////////////////////////////////////////////////////////// */
 /*                      Règles de base                        */
 /* ////////////////////////////////////////////////////////// */
 h1 {
@@ -219,52 +232,6 @@ button.entete__button:active {
   transform: translateY(5px);
 }
 
-.entete__menu {
-  width: 100%;
-  position: fixed;
-  height: 10vh;
-  background-color: var(--couleur-arriere-entete);
-  display: flex;
-  justify-content: center;
-  z-index: 2;
-  font-size: clamp(1rem, 2vw, 1.5rem);
-}
-
-.entete__menu ul {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  border-bottom: 2px solid var(--couleur-arriere-footer);
-}
-
-.entete__menu li {
-  flex: 1 1 auto;
-  border-left: 2px solid var(--couleur-arriere-footer);
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.entete__menu li:first-of-type {
-  border-left: none;
-}
-
-.entete__menu a {
-  text-decoration: none;
-  color: var(--couleur-arriere-footer);
-  font-weight: bold;
-}
-
-.entete__menu a:hover {
-  color: var(--couleur-arriere-galerie);
-}
-
 /* ////////////////////////////////////////////////////////// */
 /*                    Règles de pagination                    */
 /* ////////////////////////////////////////////////////////// */
@@ -291,14 +258,15 @@ body {
 }
 
 .global > section,
-.global > footer {
+.global > footer,
+.global > header,
+.global > .entete__menu {
   flex: 0 1 var(--flex-basis-contenu);
   padding: 5rem 1.5rem;
 }
 
 .global > header {
-  flex: 0 1 1300px;
-  padding: 5rem 1.5rem;
+  padding-top: 0;
 }
 
 #entete {
@@ -342,6 +310,12 @@ body {
     align-items: center;
     justify-content: center;
   }
+  header * {
+    text-align: center;
+  }
+  .entete__header {
+    align-items: center !important;
+  }
 }
 /* width */
 ::-webkit-scrollbar {
@@ -370,6 +344,9 @@ body {
   background-image: url("images/logo.png");
   background-repeat: no-repeat;
   background-position: 90% 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .entete__header span {
@@ -529,19 +506,19 @@ body {
 .section__cours {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 1rem;
 }
 
 .carte {
-  min-width: 200px;
-  background-color: var(--couleur-arriere-entete);
-  border-radius: 10px;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  padding: 2rem;
-  flex: 0 1 23%;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+  flex: 1 0 calc((var(--flex-basis-contenu) - 100px) / 4);
+  border-radius: 10px;
+  background-color: var(--couleur-arriere-entete);
 }
 .carte h4 {
   margin: 0rem;
@@ -553,7 +530,67 @@ body {
 }
 .carte h6 {
   margin: 0rem;
-  flex-grow: 1;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+}
+
+.carte * {
+  text-align: center;
+}
+
+#menu {
+  min-height: 0;
+  width: 100%;
+  height: 10vh;
+  background-color: var(--couleur-arriere-entete);
+}
+
+.global > .entete__menu {
+  padding: 0;
+  width: 100%;
+}
+
+.menu-entete-container {
+  position: sticky;
+  top: 0;
+  height: 100%;
+  background-color: var(--couleur-arriere-entete);
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+.menu {
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-bottom: 2px solid var(--couleur-arriere-footer);
+}
+
+.menu-item {
+  border-left: 2px solid var(--couleur-arriere-footer);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex: 1 1 auto;
+  align-items: center;
+}
+
+.menu-item:last-of-type {
+  border-right: 2px solid var(--couleur-arriere-footer);
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: var(--couleur-arriere-footer);
+  font-weight: bold;
+  font-size: clamp(0.75rem, 1.5vw, 1.25rem);
+}
+
+.menu-item a:hover {
+  color: var(--couleur-arriere-galerie);
 }/*# sourceMappingURL=style.css.map */

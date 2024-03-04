@@ -15,20 +15,27 @@
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;1,500&display=swap" rel="stylesheet" />
     </head>
     <body>
-        <div id="entete" class="global">
-            <nav class="entete__menu">
-                <ul>
+        <div id="menu" class="global">
+            <div class="entete__menu">
+                <?php
+                    wp_nav_menu();
+                ?>
+                <!-- 
+                    <ul>
                     <li><a href="#entete">Menu</a></li>
                     <li><a href="#accueil">Accueil</a></li>
                     <li><a href="#galerie">Galerie</a></li>
                     <li><a href="#evenement">Événement</a></li>
-                </ul>
-            </nav>
+                    </ul>
+                -->
+            </div>
+        </div>
+        <div id="entete" class="global">
 
             <header class="entete__header">
-                <h1>Thème du groupe 2</h1>
-                <h2>4w4 - Conception d'interface <span>et développement Web</span></h2>
-                <h3>TIM - Collège de maisonneuve</h3>
+                <h1 class="bgc-texte">Thème du groupe 2</h1>
+                <h2 class="bgc-texte">4w4 - Conception d'interface <span>et développement Web</span></h2>
+                <h3 class="bgc-texte">TIM - Collège de maisonneuve</h3>
                 <button class="entete__button">S'inscrire</button>
             </header>
             <div class="vague">
@@ -62,15 +69,16 @@
                         while(have_posts()): the_post();
                             $titre = get_the_title();
                             $sigle = substr($titre, 0, 7);
-                            $duree = substr($titre, strpos( $titre, '('), 6);
-                            $nom = trim(substr($titre, 7), $duree)
+                            $duree = substr($titre, strpos( $titre, '(') + 1, -1);
+                            // $titre = trim(substr($titre, 7), $duree)
+                            $titre = trim(substr($titre, 7, strpos($titre, '(') - 7));
                             // strpos()
                             ?>
                             <div class="carte">
                                 <h5><?= $sigle; ?></h5>
-                                <h4><?= $nom; ?></h4>
+                                <h4><?= $titre; ?></h4>
+                                <p><?= wp_trim_words(get_the_content(), 10); ?></p>
                                 <h6>Durée : <?= $duree; ?></h6>
-                                <p><?= wp_trim_words(get_the_content(), 30); ?></p>
                             </div>
                         <?php endwhile; ?>
                         <?php endif; ?>
