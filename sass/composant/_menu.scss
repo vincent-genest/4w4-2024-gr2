@@ -22,18 +22,22 @@
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem 0;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: hsla(var(--hu1), var(--s-couleur-arriere), var(--l1), 0.8);
     transform: translateX(-200%);
     transition: transform 0.3s ease-in-out;
-    @media screen and (min-width: 700px) {
+    backdrop-filter: blur(10px);
+    @media screen and (min-width: 600px) {
         position: static;
         transform: translateX(0);
         border-bottom: 2px solid var(--couleur-arriere-footer);
+        height: auto;
+        justify-content: space-between;
     }
     // width: 100%;
     // height: 100%;
@@ -51,12 +55,13 @@
     display: flex;
     flex-direction: column;
     list-style-type: none;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    height: 80%;
     padding: 0;
     margin: 0;
 
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 600px) {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
@@ -68,16 +73,16 @@
     height: 100%;
     display: flex;
     justify-content: center;
-    flex: 1 1 auto;
     align-items: center;
-    @media screen and (min-width: 700px) {
+    flex: 1 1 auto;
+    @media screen and (min-width: 600px) {
         border-left: none;
         border-left: 2px solid var(--couleur-arriere-footer);
     }
 }
 .menu-item:last-of-type {
     // premier li
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 600px) {
         border-right: 2px solid var(--couleur-arriere-footer);
     }
 }
@@ -87,6 +92,9 @@
     color: var(--couleur-arriere-footer);
     font-weight: bold;
     font-size: clamp(2rem, 4vw, 3rem);
+    @media screen and (min-width: 600px) {
+        font-size: clamp(1rem, 1.5vw, 1.5rem);
+    }
 }
 .menu-item a:hover {
     color: var(--couleur-arriere-galerie);
@@ -101,10 +109,16 @@
     position: absolute;
     top: 10px;
     left: 10px;
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 600px) {
         display: none;
     }
 }
 #chk_burger:checked ~ .menu-principal-container {
     transform: translateX(0);
+}
+#chk_burger:checked + #burger svg {
+    transform: rotate(90deg);
+}
+#burger svg {
+    transition: transform 0.3s ease-in-out;
 }
