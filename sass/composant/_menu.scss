@@ -15,7 +15,7 @@
 #menu {
     z-index: 2;
     width: 100%;
-    background-color: var(--couleur-arriere-entete);
+    position: fixed;
 }
 .menu-principal-container {
     //nav
@@ -32,12 +32,17 @@
     transform: translateX(-200%);
     transition: transform 0.3s ease-in-out;
     backdrop-filter: blur(10px);
-    @media screen and (min-width: 600px) {
+
+    @media screen and (min-width: 700px) {
         position: static;
         transform: translateX(0);
         border-bottom: 2px solid var(--couleur-arriere-footer);
+        background-color: var(--couleur-arriere-entete);
         height: auto;
         justify-content: space-between;
+        width: 100%;
+        max-width: 1500px;
+        padding: 0;
     }
     // width: 100%;
     // height: 100%;
@@ -61,11 +66,12 @@
     padding: 0;
     margin: 0;
 
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 700px) {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         height: 7vw;
+        width: 100%;
     }
 }
 .menu-item {
@@ -75,24 +81,26 @@
     justify-content: center;
     align-items: center;
     flex: 1 1 auto;
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 700px) {
         border-left: none;
         border-left: 2px solid var(--couleur-arriere-footer);
     }
 }
 .menu-item:last-of-type {
     // premier li
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 700px) {
         border-right: 2px solid var(--couleur-arriere-footer);
     }
 }
 .menu-item a {
     // li a
+    margin: 1rem;
     text-decoration: none;
+    text-align: center;
     color: var(--couleur-arriere-footer);
     font-weight: bold;
     font-size: clamp(2rem, 4vw, 3rem);
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 700px) {
         font-size: clamp(1rem, 1.5vw, 1.5rem);
     }
 }
@@ -109,7 +117,7 @@
     position: absolute;
     top: 10px;
     left: 10px;
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 700px) {
         display: none;
     }
 }
@@ -121,4 +129,8 @@
 }
 #burger svg {
     transition: transform 0.3s ease-in-out;
+    color: var(--couleur-entete);
+}
+#burger svg:hover {
+    color: var(--couleur-liens-visited-galerie);
 }
