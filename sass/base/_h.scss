@@ -60,3 +60,24 @@ blockquote span {
     font-weight: bold;
     margin-top: 1em;
 }
+
+::-moz-selection {
+    /* Code for Firefox */
+    color: white;
+    background: var(--couleur-arriere-galerie);
+}
+
+::selection {
+    color: white;
+    background: var(--couleur-arriere-galerie);
+}
+
+#galerie *::selection {
+    color: white;
+    background: var(--couleur-arriere-accueil);
+}
+
+#galerie *::-moz-selection {
+    color: white;
+    background: var(--couleur-arriere-accueil);
+}

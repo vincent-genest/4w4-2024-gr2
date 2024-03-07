@@ -14,16 +14,20 @@ body {
 .global {
     display: flex;
     justify-content: center;
-    min-height: 30vh;
+    // min-height: 30vh;
 }
 .global > section,
-.global > footer,
-.global > header,
-.global > .entete__menu {
+.global > footer {
     flex: 0 1 var(--flex-basis-contenu);
     padding: 5rem 1.5rem;
 }
-.global > header {
+.entete__menu {
+    flex: 0 1 1500px;
+    padding-top: 0;
+    padding: 3rem 0 0 0;
+    position: relative;
+}
+.entete__header {
     padding-top: 0;
 }
 #entete {
@@ -56,13 +60,13 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-    header {
+    .entete__header {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    header * {
+    .entete__header * {
         text-align: center;
     }
     .entete__header {

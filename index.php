@@ -1,51 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Thème gr2</title>
-        <!-- <link rel="stylesheet" href="normalize.css"> -->
-        <!-- <link rel="stylesheet" href="style.css"> -->
-
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/normalize.css';?>" />
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/style.css';?>" />
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;1,500&display=swap" rel="stylesheet" />
-    </head>
-    <body>
-        <div id="menu" class="global">
-            <div class="entete__menu">
-                <?php
-                    wp_nav_menu();
-                ?>
-                <!-- 
-                    <ul>
-                    <li><a href="#entete">Menu</a></li>
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#galerie">Galerie</a></li>
-                    <li><a href="#evenement">Événement</a></li>
-                    </ul>
-                -->
-            </div>
-        </div>
+<?php
+    /**
+     * Modèle de base index.php
+     */
+    get_header();
+?>
         <div id="entete" class="global">
 
-            <header class="entete__header">
+            <section class="entete__header">
                 <h1 class="bgc-texte">Thème du groupe 2</h1>
                 <h2 class="bgc-texte">4w4 - Conception d'interface <span>et développement Web</span></h2>
                 <h3 class="bgc-texte">TIM - Collège de maisonneuve</h3>
                 <button class="entete__button">S'inscrire</button>
-            </header>
-            <div class="vague">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path
-                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                        style="fill: var(--couleur-arriere-accueil)"
-                    ></path>
-                </svg>
-            </div>
+            </section>
+            <?php
+                get_template_part('gabarit/vague')
+            ?>
         </div>
         <div id="accueil" class="global">
             <section class="accueil__section">
@@ -129,14 +98,9 @@
                 </blockquote>
                 <a href="#">Voir plus</a>
             </section>
-            <div class="vague">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path
-                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                        style="fill: var(--couleur-arriere-footer)"
-                    ></path>
-                </svg>
-            </div>
+            <?php
+                get_template_part('gabarit/vague')
+            ?>
         </div>
         <div id="footer" class="global">
             <footer class="footer__section">
