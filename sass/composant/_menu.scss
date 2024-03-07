@@ -1,53 +1,61 @@
-// <div id="menu" class="global">
-//     <div class="entete__menu">
-//         // Généré par WordPress
-//         <div class="menu-entete-container">
-//             <ul id="menu-entete" class="menu">
-//                 <li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-31"><a href="http://localhost/4w4/2020/10/07/582-6n3-stage-285h/">Stage</a></li>
-//                 <li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-32"><a href="http://localhost/4w4/2020/10/07/582-5mbtechnologies-emergentes-et-avancees-volet-creation-60h/">echnologies émergentes</a></li>
-//                 <li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33"><a href="http://localhost/4w4/2020/10/07/582-5w5-projet-web-en-equipe-105h/">Projet Web en équipe</a></li>
-//                 <li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-34"><a href="http://localhost/4w4/2020/10/07/350-5n1-communication-et-dynamique-dune-equipe-de-travail-45h/">Communication</a></li>
-//                 <li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-35"><a href="http://localhost/4w4/2020/10/07/393-5e1-methodes-de-recherche-et-preparation-au-marche-du-travail-45h/">Méthodes de recherche</a></li>
-//             </ul>
-//         </div>
-//     </div>
-// </div>
+/*
+<nav class="menu-principal-container">
+    <ul id="menu-principal" class="menu">
+        <li id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-36"><a href="http://localhost/4w4/2020/10/07/582-4mb-animation-3d-75h/">Animation 3D</a></li>
+        <li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-37"><a href="http://localhost/4w4/2020/10/07/360-4j4-creation-de-jeu-en-equipe-105h/">Création de jeu en équipe</a></li>
+        <li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-38"><a href="http://localhost/4w4/2020/10/07/582-3j3-creation-de-jeu-3d-75h/">Création de jeu 3D</a></li>
+        <li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-41"><a href="http://localhost/4w4/2020/10/07/582-2j2creation-de-jeu-2d-60h/">Création de jeu 2D</a></li>
+        <li id="menu-item-42" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42"><a href="#accueil">Accueil</a></li>
+        <li id="menu-item-43" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43"><a href="#galerie">Galerie</a></li>
+        <li id="menu-item-44" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44"><a href="#evenement">Événement</a></li>
+    </ul>
+</nav>
+*/
 
 #menu {
-    min-height: 0;
     width: 100%;
-    height: 10vh;
     background-color: var(--couleur-arriere-entete);
-}
-.global > .entete__menu {
-    padding: 0;
-    width: 100%;
 }
 .menu-principal-container {
-    height: 100%;
-}
-.menu-entete-container {
-    // div
-    position: sticky;
+    //nav
+    position: absolute;
     top: 0;
-    height: 100%;
-    background-color: var(--couleur-arriere-entete);
-    display: flex;
-    justify-content: center;
-    z-index: 2;
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    left: 50px;
+    z-index: 5;
+    padding: 0;
+    border-bottom: 2px solid var(--couleur-arriere-footer);
+    transform: translateX(-200%);
+    transition: transform 0.3s ease-in-out;
+    @media screen and (min-width: 700px) {
+        position: static;
+        transform: translateX(0);
+    }
+    // width: 100%;
+    // height: 100%;
+    // position: sticky;
+    // top: 0;
+    // background-color: var(--couleur-arriere-entete);
+    // display: flex;
+    // justify-content: center;
+    // z-index: 2;
+    // font-size: clamp(1rem, 2vw, 1.5rem);
 }
-.menu {
+#menu-principal {
     // ul
-    width: 100%;
-    list-style-type: none;
+    top: 0;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
+    list-style-type: none;
+    justify-content: flex-start;
+    align-items: flex-start;
     padding: 0;
     margin: 0;
-    list-style: none;
-    border-bottom: 2px solid var(--couleur-arriere-footer);
+
+    @media screen and (min-width: 700px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 .menu-item {
     // li
@@ -63,7 +71,7 @@
     border-right: 2px solid var(--couleur-arriere-footer);
 }
 .menu-item a {
-    // mots
+    // li a
     text-decoration: none;
     color: var(--couleur-arriere-footer);
     font-weight: bold;
@@ -71,4 +79,20 @@
 }
 .menu-item a:hover {
     color: var(--couleur-arriere-galerie);
+}
+
+#chk_burger {
+    display: none;
+}
+#burger {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    @media screen and (min-width: 700px) {
+        display: none;
+    }
+}
+#chk_burger:checked ~ .menu-principal-container {
+    transform: translateX(0);
 }

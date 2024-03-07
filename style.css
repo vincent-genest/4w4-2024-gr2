@@ -294,7 +294,6 @@ body {
 .entete__menu {
   flex: 0 1 1500px;
   padding-top: 0;
-  padding: 3rem 0 0 0;
   position: relative;
 }
 
@@ -573,43 +572,57 @@ body {
   text-align: center;
 }
 
+/*
+<nav class="menu-principal-container">
+    <ul id="menu-principal" class="menu">
+        <li id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-36"><a href="http://localhost/4w4/2020/10/07/582-4mb-animation-3d-75h/">Animation 3D</a></li>
+        <li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-37"><a href="http://localhost/4w4/2020/10/07/360-4j4-creation-de-jeu-en-equipe-105h/">Création de jeu en équipe</a></li>
+        <li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-38"><a href="http://localhost/4w4/2020/10/07/582-3j3-creation-de-jeu-3d-75h/">Création de jeu 3D</a></li>
+        <li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-41"><a href="http://localhost/4w4/2020/10/07/582-2j2creation-de-jeu-2d-60h/">Création de jeu 2D</a></li>
+        <li id="menu-item-42" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42"><a href="#accueil">Accueil</a></li>
+        <li id="menu-item-43" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43"><a href="#galerie">Galerie</a></li>
+        <li id="menu-item-44" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44"><a href="#evenement">Événement</a></li>
+    </ul>
+</nav>
+*/
 #menu {
-  min-height: 0;
   width: 100%;
-  height: 10vh;
   background-color: var(--couleur-arriere-entete);
-}
-
-.global > .entete__menu {
-  padding: 0;
-  width: 100%;
 }
 
 .menu-principal-container {
-  height: 100%;
-}
-
-.menu-entete-container {
-  position: sticky;
+  position: absolute;
   top: 0;
-  height: 100%;
-  background-color: var(--couleur-arriere-entete);
-  display: flex;
-  justify-content: center;
-  z-index: 2;
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  left: 50px;
+  z-index: 5;
+  padding: 0;
+  border-bottom: 2px solid var(--couleur-arriere-footer);
+  transform: translateX(-200%);
+  transition: transform 0.3s ease-in-out;
+}
+@media screen and (min-width: 700px) {
+  .menu-principal-container {
+    position: static;
+    transform: translateX(0);
+  }
 }
 
-.menu {
-  width: 100%;
-  list-style-type: none;
+#menu-principal {
+  top: 0;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
+  list-style-type: none;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding: 0;
   margin: 0;
-  list-style: none;
-  border-bottom: 2px solid var(--couleur-arriere-footer);
+}
+@media screen and (min-width: 700px) {
+  #menu-principal {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .menu-item {
@@ -634,4 +647,24 @@ body {
 
 .menu-item a:hover {
   color: var(--couleur-arriere-galerie);
+}
+
+#chk_burger {
+  display: none;
+}
+
+#burger {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+@media screen and (min-width: 700px) {
+  #burger {
+    display: none;
+  }
+}
+
+#chk_burger:checked ~ .menu-principal-container {
+  transform: translateX(0);
 }/*# sourceMappingURL=style.css.map */
