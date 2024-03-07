@@ -1,4 +1,4 @@
-# Labo #3
+# Labo #4
 
 ## Auteur
 
@@ -6,29 +6,24 @@
 
 ## Création d'un site WP.
 
-### Continuer la version du Laboratiore #2 :
+### Créer une nouvelle branche « labo4 »
 
--   Adaptation du thème de exercice #1
--   Création du modèle index.php
--   Création de la branche labo3
--   minimum 3 commits
--   Décomposition le titre de chaque cours:
+### Création du menu principal
 
-    -   sigle du cours ex: 582-4W4
-    -   le titre du cours ex: Conception d'interface et développement Web
-    -   la durée du cours : 90h
+-   Ajouter un menu permettant d'accéder
+    -   à vos cinq cours préférés
+    -   à chacune des sections de la page
+-   Le menu doit être formatter en utilisant
+    composant/\_menu.scss
+    Le menu doit être adaptatif et être amovible en version mobile.
 
--   Garder les 30 premiers mots de la description du cours.
--   La liste doit s'adapter aux différentes largeurs de fenêtre en mobile une seule colonne.
--   Chacune des cartes de cours sera formatés en en utilisant les flex box
+### Création d'un header.php
 
-À réaliser :
+-   Créer le template header.php qui contiendra la structure d'entête de la page qui sera reproduite dans chacun des modules du thème
 
--   Mise en place de la page sur WP
--   Rendre la page adaptable
--   Décompser les titres
--   Créer plusieurs commit
--   Une github-page
+### Création d'un « template-part » (gabarit)
+
+-   Créer un template-part qui permettra d'afficher les vagues.
 
 # Ma github-page
 
