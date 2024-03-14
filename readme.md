@@ -3,9 +3,7 @@
 ## Auteur
 
 -   [Vincent Genest](https://github.com/vincent-genest)
-
-### Groupe
-
+-   582-4W4-MA CONCEPTION D'INTERFACES ET DÉVELOPPEMENT WEB
 -   gr. 00002
 
 ### Objectif général :
