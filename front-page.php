@@ -8,8 +8,8 @@
         <div id="entete" class="global">
 
             <section class="entete__header">
-                <h1 class="bgc-texte">Thème du groupe 2</h1>
-                <h2 class="bgc-texte">4w4 - Conception d'interface <span>et développement Web</span></h2>
+                <h1 class="bgc-texte"><?= get_bloginfo("name"); ?></h1>
+                <h2 class="bgc-texte"><?= get_bloginfo("description"); ?></span></h2>
                 <h3 class="bgc-texte">TIM - Collège de maisonneuve</h3>
                 <button class="entete__button">S'inscrire</button>
             </section>
@@ -21,34 +21,13 @@
             <section class="accueil__section">
                 <h2>Accueil (h2)</h2>
                 <div class="section__cours">
-                    
-                    <!-- 
-                    if(have_posts()){
-                        while(have_posts()){
-                            the_post();
-                            <details>
-                            the_title('<h5>','</h5>');
-                            $contenu = get_the_content();
-                            $contenu = wp_trim_words($contenu, 10);
-                            echo $contenu;
-                            </details>
-                        }
-                    } -->
-                    
+        
                     <?php if(have_posts()):
-                        while(have_posts()): the_post();
-                            $titre = get_the_title();
-                            $sigle = substr($titre, 0, 7);
-                            $duree = substr($titre, strpos( $titre, '(') + 1, -1);
-                            // $titre = trim(substr($titre, 7), $duree)
-                            $titre = trim(substr($titre, 7, strpos($titre, '(') - 7));
-                            // strpos()
-                            ?>
+                        while(have_posts()): the_post();?>
                             <div class="carte">
-                                <h5><?= $sigle; ?></h5>
-                                <h4><?= $titre; ?></h4>
+                                <h4><?php the_title(); ?></h4>
                                 <p><?= wp_trim_words(get_the_content(), 10); ?></p>
-                                <h6>Durée : <?= $duree; ?></h6>
+                                <p><a href="<?= get_permalink() ?>">Voir plus</a></p>
                             </div>
                         <?php endwhile; ?>
                         <?php endif; ?>

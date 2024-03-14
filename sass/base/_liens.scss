@@ -14,7 +14,7 @@ a {
 }
 
 #accueil a {
-    color: var(--couleur-liens-accueil);
+    color: var(--couleur-entete);
     &:visited {
         color: var(--couleur-liens-visited-accueil);
     }

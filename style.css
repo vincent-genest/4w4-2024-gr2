@@ -212,7 +212,7 @@ a:hover, a:focus {
 }
 
 #accueil a {
-  color: var(--couleur-liens-accueil);
+  color: var(--couleur-entete);
 }
 #accueil a:visited {
   color: var(--couleur-liens-visited-accueil);
