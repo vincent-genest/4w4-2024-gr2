@@ -1,10 +1,25 @@
-# Labo #4
+# TP1 - Club de voyage
 
 ## Auteur
 
 -   [Vincent Genest](https://github.com/vincent-genest)
 
-## Création d'un site WP.
+## Groupe
+
+-   gr. 00002
+
+### objectifs :
+
+Créer un site web pour un club de voyage qui permettra de mettre en valeur les différentes destinations de voyage
+
+### Description du projet :
+
+### Liens URL :
+
+-   Lien vers le serveur distant whc.ca :
+-   Lien vers ma GitHub page de la page d'accueil : https://vincent-genest.github.io/4w4-2024-gr2/
+
+<!-- ## Création d'un site WP.
 
 ### Créer une nouvelle branche « labo4 »
 
@@ -23,8 +38,4 @@
 
 ### Création d'un « template-part » (gabarit)
 
--   Créer un template-part qui permettra d'afficher les vagues.
-
-# Ma github-page
-
--   https://vincent-genest.github.io/4w4-2024-gr2/
+-   Créer un template-part qui permettra d'afficher les vagues. -->
