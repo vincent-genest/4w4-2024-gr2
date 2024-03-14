@@ -10,24 +10,23 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-width: 200px;
     flex: 1 0 calc((var(--flex-basis-contenu) - 100px) / 4);
     border-radius: 10px;
     background-color: var(--couleur-arriere-entete);
 
     h4 {
-        margin: 0rem;
-        margin-top: 1rem;
+        margin: 1rem 0;
         color: var(--couleur-entete);
     }
-    h5 {
-        margin: 0rem;
-    }
-    h6 {
-        margin: 0rem;
+    p {
+        margin-bottom: 0.5rem;
     }
 }
 .carte * {
-    text-align: center;
+    // text-align: center;
+}
+.carte p:last-of-type {
+    margin: 0;
 }

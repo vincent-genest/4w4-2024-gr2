@@ -16,6 +16,7 @@
     </head>
     <body>
         <header id="menu" class="global">
+            <div>Nous contacter</div>
             <?= get_custom_logo(); ?>
             <div class="entete__menu">
                 <input id="chk_burger" type="checkbox" name="">

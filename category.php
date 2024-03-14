@@ -1,13 +1,13 @@
 <?php
     /**
-     * Modèle de base index.php
+     * Modèle de base de l'affichage d'une liste d'une certaine catégorie
      */
     get_header();
 ?>
         <!-- <h1>category</h1> -->
         <div id="accueil" class="global">
             <section class="accueil__section">
-                <h2>Accueil (h2)</h2>
+                <h2>La catégorie</h2>
                 <div class="section__cours">
         
                     <?php if(have_posts()):

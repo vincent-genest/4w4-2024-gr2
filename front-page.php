@@ -8,8 +8,10 @@
         <div id="entete" class="global">
 
             <section class="entete__header">
-                <h1 class="bgc-texte"><?= get_bloginfo("name"); ?></h1>
-                <h2 class="bgc-texte"><?= get_bloginfo("description"); ?></span></h2>
+                <!-- get_bloginfo("name"); -->
+                <!-- get_bloginfo("description"); -->
+                <h1 class="bgc-texte"> L'aventure vous appelle</h1>
+                <h2 class="bgc-texte">Répondez-y</span></h2>
                 <h3 class="bgc-texte">TIM - Collège de maisonneuve</h3>
                 <button class="entete__button">S'inscrire</button>
             </section>
