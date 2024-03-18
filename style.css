@@ -380,6 +380,7 @@ body {
 #entete {
   background-image: url(images/horizon4.jpg);
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-position: 80% 75%;
   background-size: cover;
   padding: 3rem 0;
@@ -562,15 +563,17 @@ body {
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   min-width: 200px;
-  flex: 1 0 calc((var(--flex-basis-contenu) - 100px) / 4);
+  flex: 1 0 calc((var(--flex-basis-contenu) - 100px) / 3);
   border-radius: 10px;
   background-color: var(--couleur-arriere-entete);
 }
 .carte h4 {
-  margin: 1rem 0;
+  margin: 0;
+  display: flex;
+  align-items: flex-end;
   color: var(--couleur-entete);
 }
 .carte p {
@@ -579,6 +582,28 @@ body {
 
 .carte p:last-of-type {
   margin: 0;
+}
+
+.carte .post-categories {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+}
+
+.carte .post-categories li::after {
+  content: " | ";
+}
+
+.carte .post-categories li:last-of-type:after {
+  content: "";
+}
+
+.carte .post-categories a {
+  text-decoration: none;
+}
+
+.carte .post-categories a:hover {
+  text-decoration: underline;
 }
 
 /*
@@ -623,7 +648,7 @@ body {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: clamp(0.8rem, 1.8vw, 1rem);
+  font-size: clamp(1rem, 2vw, 1.3rem);
 }
 
 .entete__contact:hover .btn_menu {
@@ -646,8 +671,8 @@ body {
 
 #menu .icone_contact {
   margin: 0.5rem;
-  max-width: 30px;
-  min-width: 20px;
+  max-height: 30px;
+  min-height: 20px;
 }
 
 #menu .icone_contact path {
@@ -745,8 +770,7 @@ body {
 }
 
 .icone {
-  width: 4vw;
-  height: auto;
+  height: 4vw;
 }
 
 .icone_burger {
@@ -757,8 +781,8 @@ body {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  max-width: 80px;
-  min-width: 30px;
+  max-height: 80px;
+  min-height: 30px;
 }
 
 #chk_burger:checked ~ #burger .burger_rotation {

@@ -45,7 +45,7 @@
     color: white;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: clamp(0.8rem, 1.8vw, 1rem);
+    font-size: clamp(1rem, 2vw, 1.3rem);
 }
 .entete__contact:hover .btn_menu {
     // Effet hover bouton contact
@@ -68,8 +68,8 @@
 #menu .icone_contact {
     // Icone contact
     margin: 0.5rem;
-    max-width: 30px;
-    min-width: 20px;
+    max-height: 30px;
+    min-height: 20px;
 }
 #menu .icone_contact path {
     // Icone contact
@@ -202,8 +202,10 @@
     transform: rotate(90deg);
 }
 .icone {
-    width: 4vw;
-    height: auto;
+    // width: 4vw;
+    // height: auto;
+    // height: 100%;
+    height: 4vw;
 }
 .icone_burger {
     // icone burger
@@ -214,8 +216,8 @@
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    max-width: 80px;
-    min-width: 30px;
+    max-height: 80px;
+    min-height: 30px;
 }
 #chk_burger:checked ~ #burger .burger_rotation {
     // burger rotation

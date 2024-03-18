@@ -31,9 +31,9 @@
                         while(have_posts()): the_post();?>
                             <div class="carte">
                                 <h4><?php the_title(); ?></h4>
+                                <?php the_category() ?>
                                 <p><?= wp_trim_words(get_the_content(), 10); ?></p>
                                 <p><a href="<?= get_permalink() ?>">Voir plus</a></p>
-                                <?php the_category() ?>
                             </div>
                         <?php endwhile; ?>
                         <?php endif; ?>
