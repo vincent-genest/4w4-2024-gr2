@@ -20,6 +20,8 @@
     width: 100vw;
     padding: 0 1rem;
     border-bottom: 1px solid white;
+    // background-color: var(--couleur-arriere-entete);
+    // backdrop-filter: blur(30px);
 }
 #menu .entete__contenu {
     // Entete avec marge
@@ -29,11 +31,21 @@
     width: 100%;
     max-width: 1500px;
 }
+#menu .entete__contenu > * {
+    // Entete avec marge
+    flex: 0 0 33%;
+}
+#menu .entete__contenu > a {
+    display: flex;
+    justify-content: center;
+}
+
 .btn_menu {
     // Boutons du menu
     color: white;
     text-decoration: none;
     text-transform: uppercase;
+    font-size: clamp(0.8rem, 1.8vw, 1rem);
 }
 .entete__contact:hover .btn_menu {
     // Effet hover bouton contact
@@ -43,30 +55,38 @@
     // Effet hover bouton menu
     text-decoration: underline;
 }
-#menu img {
-    // Logo
-    width: 150px;
-    height: auto;
-    // filter: invert(1);
+
+#menu .entete__contact {
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 #menu .entete__contact a {
     // Contact
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 #menu .icone_contact {
     // Icone contact
-    margin: 1rem;
+    margin: 0.5rem;
+    max-width: 30px;
+    min-width: 20px;
 }
 #menu .icone_contact path {
     // Icone contact
     stroke: white;
+    stroke-width: 0.8;
+}
+#menu img {
+    // Logo
+    width: 10vw;
+    max-width: 150px;
+    min-width: 80px;
+    height: auto;
+    // filter: invert(1);
 }
 
 .entete__menu {
     // Menu
-    width: 11%;
     height: 80px;
     display: flex;
     justify-content: flex-end;
@@ -74,21 +94,19 @@
 }
 
 .menu-principal-container {
-    //Nav
+    //Nav (cache)
     position: fixed;
     top: 0;
     right: 0;
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem 0;
+    justify-content: flex-start;
+    padding: 5rem;
     background-color: hsla(var(--hu1), var(--s-couleur-arriere), var(--l1), 0.8);
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     backdrop-filter: blur(10px);
-
     // @media screen and (min-width: 700px) {
     //     position: static;
     //     transform: translateX(0);
@@ -107,11 +125,10 @@
     display: flex;
     flex-direction: column;
     list-style-type: none;
-    justify-content: space-between;
-    align-items: center;
-    height: 80%;
+    width: 100%;
+    max-width: 1500px;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
 
     // @media screen and (min-width: 700px) {
     //     flex-direction: row;
@@ -125,13 +142,19 @@
     // li
     height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex: 1 1 auto;
+    font-size: clamp(1.5rem, 3vw, 1.75rem);
     // @media screen and (min-width: 700px) {
     //     border-left: none;
     //     border-left: 2px solid var(--couleur-arriere-footer);
     // }
+}
+.menu-item::after {
+    // li
+    color: white;
+    content: "\279C";
+    margin-left: auto;
 }
 
 .menu-item a {
@@ -139,16 +162,20 @@
     margin: 1rem;
     text-decoration: none;
     text-align: center;
-    color: var(--couleur-arriere-footer);
-    font-weight: bold;
-    font-size: clamp(2rem, 4vw, 3rem);
+    // color: var(--couleur-arriere-footer);
+    color: white;
+    // font-weight: bold;
     // @media screen and (min-width: 700px) {
     //     font-size: clamp(1rem, 1.5vw, 1.5rem);
     // }
 }
-.menu-item a:hover {
+.menu-item:hover::after {
     // li a hover
     color: var(--couleur-arriere-galerie);
+}
+.menu-item a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
 }
 
 #chk_burger {
@@ -174,7 +201,10 @@
     // burger quand checked
     transform: rotate(90deg);
 }
-
+.icone {
+    width: 4vw;
+    height: auto;
+}
 .icone_burger {
     // icone burger
     cursor: pointer;
@@ -184,7 +214,8 @@
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    width: 80px;
+    max-width: 80px;
+    min-width: 30px;
 }
 #chk_burger:checked ~ #burger .burger_rotation {
     // burger rotation

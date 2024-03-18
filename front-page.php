@@ -8,12 +8,12 @@
         <div id="entete" class="global">
 
             <section class="entete__header">
-                <!-- get_bloginfo("name"); -->
-                <!-- get_bloginfo("description"); -->
-                <h1 class="bgc-texte"> L'aventure vous appelle</h1>
-                <h2 class="bgc-texte">Répondez-y</span></h2>
-                <h3 class="bgc-texte">TIM - Collège de maisonneuve</h3>
-                <button class="entete__button">S'inscrire</button>
+                <h1 class="bgc-texte"><?= get_bloginfo("name"); ?> </h1>
+                <h2 class="bgc-texte"><?= get_bloginfo("description"); ?> </span></h2>
+                <!-- <h1 class="bgc-texte"> L'aventure vous appelle</h1> -->
+                <!-- <h2 class="bgc-texte">Répondez-y</span></h2> -->
+                <h3 class="bgc-texte">Découvrez une foule de voyages à portée de main</h3>
+                <button class="entete__button">Voir plus</button>
             </section>
             <?php
                 get_template_part('gabarit/vague')
@@ -23,13 +23,17 @@
             <section class="accueil__section">
                 <h2>Accueil (h2)</h2>
                 <div class="section__cours">
-        
+                <!-- 
+                    get_the_title(); // retourne une chaine qui contient le titre
+                    the_title(); // echo du titre
+                 -->
                     <?php if(have_posts()):
                         while(have_posts()): the_post();?>
                             <div class="carte">
                                 <h4><?php the_title(); ?></h4>
                                 <p><?= wp_trim_words(get_the_content(), 10); ?></p>
                                 <p><a href="<?= get_permalink() ?>">Voir plus</a></p>
+                                <?php the_category() ?>
                             </div>
                         <?php endwhile; ?>
                         <?php endif; ?>

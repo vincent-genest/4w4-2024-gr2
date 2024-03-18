@@ -302,7 +302,7 @@ body {
 
 #entete {
   background-color: var(--couleur-arriere-entete);
-  color: var(--couleur-entete);
+  color: var(--couleur-arriere-entete);
   position: relative;
   line-height: 1.5;
 }
@@ -372,16 +372,35 @@ body {
 /*                    Règles des sections                     */
 /* ////////////////////////////////////////////////////////// */
 .entete__header {
-  background-image: url("images/logo.png");
-  background-repeat: no-repeat;
-  background-position: 90% 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
+#entete {
+  background-image: url(images/horizon4.jpg);
+  background-repeat: no-repeat;
+  background-position: 80% 75%;
+  background-size: cover;
+  padding: 3rem 0;
+}
+
+#entete h2 {
+  text-shadow: 3px 3px 3px hsla(var(--hu1), 0%, var(--l5), 40%);
+}
+
 .entete__header span {
   display: block;
+}
+
+#entete h1,
+#entete h2,
+#entete h3 {
+  margin: 0;
+}
+
+#entete h3 {
+  margin-top: 5rem;
 }
 
 .footer__section {
@@ -591,10 +610,20 @@ body {
   max-width: 1500px;
 }
 
+#menu .entete__contenu > * {
+  flex: 0 0 33%;
+}
+
+#menu .entete__contenu > a {
+  display: flex;
+  justify-content: center;
+}
+
 .btn_menu {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
+  font-size: clamp(0.8rem, 1.8vw, 1rem);
 }
 
 .entete__contact:hover .btn_menu {
@@ -605,27 +634,35 @@ body {
   text-decoration: underline;
 }
 
-#menu img {
-  width: 150px;
-  height: auto;
+#menu .entete__contact {
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 #menu .entete__contact a {
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
 #menu .icone_contact {
-  margin: 1rem;
+  margin: 0.5rem;
+  max-width: 30px;
+  min-width: 20px;
 }
 
 #menu .icone_contact path {
   stroke: white;
+  stroke-width: 0.8;
+}
+
+#menu img {
+  width: 10vw;
+  max-width: 150px;
+  min-width: 80px;
+  height: auto;
 }
 
 .entete__menu {
-  width: 11%;
   height: 80px;
   display: flex;
   justify-content: flex-end;
@@ -639,9 +676,8 @@ body {
   width: 100vw;
   height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem 0;
+  justify-content: flex-start;
+  padding: 5rem;
   background-color: hsla(var(--hu1), var(--s-couleur-arriere), var(--l1), 0.8);
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
@@ -653,32 +689,40 @@ body {
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  justify-content: space-between;
-  align-items: center;
-  height: 80%;
+  width: 100%;
+  max-width: 1500px;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .menu-item {
   height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex: 1 1 auto;
+  font-size: clamp(1.5rem, 3vw, 1.75rem);
+}
+
+.menu-item::after {
+  color: white;
+  content: "➜";
+  margin-left: auto;
 }
 
 .menu-item a {
   margin: 1rem;
   text-decoration: none;
   text-align: center;
-  color: var(--couleur-arriere-footer);
-  font-weight: bold;
-  font-size: clamp(2rem, 4vw, 3rem);
+  color: white;
+}
+
+.menu-item:hover::after {
+  color: var(--couleur-arriere-galerie);
 }
 
 .menu-item a:hover {
-  color: var(--couleur-arriere-galerie);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
 }
 
 #chk_burger {
@@ -700,6 +744,11 @@ body {
   transform: rotate(90deg);
 }
 
+.icone {
+  width: 4vw;
+  height: auto;
+}
+
 .icone_burger {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -708,7 +757,8 @@ body {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  width: 80px;
+  max-width: 80px;
+  min-width: 30px;
 }
 
 #chk_burger:checked ~ #burger .burger_rotation {
