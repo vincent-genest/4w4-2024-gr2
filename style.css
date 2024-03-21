@@ -16,6 +16,19 @@ Ce thème a été développé dans le cadre du cours 4w4
 /* ////////////////////////////////////////////////////////// */
 /*                       Variables css                        */
 /* ////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////// */
+/*                 Règles des trucs utiles                    */
+/* ////////////////////////////////////////////////////////// */
+.bgc-texte {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+}
+@media screen and (min-width: 1100px) {
+  .bgc-texte {
+    background-color: transparent;
+  }
+}
+
 :root {
   --nb-element: 5;
   --l-initial: 80%;
@@ -28,7 +41,7 @@ Ce thème a été développé dans le cadre du cours 4w4
   --l3: calc(var(--l2) - var(--increment-angle));
   --l4: calc(var(--l3) - var(--increment-angle));
   --l5: calc(var(--l4) - var(--increment-angle));
-  --s-couleur: 100%;
+  --s-couleur: 70%;
   --l-couleur: 15%;
   --couleur-arriere-entete: hsl(var(--hu1), var(--s-couleur-arriere), var(--l1));
   --couleur-arriere-accueil: hsl(var(--hu1), var(--s-couleur-arriere), var(--l2));
@@ -98,17 +111,156 @@ Ce thème a été développé dans le cadre du cours 4w4
   --_couleur-arriere-vague: hsl(var(--hu1), var(--s-couleur-arriere), var(--l5));
 }
 
-/* ////////////////////////////////////////////////////////// */
-/*                 Règles des trucs utiles                    */
-/* ////////////////////////////////////////////////////////// */
-.bgc-texte {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 1rem;
+/* Cération des classes de couleurs
+    .clr-primaire-100 {}
+    .bck-primaire-100 {}
+*/
+.clr-primaire-100 {
+  color: hsl(220, 100%, 85%);
 }
-@media screen and (min-width: 1100px) {
-  .bgc-texte {
-    background-color: transparent;
-  }
+
+.bck-primaire-100 {
+  background-color: hsl(220, 100%, 85%);
+}
+
+.clr-primaire-200 {
+  color: hsl(220, 100%, 60%);
+}
+
+.bck-primaire-200 {
+  background-color: hsl(220, 100%, 60%);
+}
+
+.clr-primaire-300 {
+  color: hsl(220, 100%, 30%);
+}
+
+.bck-primaire-300 {
+  background-color: hsl(220, 100%, 30%);
+}
+
+.clr-primaire-400 {
+  color: hsl(220, 100%, 15%);
+}
+
+.bck-primaire-400 {
+  background-color: hsl(220, 100%, 15%);
+}
+
+.clr-secondaire-100 {
+  color: hsl(40, 100%, 85%);
+}
+
+.bck-secondaire-100 {
+  background-color: hsl(40, 100%, 85%);
+}
+
+.clr-secondaire-200 {
+  color: hsl(40, 100%, 50%);
+}
+
+.bck-secondaire-200 {
+  background-color: hsl(40, 100%, 50%);
+}
+
+.clr-secondaire-300 {
+  color: hsl(40, 100%, 30%);
+}
+
+.bck-secondaire-300 {
+  background-color: hsl(40, 100%, 30%);
+}
+
+.clr-secondaire-400 {
+  color: hsl(40, 100%, 15%);
+}
+
+.bck-secondaire-400 {
+  background-color: hsl(40, 100%, 15%);
+}
+
+.clr-ternaire-100 {
+  color: hsl(10, 100%, 85%);
+}
+
+.bck-ternaire-100 {
+  background-color: hsl(10, 100%, 85%);
+}
+
+.clr-ternaire-200 {
+  color: hsl(10, 100%, 50%);
+}
+
+.bck-ternaire-200 {
+  background-color: hsl(10, 100%, 50%);
+}
+
+.clr-ternaire-300 {
+  color: hsl(10, 100%, 30%);
+}
+
+.bck-ternaire-300 {
+  background-color: hsl(10, 100%, 30%);
+}
+
+.clr-ternaire-400 {
+  color: hsl(10, 100%, 15%);
+}
+
+.bck-ternaire-400 {
+  background-color: hsl(10, 100%, 15%);
+}
+
+.clr-vert-100 {
+  color: hsl(70, 100%, 85%);
+}
+
+.bck-vert-100 {
+  background-color: hsl(70, 100%, 85%);
+}
+
+.clr-vert-200 {
+  color: hsl(70, 100%, 50%);
+}
+
+.bck-vert-200 {
+  background-color: hsl(70, 100%, 50%);
+}
+
+.clr-vert-300 {
+  color: hsl(70, 100%, 30%);
+}
+
+.bck-vert-300 {
+  background-color: hsl(70, 100%, 30%);
+}
+
+.clr-vert-400 {
+  color: hsl(70, 100%, 15%);
+}
+
+.bck-vert-400 {
+  background-color: hsl(70, 100%, 15%);
+}
+
+.clr-agencement-primaire {
+  color: hsl(220, 100%, 85%);
+  background-image: linear-gradient(90deg, hsl(220, 100%, 15%), hsl(220, 100%, 60%));
+}
+
+.clr-agencement-secondaire {
+  color: hsl(40, 100%, 15%);
+  background-color: hsl(40, 100%, 85%);
+}
+
+.clr-agencement-ternaire {
+  color: hsl(10, 100%, 15%);
+  background-color: hsl(10, 100%, 85%);
+}
+
+.clr-agencement-vert {
+  color: hsl(70, 100%, 15%);
+  background-color: hsl(70, 100%, 85%);
 }
 
 /* ////////////////////////////////////////////////////////// */

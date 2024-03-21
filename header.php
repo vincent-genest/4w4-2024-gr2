@@ -15,7 +15,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;1,500&display=swap" rel="stylesheet" />
     </head>
     <body>
-        <header id="menu" class="global">
+        <header id="menu" class="global clr-agencement-primaire">
             <div class="entete__contenu">
                 <div class="entete__contact">
                     <a href="#" class="btn_menu">Nous contacter
@@ -30,11 +30,9 @@
                 <div class="entete__menu">
                     <input id="chk_burger" type="checkbox" name="">
                     <label id="burger" for="chk_burger">
-                        <p class="btn_menu">menu</p>
-                    <!-- <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" color="#000"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path></svg> -->
-                        
+                        <p class="btn_menu">menu</p>                        
                     
-                    <svg class="icone_burger icone burger_rotation" viewBox="0 0 100 100">
+                        <svg class="icone_burger icone burger_rotation" viewBox="0 0 100 100">
                             <path
                                   class="trait haut"
                                   d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />

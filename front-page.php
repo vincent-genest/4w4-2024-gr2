@@ -36,8 +36,34 @@
                                 <p><a href="<?= get_permalink() ?>">Voir plus</a></p>
                             </div>
                         <?php endwhile; ?>
-                        <?php endif; ?>
+                    <?php endif; ?>
 
+                    <div class="section__cours">
+                    <?php
+                        $args = array(
+                            'orderby' => 'name',
+                            'parent' => 0
+                        );
+
+                        $categories = get_categories($args);
+
+                        foreach ($categories as $category) {
+                        $cat_link = get_term_link($category);
+                        $cat_desc = $category->description;
+                        $cat_desc_words = explode(' ', $cat_desc);
+                        $cat_desc_trimmed = implode(' ', array_slice($cat_desc_words, 0, 10));
+                        $post_count = $category->count;
+                        ?>
+
+                        <div class="carte">
+                            <h2><a href="<?php echo esc_url($cat_link); ?>"><?php echo $category->name; ?></a></h2>
+                            <p><?php echo $cat_desc_trimmed; ?></p>
+                            <p>Nombre d'articles : <?php echo $post_count; ?></p>
+                            <p><a href="<?php echo esc_url($cat_link); ?>">Voir les destinations</a></p>
+                        </div>
+                    
+                    <?php } ?>
+                    </div>
                 </div>
             </section>
         </div>
