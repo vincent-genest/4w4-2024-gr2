@@ -12,25 +12,7 @@
 </nav>
 */
 
-#menu {
-    // Entete
-    z-index: 2;
-    position: fixed;
-    // flex: 0 1 1500px;
-    width: 100vw;
-    padding: 0 1rem;
-    border-bottom: 1px solid white;
-    // background-color: var(--couleur-arriere-entete);
-    // backdrop-filter: blur(30px);
-}
-#menu .entete__contenu {
-    // Entete avec marge
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1500px;
-}
+
 #menu .entete__contenu > * {
     // Entete avec marge
     flex: 0 0 33%;

@@ -26,14 +26,32 @@ body {
     padding-top: 0;
     position: relative;
 }
-.entete__header {
-    padding-top: 0;
+.global .entete__header {
+    padding-left: 0;
+    padding-right: 0;
+    flex: 0 1 var(--flex-basis-haut-de-pli);
 }
 #entete {
     // background-color: var(--couleur-arriere-entete);
     color: var(--couleur-arriere-entete);
     position: relative;
     line-height: 1.5;
+}
+#menu {
+    z-index: 2;
+    position: fixed;
+    width: 100vw;
+    padding: 0 1rem;
+    border-bottom: 1px solid white;
+}
+
+#menu .entete__contenu {
+    // Entete avec marge
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: var(--flex-basis-haut-de-pli);
 }
 #accueil {
     background-color: var(--couleur-arriere-accueil);

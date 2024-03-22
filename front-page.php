@@ -11,7 +11,9 @@
                 <h1 class="bgc-texte"><?= get_bloginfo("name"); ?> </h1>
                 <h2 class="bgc-texte"><?= get_bloginfo("description"); ?> </span></h2>
                 <h3 class="bgc-texte">Découvrez une foule de voyages à portée de main</h3>
-                <button class="entete__button clr-agencement-secondaire">Voir plus</button>
+                <a href="#accueil">
+                    <button class="entete__button clr-agencement-secondaire">Voir plus</button>
+                </a>
             </section>
             <?php
                 get_template_part('gabarit/vague')
@@ -29,8 +31,7 @@
                         foreach ($categories as $category) {
                         $cat_liens = get_term_link($category);
                         $cat_desc = $category->description;
-                        $cat_desc_mots = explode(' ', $cat_desc);
-                        $cat_desc_trimmed = implode(' ', array_slice($cat_desc_mots, 0, 10));
+                        $cat_desc_trimmed = wp_trim_words($cat_desc, 10);
                         $post_compte = $category->count;
                         $image_url = get_template_directory_uri() . '/images/categories/' . strtolower($category->slug) . ".jpg";
                         ?>
@@ -42,6 +43,7 @@
                         </div>
                         
                     <?php } ?>
+
                 </div>
                 <h3>Destinations populaires</h3>
                 <div class="section__destinations">
