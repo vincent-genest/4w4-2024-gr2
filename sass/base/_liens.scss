@@ -13,12 +13,12 @@ a {
     }
 }
 
-#accueil a {
-    color: var(--couleur-entete);
-    &:visited {
-        color: var(--couleur-liens-visited-accueil);
-    }
-}
+// #accueil a {
+//     color: var(--couleur-entete);
+//     &:visited {
+//         color: var(--couleur-liens-visited-accueil);
+//     }
+// }
 
 #galerie a {
     color: var(--couleur-liens-galerie);

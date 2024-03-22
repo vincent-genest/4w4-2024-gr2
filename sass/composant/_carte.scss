@@ -1,20 +1,69 @@
-.section__cours {
+.section__destinations,
+.section__categories {
     display: flex;
     flex-wrap: wrap;
     // justify-content: center;
     gap: 1rem;
+    margin-bottom: 5rem;
 }
 
 .carte {
     padding: 2rem;
     display: flex;
     flex-direction: column;
+    background-color: var(--couleur-arriere-entete);
+}
+
+.section__categories .carte {
+    position: relative;
+    flex: 1 0 calc((var(--flex-basis-contenu) - 100px) / 2);
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    clip-path: inset(0);
+    transition: clip-path 0.3s ease-in-out;
+    min-height: 20rem;
+
+    // obscursir les background images, mais pas le texte
+    &:hover {
+        clip-path: inset(10px);
+    }
+    &:hover::before {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.35);
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    * {
+        text-align: center;
+        color: white;
+        z-index: 1;
+    }
+    p {
+        font-size: clamp(0.5rem, 0.5rem + 0.5vw, 0.75rem);
+    }
+    h2 {
+        font-size: clamp(1.5rem, 1.5rem + 2vw, 2.5rem);
+        margin: 0.5rem;
+        a {
+            text-decoration: none;
+        }
+    }
+}
+.section__destinations .carte {
     justify-content: flex-start;
     align-items: flex-start;
     min-width: 200px;
     flex: 1 0 calc((var(--flex-basis-contenu) - 100px) / 3);
-    border-radius: 10px;
-    background-color: var(--couleur-arriere-entete);
 
     h4 {
         margin: 0;

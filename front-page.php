@@ -5,15 +5,13 @@
     get_header();
 ?>
         <!-- <h1>Front-page.php</h1> -->
-        <div id="entete" class="global">
+        <div id="entete" class="bck-primaire-300 global">
 
             <section class="entete__header">
                 <h1 class="bgc-texte"><?= get_bloginfo("name"); ?> </h1>
                 <h2 class="bgc-texte"><?= get_bloginfo("description"); ?> </span></h2>
-                <!-- <h1 class="bgc-texte"> L'aventure vous appelle</h1> -->
-                <!-- <h2 class="bgc-texte">Répondez-y</span></h2> -->
                 <h3 class="bgc-texte">Découvrez une foule de voyages à portée de main</h3>
-                <button class="entete__button">Voir plus</button>
+                <button class="entete__button clr-agencement-secondaire">Voir plus</button>
             </section>
             <?php
                 get_template_part('gabarit/vague')
@@ -22,11 +20,36 @@
         <div id="accueil" class="global">
             <section class="accueil__section">
                 <h2>Accueil (h2)</h2>
-                <div class="section__cours">
+                <h3>Catégories</h3>
+                <div class="section__categories">
+                    <?php
+                      
+                        $categories = get_categories();
+                    
+                        foreach ($categories as $category) {
+                        $cat_liens = get_term_link($category);
+                        $cat_desc = $category->description;
+                        $cat_desc_mots = explode(' ', $cat_desc);
+                        $cat_desc_trimmed = implode(' ', array_slice($cat_desc_mots, 0, 10));
+                        $post_compte = $category->count;
+                        $image_url = get_template_directory_uri() . '/images/categories/' . strtolower($category->slug) . ".jpg";
+                        ?>
+
+                            <div class="carte" style="background-image: url('<?php echo $image_url; ?>');">
+                            <h2><a href="<?php echo esc_url($cat_liens); ?>"><?php echo $category->name; ?></a></h2>
+                            <p><?php echo $cat_desc_trimmed; ?></p>
+                            <p><a href="<?php echo esc_url($cat_link); ?>">Voir les <?php echo $post_compte; ?> destinations</a></p>
+                        </div>
+                        
+                    <?php } ?>
+                </div>
+                <h3>Destinations populaires</h3>
+                <div class="section__destinations">
                 <!-- 
                     get_the_title(); // retourne une chaine qui contient le titre
                     the_title(); // echo du titre
                  -->
+
                     <?php if(have_posts()):
                         while(have_posts()): the_post();?>
                             <div class="carte">
@@ -38,33 +61,6 @@
                         <?php endwhile; ?>
                     <?php endif; ?>
 
-                    <div class="section__cours">
-                    <?php
-                        $args = array(
-                            'orderby' => 'name',
-                            'parent' => 0
-                        );
-
-                        $categories = get_categories($args);
-
-                        foreach ($categories as $category) {
-                        $cat_link = get_term_link($category);
-                        $cat_desc = $category->description;
-                        $cat_desc_words = explode(' ', $cat_desc);
-                        $cat_desc_trimmed = implode(' ', array_slice($cat_desc_words, 0, 10));
-                        $post_count = $category->count;
-                        ?>
-
-                        <div class="carte">
-                            <h2><a href="<?php echo esc_url($cat_link); ?>"><?php echo $category->name; ?></a></h2>
-                            <p><?php echo $cat_desc_trimmed; ?></p>
-                            <p>Nombre d'articles : <?php echo $post_count; ?></p>
-                            <p><a href="<?php echo esc_url($cat_link); ?>">Voir les destinations</a></p>
-                        </div>
-                    
-                    <?php } ?>
-                    </div>
-                </div>
             </section>
         </div>
         <div id="galerie" class="global diagonal">

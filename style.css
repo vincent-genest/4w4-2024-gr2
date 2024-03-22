@@ -249,8 +249,8 @@ Ce thème a été développé dans le cadre du cours 4w4
 }
 
 .clr-agencement-secondaire {
-  color: hsl(40, 100%, 15%);
-  background-color: hsl(40, 100%, 85%);
+  color: hsl(40, 100%, 85%);
+  background-image: linear-gradient(90deg, hsl(40, 100%, 85%), hsl(40, 100%, 30%));
 }
 
 .clr-agencement-ternaire {
@@ -259,8 +259,8 @@ Ce thème a été développé dans le cadre du cours 4w4
 }
 
 .clr-agencement-vert {
-  color: hsl(70, 100%, 15%);
-  background-color: hsl(70, 100%, 85%);
+  color: hsl(70, 100%, 85%);
+  background-image: linear-gradient(90deg, hsl(70, 100%, 15%), hsl(70, 100%, 30%));
 }
 
 /* ////////////////////////////////////////////////////////// */
@@ -363,13 +363,6 @@ a:hover, a:focus {
   color: var(--couleur-liens-visited-entete);
 }
 
-#accueil a {
-  color: var(--couleur-entete);
-}
-#accueil a:visited {
-  color: var(--couleur-liens-visited-accueil);
-}
-
 #galerie a {
   color: var(--couleur-liens-galerie);
 }
@@ -393,9 +386,8 @@ a:hover, a:focus {
 
 button.entete__button {
   font-size: clamp(1.375rem, 0.4375rem + 3vw, 2.5rem);
-  background-image: linear-gradient(45deg, var(--couleur-arriere-entete) 0%, var(--couleur-arriere-entete) 100%);
-  color: var(--couleur-entete);
-  border: solid 3px var(--couleur-arriere-footer);
+  color: white;
+  border: none;
   border-radius: 10px;
   padding: 1rem 2rem;
   cursor: pointer;
@@ -453,7 +445,6 @@ body {
 }
 
 #entete {
-  background-color: var(--couleur-arriere-entete);
   color: var(--couleur-arriere-entete);
   position: relative;
   line-height: 1.5;
@@ -530,7 +521,6 @@ body {
 }
 
 #entete {
-  background-image: url(images/horizon4.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 80% 75%;
@@ -705,30 +695,77 @@ body {
   fill: var(--couleur-arriere-galerie);
 }
 
-.section__cours {
+.section__destinations,
+.section__categories {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  margin-bottom: 5rem;
 }
 
 .carte {
   padding: 2rem;
   display: flex;
   flex-direction: column;
+  background-color: var(--couleur-arriere-entete);
+}
+
+.section__categories .carte {
+  position: relative;
+  flex: 1 0 calc((var(--flex-basis-contenu) - 100px) / 2);
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  clip-path: inset(0);
+  transition: clip-path 0.3s ease-in-out;
+  min-height: 20rem;
+}
+.section__categories .carte:hover {
+  clip-path: inset(10px);
+}
+.section__categories .carte:hover::before {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.section__categories .carte::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  transition: background-color 0.3s ease-in-out;
+}
+.section__categories .carte * {
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+.section__categories .carte p {
+  font-size: clamp(0.5rem, 0.5rem + 0.5vw, 0.75rem);
+}
+.section__categories .carte h2 {
+  font-size: clamp(1.5rem, 1.5rem + 2vw, 2.5rem);
+  margin: 0.5rem;
+}
+.section__categories .carte h2 a {
+  text-decoration: none;
+}
+
+.section__destinations .carte {
   justify-content: flex-start;
   align-items: flex-start;
   min-width: 200px;
   flex: 1 0 calc((var(--flex-basis-contenu) - 100px) / 3);
-  border-radius: 10px;
-  background-color: var(--couleur-arriere-entete);
 }
-.carte h4 {
+.section__destinations .carte h4 {
   margin: 0;
   display: flex;
   align-items: flex-end;
   color: var(--couleur-entete);
 }
-.carte p {
+.section__destinations .carte p {
   margin-bottom: 0.5rem;
 }
 

@@ -8,7 +8,7 @@
         <div id="accueil" class="global">
             <section class="accueil__section">
                 <h2>La catégorie</h2>
-                <div class="section__cours">
+                <div class="section__destinations">
         
                     <?php if(have_posts()):
                         while(have_posts()): the_post();?>
