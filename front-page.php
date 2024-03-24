@@ -5,14 +5,14 @@
     get_header();
 ?>
         <!-- <h1>Front-page.php</h1> -->
-        <div id="entete" class="bck-primaire-300 global">
+        <div id="entete" class="global clr-agencement-primaire">
 
             <section class="entete__header">
                 <h1 class="bgc-texte"><?= get_bloginfo("name"); ?> </h1>
                 <h2 class="bgc-texte"><?= get_bloginfo("description"); ?> </span></h2>
                 <h3 class="bgc-texte">Découvrez une foule de voyages à portée de main</h3>
                 <a href="#accueil">
-                    <button class="entete__button clr-agencement-secondaire">Voir plus</button>
+                    <button class="entete__button bck-secondaire-200">Voir plus</button>
                 </a>
             </section>
             <?php
@@ -39,7 +39,15 @@
                             <div class="carte" style="background-image: url('<?php echo $image_url; ?>');">
                             <h2><a href="<?php echo esc_url($cat_liens); ?>"><?php echo $category->name; ?></a></h2>
                             <p><?php echo $cat_desc_trimmed; ?></p>
-                            <p><a href="<?php echo esc_url($cat_link); ?>">Voir les <?php echo $post_compte; ?> destinations</a></p>
+                            <p><a href="<?php echo esc_url($cat_liens); ?>">
+                            <?php
+                                if($post_compte>1){
+                                    echo "Voir les " . $post_compte . " destinations";
+                                } else {
+                                    echo "Voir la destination";
+                                }
+                            ?>
+                        </a></p>
                         </div>
                         
                     <?php } ?>

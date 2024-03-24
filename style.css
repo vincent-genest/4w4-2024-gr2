@@ -245,8 +245,8 @@ Ce thème a été développé dans le cadre du cours 4w4
 }
 
 .clr-agencement-secondaire {
-  color: hsl(40, 100%, 85%);
-  background-image: linear-gradient(90deg, hsl(40, 100%, 85%), hsl(40, 100%, 30%));
+  color: hsl(40, 100%, 15%);
+  background-color: hsl(40, 100%, 85%);
 }
 
 .clr-agencement-ternaire {
@@ -358,34 +358,10 @@ blockquote span {
 
 a {
   text-decoration: underline;
+  color: var(--couleur-entete);
 }
 a:hover, a:focus {
   text-decoration: none;
-}
-
-#entete .entete__header a:visited {
-  color: var(--couleur-liens-visited-entete);
-}
-
-#galerie a {
-  color: var(--couleur-liens-galerie);
-}
-#galerie a:visited {
-  color: var(--couleur-liens-visited-galerie);
-}
-
-#evenement a {
-  color: var(--couleur-liens-evenement);
-}
-#evenement a:visited {
-  color: var(--couleur-liens-visited-evenement);
-}
-
-#footer a {
-  color: var(--couleur-liens-footer);
-}
-#footer a:visited {
-  color: var(--couleur-liens-visited-footer);
 }
 
 button.entete__button {
@@ -445,8 +421,8 @@ body {
 }
 
 .global .entete__header {
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
   flex: 0 1 var(--flex-basis-haut-de-pli);
 }
 

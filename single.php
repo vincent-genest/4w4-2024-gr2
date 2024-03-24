@@ -15,11 +15,11 @@
                         while(have_posts()): the_post();?>
                             <div class="carte">
                                 <h4><?php the_title(); ?></h4>
-                                <p><?php the_content(); ?></p>
+                                <?php the_category() ?>
+                                <?php the_content(); ?>
                             </div>
                         <?php endwhile; ?>
                         <?php endif; ?>
-
                 </div>
             </section>
         </div>

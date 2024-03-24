@@ -1,42 +1,42 @@
 a {
     text-decoration: underline;
+    color: var(--couleur-entete);
     &:hover,
     &:focus {
         text-decoration: none;
     }
 }
 
-#entete .entete__header a {
-    //color: var(--couleur-liens-entete);
-    &:visited {
-        color: var(--couleur-liens-visited-entete);
-    }
-}
+// #entete .entete__header a {
+// color: var(--couleur-liens-entete);
+//     &:visited {
+//         color: var(--couleur-liens-visited-entete);
+//     }
+// }
 
 // #accueil a {
-//     color: var(--couleur-entete);
 //     &:visited {
 //         color: var(--couleur-liens-visited-accueil);
 //     }
 // }
 
-#galerie a {
-    color: var(--couleur-liens-galerie);
-    &:visited {
-        color: var(--couleur-liens-visited-galerie);
-    }
-}
+// #galerie a {
+//     color: var(--couleur-liens-galerie);
+//     &:visited {
+//         color: var(--couleur-liens-visited-galerie);
+//     }
+// }
 
-#evenement a {
-    color: var(--couleur-liens-evenement);
-    &:visited {
-        color: var(--couleur-liens-visited-evenement);
-    }
-}
+// #evenement a {
+//     color: var(--couleur-liens-evenement);
+//     &:visited {
+//         color: var(--couleur-liens-visited-evenement);
+//     }
+// }
 
-#footer a {
-    color: var(--couleur-liens-footer);
-    &:visited {
-        color: var(--couleur-liens-visited-footer);
-    }
-}
+// #footer a {
+//     color: var(--couleur-liens-footer);
+//     &:visited {
+//         color: var(--couleur-liens-visited-footer);
+//     }
+// }
