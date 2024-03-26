@@ -45,7 +45,7 @@
 
     * {
         text-align: center;
-        color: white;
+        color: $--clr-bleu-tres-pale;
         z-index: 1;
     }
     p {
@@ -70,7 +70,7 @@
         // height: 3rem;
         display: flex;
         align-items: flex-end;
-        color: var(--couleur-entete);
+        // color: var(--couleur-entete);
     }
     p {
         margin-bottom: 0.5rem;
@@ -94,6 +94,7 @@
 }
 .carte .post-categories li::after {
     content: "\00a0|\00a0";
+    color: $--clr-bleu-tres-pale;
 }
 .carte .post-categories li:last-of-type:after {
     content: "";

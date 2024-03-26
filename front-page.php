@@ -9,8 +9,7 @@
 
             <section class="entete__header">
                 <h1 class="bgc-texte"><?= get_bloginfo("name"); ?> </h1>
-                <h2 class="bgc-texte"><?= get_bloginfo("description"); ?> </span></h2>
-                <h3 class="bgc-texte">Découvrez une foule de voyages à portée de main</h3>
+                <h4 class="bgc-texte"><?= get_bloginfo("description"); ?> </span></h4>
                 <a href="#accueil">
                     <button class="entete__button bck-secondaire-200">Voir plus</button>
                 </a>
@@ -21,8 +20,7 @@
         </div>
         <div id="accueil" class="global">
             <section class="accueil__section">
-                <h2>Accueil (h2)</h2>
-                <h3>Catégories</h3>
+                <h2>Catégories</h2>
                 <div class="section__categories">
                     <?php
                       
@@ -53,7 +51,7 @@
                     <?php } ?>
 
                 </div>
-                <h3>Destinations populaires</h3>
+                <h2>Destinations populaires</h2>
                 <div class="section__destinations">
                 <!-- 
                     get_the_title(); // retourne une chaine qui contient le titre

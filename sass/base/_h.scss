@@ -3,17 +3,23 @@
 
 // Sélecteur textuel de base
 h1 {
-    font-size: clamp(2rem, -2.875rem + 13vw, 5.5rem);
+    font-size: clamp(3.4375rem, 2.9688rem + 1.5vw, 4.375rem);
     text-shadow: 5px 5px 5px hsla(var(--hu1), 0%, var(--l5), 40%);
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: "raleway", arial, sans-serif;
 }
 h2 {
-    font-size: clamp(3.25rem, -0.5714rem + 6.2857vw, 3.75rem);
+    font-size: clamp(2.1875rem, 1.7188rem + 1.5vw, 3.125rem);
+    font-family: "raleway", arial, sans-serif;
+    font-weight: bold;
 }
 h3 {
-    font-size: clamp(2rem, -1.4375rem + 7vw, 2.5rem);
+    font-size: clamp(1.675rem, 1.3125rem + 1vw, 2.375rem);
 }
 h4 {
     font-size: clamp(1.175rem, -0.7188rem + 4.5vw, 1.675rem);
+    font-weight: normal;
 }
 h5 {
     font-size: clamp(1rem, -0.75rem + 4vw, 1.5rem);
@@ -31,22 +37,22 @@ blockquote {
     width: 80%;
     margin: 50px auto;
     font-style: italic;
-    color: var(--couleur-arriere-footer);
+    color: $--clr-bleu-tres-pale;
     padding: 1.2em 30px 1.2em 75px;
-    border-left: 8px solid var(--couleur-arriere-footer);
+    border-left: 8px solid $--clr-bleu-moyen;
     line-height: 1.6;
     position: relative;
-    background: var(--couleur-arriere-entete);
+    background: $--clr-bleu-fonce;
 }
 blockquote::first-letter {
     font-size: 3em;
-    color: var(--couleur-arriere-footer);
+    // color: var(--couleur-arriere-footer);
     line-height: 0.9;
 }
 
 blockquote::before {
     content: "\201C";
-    color: var(--couleur-arriere-footer);
+    // color: var(--couleur-arriere-footer);
     font-size: 4em;
     position: absolute;
     left: 10px;
@@ -55,7 +61,7 @@ blockquote::before {
 
 blockquote span {
     display: block;
-    color: var(--couleur-arriere-footer);
+    // color: var(--couleur-arriere-footer);
     font-style: normal;
     font-weight: bold;
     margin-top: 1em;
@@ -80,4 +86,15 @@ blockquote span {
 #galerie *::-moz-selection {
     color: white;
     background: var(--couleur-arriere-accueil);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    color: $--clr-bleu-tres-fonce;
 }

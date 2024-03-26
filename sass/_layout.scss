@@ -9,7 +9,7 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    font-family: "raleway", arial, sans-serif;
+    font-family: "Merriweather", arial, sans-serif;
 }
 .global {
     display: flex;
@@ -30,12 +30,15 @@ body {
     padding-left: 1rem;
     padding-right: 1rem;
     flex: 0 1 var(--flex-basis-haut-de-pli);
+    padding-bottom: 12rem;
 }
 #entete {
     // background-color: var(--couleur-arriere-entete);
-    color: var(--couleur-arriere-entete);
     position: relative;
     line-height: 1.5;
+}
+#entete * {
+    color: $--clr-bleu-tres-pale;
 }
 #menu {
     z-index: 2;
@@ -54,22 +57,21 @@ body {
     max-width: var(--flex-basis-haut-de-pli);
 }
 #accueil {
-    background-color: var(--couleur-arriere-accueil);
-    color: var(--couleur-accueil);
+    background-color: $--clr-bleu-tres-pale;
 }
 #galerie {
-    background: linear-gradient(180deg, var(--couleur-arriere-accueil) 50%, var(--couleur-arriere-evenement) 00%);
-    color: var(--couleur-galerie);
+    // background: linear-gradient(180deg, $--clr-bleu-tres-pale 50%, $--clr-bleu-leger 00%);
+    background-color: $--clr-bleu-tres-pale;
     z-index: 1;
 }
 #evenement {
-    background-color: var(--couleur-arriere-evenement);
+    background-color: $--clr-bleu-tres-pale;
     color: var(--couleur-evenement);
     position: relative;
 }
 #footer {
-    background-color: var(--couleur-arriere-footer);
-    color: var(--couleur-footer);
+    background-color: $--clr-bleu-fonce;
+    color: $--clr-bleu-tres-pale;
 }
 .footer__section {
     display: flex;

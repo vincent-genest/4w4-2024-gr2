@@ -21,7 +21,6 @@ Ce thème a été développé dans le cadre du cours 4w4
 /* ////////////////////////////////////////////////////////// */
 .bgc-texte {
   background-color: rgba(255, 255, 255, 0.1);
-  padding: 1rem;
 }
 @media screen and (min-width: 1100px) {
   .bgc-texte {
@@ -29,78 +28,82 @@ Ce thème a été développé dans le cadre du cours 4w4
   }
 }
 
-:root {
-  --nb-element: 5;
-  --l-initial: 80%;
-  --increment-angle: 15%;
-  --hu1: 200;
-  --hu2: calc(var(--hu1) + 180);
-  --s-couleur-arriere: 100%;
-  --l1: var(--l-initial);
-  --l2: calc(var(--l1) - var(--increment-angle));
-  --l3: calc(var(--l2) - var(--increment-angle));
-  --l4: calc(var(--l3) - var(--increment-angle));
-  --l5: calc(var(--l4) - var(--increment-angle));
-  --s-couleur: 70%;
-  --l-couleur: 15%;
-  --couleur-arriere-entete: hsl(var(--hu1), var(--s-couleur-arriere), var(--l1));
-  --couleur-arriere-accueil: hsl(var(--hu1), var(--s-couleur-arriere), var(--l2));
-  --couleur-arriere-galerie: hsl(var(--hu2), var(--s-couleur-arriere), var(--l3));
-  --couleur-arriere-evenement: hsl(var(--hu1), var(--s-couleur-arriere), var(--l4));
-  --couleur-arriere-footer: hsl(var(--hu1), var(--s-couleur-arriere), var(--l5));
-  --couleur-entete: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l1)));
-  --couleur-accueil: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l2)));
-  --couleur-galerie: hsl(var(--hu2), var(--s-couleur), calc(100% - var(--l5)));
-  --couleur-evenement: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l4)));
-  --couleur-footer: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l5)));
-  --couleur-liens-entete: hsl(var(--hu1), var(--s-couleur), 80%);
-  --couleur-liens-accueil: hsl(var(--hu1), var(--s-couleur), 80%);
-  --couleur-liens-galerie: hsl(var(--hu2), var(--s-couleur), 80%);
-  --couleur-liens-evenement: hsl(var(--hu1), var(--s-couleur), 80%);
-  --couleur-liens-footer: hsl(var(--hu1), var(--s-couleur), 80%);
-  --couleur-liens-visited-entete: hsl(var(--hu1), var(--s-couleur), 20%);
-  --couleur-liens-visited-accueil: hsl(var(--hu1), var(--s-couleur), 20%);
-  --couleur-liens-visited-galerie: hsl(var(--hu2), var(--s-couleur), 20%);
-  --couleur-liens-visited-evenement: hsl(var(--hu1), var(--s-couleur), 20%);
-  --couleur-liens-visited-footer: hsl(var(--hu1), var(--s-couleur), 20%);
-  /*
-   --nb-element: 5;
-      --increment-angle: calc(360 / var(--nb-element));
-      // 360/5 = 72
-      --angle-initial: 180;
-      // Couleur arrière plan
-      --s-couleur-arriere: 100%; // saturation
-      --l-couleur-arriere: 50%; // luminosité
-      // Couleur texte
-      --s-couleur: 100%; // saturation
-      --l-couleur: 80%; // luminosité
+/*:root {
+    --nb-element: 5;
+    --l-initial: 80%; // luminosité
+    --increment-angle: 15%;
+    //  360/5 = 72
+    //  Couleur arrière plan
+    --hu1: 200;
+    --hu2: calc(var(--hu1) + 180);
+    --s-couleur-arriere: 100%; // saturation
 
-      --hu1: var(--angle-initial);
-      --hu2: calc(var(--hu1) + 180);
-      --hu3: calc(var(--hu2) + var(--increment-angle));
-      --hu4: calc(var(--hu3) + var(--increment-angle));
-      --hu5: calc(var(--hu4) + var(--increment-angle));
+    --l1: var(--l-initial);
+    --l2: calc(var(--l1) - var(--increment-angle));
+    --l3: calc(var(--l2) - var(--increment-angle));
+    --l4: calc(var(--l3) - var(--increment-angle));
+    --l5: calc(var(--l4) - var(--increment-angle));
 
-      --couleur-arriere-entete: hsl(var(--hu1), var(--s-couleur-arriere), 60%);
-      --couleur-arriere-accueil: hsl(var(--hu1), var(--s-couleur-arriere), 65%);
-      --couleur-arriere-galerie: hsl(var(--hu2), var(--s-couleur-arriere), 70%);
-      --couleur-arriere-evenement: hsl(var(--hu1), var(--s-couleur-arriere), 75%);
-      --couleur-arriere-footer: hsl(var(--hu1), var(--s-couleur-arriere), 80%);
+    //  Couleur texte
+    --s-couleur: 70%; // saturation
+    --l-couleur: 15%; // luminosité
+    --couleur-arriere-entete: hsl(var(--hu1), var(--s-couleur-arriere), var(--l1));
+    --couleur-arriere-accueil: hsl(var(--hu1), var(--s-couleur-arriere), var(--l2));
+    --couleur-arriere-galerie: hsl(var(--hu2), var(--s-couleur-arriere), var(--l3));
+    --couleur-arriere-evenement: hsl(var(--hu1), var(--s-couleur-arriere), var(--l4));
+    --couleur-arriere-footer: hsl(var(--hu1), var(--s-couleur-arriere), var(--l5));
+    --couleur-entete: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l1)));
+    --couleur-accueil: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l2)));
+    --couleur-galerie: hsl(var(--hu2), var(--s-couleur), calc(100% - var(--l5)));
+    --couleur-evenement: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l4)));
+    --couleur-footer: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l5)));
+    --couleur-liens-entete: hsl(var(--hu1), var(--s-couleur), 80%);
+    --couleur-liens-accueil: hsl(var(--hu1), var(--s-couleur), 80%);
+    --couleur-liens-galerie: hsl(var(--hu2), var(--s-couleur), 80%);
+    --couleur-liens-evenement: hsl(var(--hu1), var(--s-couleur), 80%);
+    --couleur-liens-footer: hsl(var(--hu1), var(--s-couleur), 80%);
+    --couleur-liens-visited-entete: hsl(var(--hu1), var(--s-couleur), 20%);
+    --couleur-liens-visited-accueil: hsl(var(--hu1), var(--s-couleur), 20%);
+    --couleur-liens-visited-galerie: hsl(var(--hu2), var(--s-couleur), 20%);
+    --couleur-liens-visited-evenement: hsl(var(--hu1), var(--s-couleur), 20%);
+    --couleur-liens-visited-footer: hsl(var(--hu1), var(--s-couleur), 20%);
 
-      --couleur-entete: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
-      --couleur-accueil: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
-      --couleur-galerie: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
-      --couleur-evenement: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
-      --couleur-footer: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
+    --nb-element: 5;
+    --increment-angle: calc(360 / var(--nb-element));
+    // 360/5 = 72
+    --angle-initial: 180;
+    // Couleur arrière plan
+    --s-couleur-arriere: 100%; // saturation
+    --l-couleur-arriere: 50%; // luminosité
+    // Couleur texte
+    --s-couleur: 100%; // saturation
+    --l-couleur: 80%; // luminosité
 
-      --couleur-arriere-contenu: hsl(300, 100%, 50%);
-      --transparence-arriere-contenu: 0.3;
-      --flex-basis-contenu: 900px;
-  */
+    --hu1: var(--angle-initial);
+    --hu2: calc(var(--hu1) + 180);
+    --hu3: calc(var(--hu2) + var(--increment-angle));
+    --hu4: calc(var(--hu3) + var(--increment-angle));
+    --hu5: calc(var(--hu4) + var(--increment-angle));
+
+    --couleur-arriere-entete: hsl(var(--hu1), var(--s-couleur-arriere), 60%);
+    --couleur-arriere-accueil: hsl(var(--hu1), var(--s-couleur-arriere), 65%);
+    --couleur-arriere-galerie: hsl(var(--hu2), var(--s-couleur-arriere), 70%);
+    --couleur-arriere-evenement: hsl(var(--hu1), var(--s-couleur-arriere), 75%);
+    --couleur-arriere-footer: hsl(var(--hu1), var(--s-couleur-arriere), 80%);
+
+    --couleur-entete: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
+    --couleur-accueil: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
+    --couleur-galerie: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
+    --couleur-evenement: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
+    --couleur-footer: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
+
+    --couleur-arriere-contenu: hsl(300, 100%, 50%);
+    --transparence-arriere-contenu: 0.3;
+    --flex-basis-contenu: 900px;
 }
-
+*/
 #entete {
-  --_couleur-arriere-vague: hsl(var(--hu1), var(--s-couleur-arriere), var(--l2));
+  --_couleur-arriere-vague: hsl(200, 17%, 95%);
 }
 
 #evenement {
@@ -112,151 +115,51 @@ Ce thème a été développé dans le cadre du cours 4w4
     .bck-primaire-100 {}
 */
 .clr-primaire-100 {
-  color: hsl(220, 100%, 85%);
+  color: hsl(210, 10%, 95%);
 }
 
 .bck-primaire-100 {
-  background-color: hsl(220, 100%, 85%);
+  background-color: hsl(210, 10%, 95%);
 }
 
 .clr-primaire-200 {
-  color: hsl(220, 100%, 60%);
+  color: hsl(210, 30%, 85%);
 }
 
 .bck-primaire-200 {
-  background-color: hsl(220, 100%, 60%);
+  background-color: hsl(210, 30%, 85%);
 }
 
 .clr-primaire-300 {
-  color: hsl(220, 100%, 30%);
+  color: hsl(210, 30%, 65%);
 }
 
 .bck-primaire-300 {
-  background-color: hsl(220, 100%, 30%);
+  background-color: hsl(210, 30%, 65%);
 }
 
 .clr-primaire-400 {
-  color: hsl(220, 100%, 15%);
+  color: hsl(210, 30%, 50%);
 }
 
 .bck-primaire-400 {
-  background-color: hsl(220, 100%, 15%);
+  background-color: hsl(210, 30%, 50%);
 }
 
-.clr-secondaire-100 {
-  color: hsl(40, 100%, 85%);
+.clr-primaire-500 {
+  color: hsl(210, 97%, 20%);
 }
 
-.bck-secondaire-100 {
-  background-color: hsl(40, 100%, 85%);
+.bck-primaire-500 {
+  background-color: hsl(210, 97%, 20%);
 }
 
-.clr-secondaire-200 {
-  color: hsl(40, 100%, 50%);
+.clr-primaire-600 {
+  color: hsl(210, 90%, 10%);
 }
 
-.bck-secondaire-200 {
-  background-color: hsl(40, 100%, 50%);
-}
-
-.clr-secondaire-300 {
-  color: hsl(40, 100%, 30%);
-}
-
-.bck-secondaire-300 {
-  background-color: hsl(40, 100%, 30%);
-}
-
-.clr-secondaire-400 {
-  color: hsl(40, 100%, 15%);
-}
-
-.bck-secondaire-400 {
-  background-color: hsl(40, 100%, 15%);
-}
-
-.clr-ternaire-100 {
-  color: hsl(10, 100%, 85%);
-}
-
-.bck-ternaire-100 {
-  background-color: hsl(10, 100%, 85%);
-}
-
-.clr-ternaire-200 {
-  color: hsl(10, 100%, 50%);
-}
-
-.bck-ternaire-200 {
-  background-color: hsl(10, 100%, 50%);
-}
-
-.clr-ternaire-300 {
-  color: hsl(10, 100%, 30%);
-}
-
-.bck-ternaire-300 {
-  background-color: hsl(10, 100%, 30%);
-}
-
-.clr-ternaire-400 {
-  color: hsl(10, 100%, 15%);
-}
-
-.bck-ternaire-400 {
-  background-color: hsl(10, 100%, 15%);
-}
-
-.clr-vert-100 {
-  color: hsl(70, 100%, 85%);
-}
-
-.bck-vert-100 {
-  background-color: hsl(70, 100%, 85%);
-}
-
-.clr-vert-200 {
-  color: hsl(70, 100%, 50%);
-}
-
-.bck-vert-200 {
-  background-color: hsl(70, 100%, 50%);
-}
-
-.clr-vert-300 {
-  color: hsl(70, 100%, 30%);
-}
-
-.bck-vert-300 {
-  background-color: hsl(70, 100%, 30%);
-}
-
-.clr-vert-400 {
-  color: hsl(70, 100%, 15%);
-}
-
-.bck-vert-400 {
-  background-color: hsl(70, 100%, 15%);
-}
-
-.clr-agencement-primaire {
-  color: hsl(220, 100%, 85%);
-  background-image: linear-gradient(90deg, hsl(220, 100%, 15%), hsl(220, 100%, 60%));
-}
-
-.clr-agencement-secondaire {
-  color: hsl(40, 100%, 15%);
-  background-color: hsl(40, 100%, 85%);
-}
-
-.clr-agencement-ternaire {
-  color: hsl(10, 100%, 15%);
-  background-color: hsl(10, 100%, 85%);
-}
-
-.clr-agencement-vert {
-  color: hsl(70, 100%, 85%);
-  background-image: linear-gradient(90deg, hsl(70, 100%, 15%), hsl(70, 100%, 30%));
+.bck-primaire-600 {
+  background-color: hsl(210, 90%, 10%);
 }
 
 :root {
@@ -271,20 +174,26 @@ Ce thème a été développé dans le cadre du cours 4w4
 /*                      Règles de base                        */
 /* ////////////////////////////////////////////////////////// */
 h1 {
-  font-size: clamp(2rem, -2.875rem + 13vw, 5.5rem);
+  font-size: clamp(3.4375rem, 2.9688rem + 1.5vw, 4.375rem);
   text-shadow: 5px 5px 5px hsla(var(--hu1), 0%, var(--l5), 40%);
+  font-weight: 300;
+  text-transform: uppercase;
+  font-family: "raleway", arial, sans-serif;
 }
 
 h2 {
-  font-size: clamp(3.25rem, -0.5714rem + 6.2857vw, 3.75rem);
+  font-size: clamp(2.1875rem, 1.7188rem + 1.5vw, 3.125rem);
+  font-family: "raleway", arial, sans-serif;
+  font-weight: bold;
 }
 
 h3 {
-  font-size: clamp(2rem, -1.4375rem + 7vw, 2.5rem);
+  font-size: clamp(1.675rem, 1.3125rem + 1vw, 2.375rem);
 }
 
 h4 {
   font-size: clamp(1.175rem, -0.7188rem + 4.5vw, 1.675rem);
+  font-weight: normal;
 }
 
 h5 {
@@ -304,23 +213,21 @@ blockquote {
   width: 80%;
   margin: 50px auto;
   font-style: italic;
-  color: var(--couleur-arriere-footer);
+  color: hsl(210, 10%, 95%);
   padding: 1.2em 30px 1.2em 75px;
-  border-left: 8px solid var(--couleur-arriere-footer);
+  border-left: 8px solid hsl(210, 30%, 50%);
   line-height: 1.6;
   position: relative;
-  background: var(--couleur-arriere-entete);
+  background: hsl(210, 97%, 20%);
 }
 
 blockquote::first-letter {
   font-size: 3em;
-  color: var(--couleur-arriere-footer);
   line-height: 0.9;
 }
 
 blockquote::before {
   content: "“";
-  color: var(--couleur-arriere-footer);
   font-size: 4em;
   position: absolute;
   left: 10px;
@@ -329,7 +236,6 @@ blockquote::before {
 
 blockquote span {
   display: block;
-  color: var(--couleur-arriere-footer);
   font-style: normal;
   font-weight: bold;
   margin-top: 1em;
@@ -356,9 +262,19 @@ blockquote span {
   background: var(--couleur-arriere-accueil);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  color: hsl(210, 90%, 10%);
+}
+
 a {
   text-decoration: underline;
-  color: var(--couleur-entete);
 }
 a:hover, a:focus {
   text-decoration: none;
@@ -401,7 +317,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  font-family: "raleway", arial, sans-serif;
+  font-family: "Merriweather", arial, sans-serif;
 }
 
 .global {
@@ -424,12 +340,16 @@ body {
   padding-left: 1rem;
   padding-right: 1rem;
   flex: 0 1 var(--flex-basis-haut-de-pli);
+  padding-bottom: 12rem;
 }
 
 #entete {
-  color: var(--couleur-arriere-entete);
   position: relative;
   line-height: 1.5;
+}
+
+#entete * {
+  color: hsl(210, 10%, 95%);
 }
 
 #menu {
@@ -449,25 +369,23 @@ body {
 }
 
 #accueil {
-  background-color: var(--couleur-arriere-accueil);
-  color: var(--couleur-accueil);
+  background-color: hsl(210, 10%, 95%);
 }
 
 #galerie {
-  background: linear-gradient(180deg, var(--couleur-arriere-accueil) 50%, var(--couleur-arriere-evenement) 0%);
-  color: var(--couleur-galerie);
+  background-color: hsl(210, 10%, 95%);
   z-index: 1;
 }
 
 #evenement {
-  background-color: var(--couleur-arriere-evenement);
+  background-color: hsl(210, 10%, 95%);
   color: var(--couleur-evenement);
   position: relative;
 }
 
 #footer {
-  background-color: var(--couleur-arriere-footer);
-  color: var(--couleur-footer);
+  background-color: hsl(210, 97%, 20%);
+  color: hsl(210, 10%, 95%);
 }
 
 .footer__section {
@@ -519,6 +437,7 @@ body {
 }
 
 #entete {
+  background-image: url(images/horizon4.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 80% 75%;
@@ -611,7 +530,7 @@ body {
   right: 0;
   z-index: -1;
   transform: skewY(-5deg);
-  background-color: var(--couleur-arriere-galerie);
+  background-color: hsl(210, 30%, 85%);
 }
 
 /* ////////////////////////////////////////////////////////// */
@@ -620,49 +539,54 @@ body {
 .recherche {
   display: flex;
   justify-content: center;
-  background-color: var(--couleur-arriere-entete);
-  border-radius: 10px;
+  border-bottom: 2px solid hsl(210, 30%, 50%);
 }
 
 .recherche__input {
-  padding: 1rem 1.5rem;
+  color: hsl(210, 10%, 95%);
+  background-color: transparent;
   display: block;
   border: none;
-  background-color: var(--couleur-arriere-entete);
-  border-radius: 10px;
   width: 10rem;
   transition: width 0.5s ease-in-out;
 }
 
 .recherche__input::placeholder {
-  color: var(--couleur-arriere-footer);
+  color: hsl(210, 30%, 85%);
 }
 
 .recherche__input:focus {
   outline: none;
   width: 30vw;
 }
+.recherche__input:focus::placeholder {
+  color: hsl(210, 10%, 95%);
+}
+.recherche__input:focus + .recherche__button > svg {
+  stroke: hsl(210, 10%, 95%);
+  transition: transform 0.25s;
+}
 
 .recherche__input::-webkit-search-cancel-button {
   -webkit-appearance: none;
-  content: url(https://s2.svgbox.net/materialui.svg?ic=cancel);
+  content: url(https://s2.svgbox.net/materialui.svg?ic=clear);
   cursor: pointer;
+  color: hsl(210, 10%, 95%);
 }
 
 .recherche__button {
   border: none;
-  background-color: var(--couleur-arriere-entete);
-  border-radius: 0 10px 10px 0;
+  background-color: transparent;
   padding: 1rem;
   transition: background-color 0.2s ease-in-out;
 }
 
-.recherche__button:hover {
-  background-color: var(--couleur-arriere-accueil);
+.recherche__button svg {
+  stroke: hsl(210, 30%, 85%);
 }
 
-.recherche__button:active {
-  background-color: var(--couleur-arriere-galerie);
+.recherche__button:hover svg {
+  transform: scale(1.2);
 }
 
 .sociaux {
@@ -672,7 +596,7 @@ body {
 }
 
 .sociaux path {
-  fill: var(--couleur-arriere-entete);
+  fill: hsl(210, 30%, 85%);
   transition: fill 0.25s;
 }
 
@@ -686,11 +610,11 @@ body {
 }
 
 .sociaux svg:hover path {
-  fill: var(--couleur-arriere-accueil);
+  fill: hsl(210, 10%, 95%);
 }
 
 .sociaux svg:active path {
-  fill: var(--couleur-arriere-galerie);
+  fill: hsl(210, 30%, 50%);
 }
 
 .section__destinations,
@@ -737,7 +661,7 @@ body {
 }
 .section__categories .carte * {
   text-align: center;
-  color: white;
+  color: hsl(210, 10%, 95%);
   z-index: 1;
 }
 .section__categories .carte p {
@@ -761,7 +685,6 @@ body {
   margin: 0;
   display: flex;
   align-items: flex-end;
-  color: var(--couleur-entete);
 }
 .section__destinations .carte p {
   margin-bottom: 0.5rem;
@@ -779,6 +702,7 @@ body {
 
 .carte .post-categories li::after {
   content: " | ";
+  color: hsl(210, 10%, 95%);
 }
 
 .carte .post-categories li:last-of-type:after {
@@ -817,6 +741,7 @@ body {
 
 .btn_menu {
   color: white;
+  font-family: "raleway", arial, sans-serif;
   text-decoration: none;
   text-transform: uppercase;
   font-size: clamp(1rem, 2vw, 1.3rem);
