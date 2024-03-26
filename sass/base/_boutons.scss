@@ -1,26 +1,30 @@
-button.entete__button {
-    font-size: clamp(1.375rem, 0.4375rem + 3vw, 2.5rem);
-    // background-image: linear-gradient(45deg, var(--couleur-arriere-entete) 0%, var(--couleur-arriere-entete) 100%);
-    // color: var(--couleur-entete);
-    color: white;
-    // border: solid 3px var(--couleur-arriere-footer);
-    border: none;
-    border-radius: 10px;
-    padding: 1rem 2rem;
+button {
+    font-size: clamp(0.625rem, 0.4688rem + 0.5vw, 0.9375rem);
+    border-radius: 50px;
+    border: $--clr-bleu-tres-pale 2px solid;
+    background-color: $--clr-bleu-tres-pale;
+    color: $--clr-bleu-tres-fonce;
+    padding: 0.5rem 1rem;
     cursor: pointer;
-    transition: transform 0.2s;
-    transform: translateY(0px);
 
     &:hover {
         // button:hover
-        background-image: linear-gradient(45deg, var(--couleur-arriere-footer) 0%, var(--couleur-arriere-footer) 100%);
-        color: var(--couleur-arriere-entete);
-        transform: translateY(-2px);
+        color: $--clr-bleu-tres-pale;
+        background-color: transparent;
     }
 
     &:active {
-        background-image: linear-gradient(45deg, var(--couleur-arriere-evenement) 0%, var(--couleur-arriere-footer) 100%);
         color: var(--couleur-arriere-entete);
-        transform: translateY(5px);
+    }
+}
+
+#entete button {
+    padding: 1rem 2rem;
+    font-size: clamp(0.625rem, 0.1563rem + 1.5vw, 1.5625rem);
+    color: $--clr-bleu-tres-fonce;
+    &:hover {
+        // button:hover
+        color: $--clr-bleu-tres-pale;
+        background-color: transparent;
     }
 }

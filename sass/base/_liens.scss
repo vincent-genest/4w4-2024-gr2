@@ -1,10 +1,29 @@
 a {
-    text-decoration: underline;
-    // color: var(--couleur-entete);
+    text-decoration: none;
+    color: $--clr-bleu-leger;
     &:hover,
     &:focus {
-        text-decoration: none;
+        // text-decoration: underline;
+        color: $--clr-bleu-fonce;
     }
+}
+
+.ligne-hover {
+    position: relative;
+}
+.ligne-hover::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $--clr-contraste;
+    transition: width 0.3s;
+}
+
+.ligne-hover:hover::after {
+    width: 100%;
 }
 
 // #entete .entete__header a {

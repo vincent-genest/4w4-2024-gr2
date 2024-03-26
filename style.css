@@ -107,7 +107,7 @@ Ce thème a été développé dans le cadre du cours 4w4
 }
 
 #evenement {
-  --_couleur-arriere-vague: hsl(var(--hu1), var(--s-couleur-arriere), var(--l5));
+  --_couleur-arriere-vague: hsl(210, 97%, 20%);
 }
 
 /* Cération des classes de couleurs
@@ -139,11 +139,11 @@ Ce thème a été développé dans le cadre du cours 4w4
 }
 
 .clr-primaire-400 {
-  color: hsl(210, 30%, 50%);
+  color: hsl(210, 70%, 50%);
 }
 
 .bck-primaire-400 {
-  background-color: hsl(210, 30%, 50%);
+  background-color: hsl(210, 70%, 50%);
 }
 
 .clr-primaire-500 {
@@ -167,15 +167,14 @@ Ce thème a été développé dans le cadre du cours 4w4
   --largeur-max-tel: 600px;
   --largeur-max-tablette: 900px;
   --flex-basis-haut-de-pli: 1500px;
-  --flex-basis-contenu: 1100px;
+  --flex-basis-contenu: 1300px;
 }
 
 /* ////////////////////////////////////////////////////////// */
 /*                      Règles de base                        */
 /* ////////////////////////////////////////////////////////// */
 h1 {
-  font-size: clamp(3.4375rem, 2.9688rem + 1.5vw, 4.375rem);
-  text-shadow: 5px 5px 5px hsla(var(--hu1), 0%, var(--l5), 40%);
+  font-size: clamp(4.0625rem, 3.5938rem + 1.5vw, 5rem);
   font-weight: 300;
   text-transform: uppercase;
   font-family: "raleway", arial, sans-serif;
@@ -215,7 +214,7 @@ blockquote {
   font-style: italic;
   color: hsl(210, 10%, 95%);
   padding: 1.2em 30px 1.2em 75px;
-  border-left: 8px solid hsl(210, 30%, 50%);
+  border-left: 8px solid hsl(210, 70%, 50%);
   line-height: 1.6;
   position: relative;
   background: hsl(210, 97%, 20%);
@@ -274,31 +273,57 @@ a {
 }
 
 a {
-  text-decoration: underline;
+  text-decoration: none;
+  color: hsl(210, 30%, 65%);
 }
 a:hover, a:focus {
-  text-decoration: none;
+  color: hsl(210, 97%, 20%);
 }
 
-button.entete__button {
-  font-size: clamp(1.375rem, 0.4375rem + 3vw, 2.5rem);
-  color: white;
-  border: none;
-  border-radius: 10px;
-  padding: 1rem 2rem;
+.ligne-hover {
+  position: relative;
+}
+
+.ligne-hover::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: hsl(30, 80%, 50%);
+  transition: width 0.3s;
+}
+
+.ligne-hover:hover::after {
+  width: 100%;
+}
+
+button {
+  font-size: clamp(0.625rem, 0.4688rem + 0.5vw, 0.9375rem);
+  border-radius: 50px;
+  border: hsl(210, 10%, 95%) 2px solid;
+  background-color: hsl(210, 10%, 95%);
+  color: hsl(210, 90%, 10%);
+  padding: 0.5rem 1rem;
   cursor: pointer;
-  transition: transform 0.2s;
-  transform: translateY(0px);
 }
-button.entete__button:hover {
-  background-image: linear-gradient(45deg, var(--couleur-arriere-footer) 0%, var(--couleur-arriere-footer) 100%);
-  color: var(--couleur-arriere-entete);
-  transform: translateY(-2px);
+button:hover {
+  color: hsl(210, 10%, 95%);
+  background-color: transparent;
 }
-button.entete__button:active {
-  background-image: linear-gradient(45deg, var(--couleur-arriere-evenement) 0%, var(--couleur-arriere-footer) 100%);
+button:active {
   color: var(--couleur-arriere-entete);
-  transform: translateY(5px);
+}
+
+#entete button {
+  padding: 1rem 2rem;
+  font-size: clamp(0.625rem, 0.1563rem + 1.5vw, 1.5625rem);
+  color: hsl(210, 90%, 10%);
+}
+#entete button:hover {
+  color: hsl(210, 10%, 95%);
+  background-color: transparent;
 }
 
 /* ////////////////////////////////////////////////////////// */
@@ -340,7 +365,9 @@ body {
   padding-left: 1rem;
   padding-right: 1rem;
   flex: 0 1 var(--flex-basis-haut-de-pli);
-  padding-bottom: 12rem;
+  height: 100vh;
+  padding-top: 0;
+  padding-bottom: 5rem;
 }
 
 #entete {
@@ -433,20 +460,30 @@ body {
 .entete__header {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 
 #entete {
   background-image: url(images/horizon4.jpg);
+  text-align: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: 80% 75%;
   background-size: cover;
+  background-position: 90% 100%;
   padding: 3rem 0;
 }
-
-#entete h2 {
-  text-shadow: 3px 3px 3px hsla(var(--hu1), 0%, var(--l5), 40%);
+#entete::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#entete * {
+  z-index: 1;
 }
 
 .entete__header span {
@@ -539,16 +576,22 @@ body {
 .recherche {
   display: flex;
   justify-content: center;
-  border-bottom: 2px solid hsl(210, 30%, 50%);
 }
 
 .recherche__input {
+  border: none;
+  border-bottom: 2px solid hsl(210, 70%, 50%);
   color: hsl(210, 10%, 95%);
   background-color: transparent;
   display: block;
-  border: none;
   width: 10rem;
   transition: width 0.5s ease-in-out;
+}
+.recherche__input:focus {
+  border-bottom: 2px solid hsl(30, 80%, 50%);
+}
+.recherche__input:focus + button {
+  border-bottom: 2px solid hsl(30, 80%, 50%);
 }
 
 .recherche__input::placeholder {
@@ -576,6 +619,8 @@ body {
 
 .recherche__button {
   border: none;
+  border-radius: 0;
+  border-bottom: 2px solid hsl(210, 70%, 50%);
   background-color: transparent;
   padding: 1rem;
   transition: background-color 0.2s ease-in-out;
@@ -614,22 +659,21 @@ body {
 }
 
 .sociaux svg:active path {
-  fill: hsl(210, 30%, 50%);
+  fill: hsl(210, 70%, 50%);
 }
 
 .section__destinations,
 .section__categories {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
-  margin-bottom: 5rem;
 }
 
 .carte {
-  padding: 2rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  background-color: var(--couleur-arriere-entete);
 }
 
 .section__categories .carte {
@@ -642,6 +686,11 @@ body {
   clip-path: inset(0);
   transition: clip-path 0.3s ease-in-out;
   min-height: 20rem;
+}
+@media screen and (max-width: 700px) {
+  .section__categories .carte {
+    flex: 1 0 calc(100vw - 3rem);
+  }
 }
 .section__categories .carte:hover {
   clip-path: inset(10px);
@@ -661,11 +710,11 @@ body {
 }
 .section__categories .carte * {
   text-align: center;
-  color: hsl(210, 10%, 95%);
   z-index: 1;
 }
 .section__categories .carte p {
-  font-size: clamp(0.5rem, 0.5rem + 0.5vw, 0.75rem);
+  font-size: clamp(0.75rem, 0.75rem + 0.75vw, 1rem);
+  color: hsl(210, 10%, 95%);
 }
 .section__categories .carte h2 {
   font-size: clamp(1.5rem, 1.5rem + 2vw, 2.5rem);
@@ -673,13 +722,19 @@ body {
 }
 .section__categories .carte h2 a {
   text-decoration: none;
+  color: hsl(210, 10%, 95%);
 }
 
 .section__destinations .carte {
   justify-content: flex-start;
   align-items: flex-start;
   min-width: 200px;
-  flex: 1 0 calc((var(--flex-basis-contenu) - 100px) / 3);
+  flex: 0 0 calc((var(--flex-basis-contenu) - 100px) / 3);
+}
+@media screen and (max-width: 700px) {
+  .section__destinations .carte {
+    flex: 1 0 calc(100vw - 3rem);
+  }
 }
 .section__destinations .carte h4 {
   margin: 0;
@@ -687,11 +742,15 @@ body {
   align-items: flex-end;
 }
 .section__destinations .carte p {
-  margin-bottom: 0.5rem;
-}
-
-.carte p:last-of-type {
   margin: 0;
+  margin-top: 0.75rem;
+}
+.section__destinations .carte > a {
+  padding-top: 0.5rem;
+}
+.section__destinations .carte img {
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 .carte .post-categories {
@@ -700,9 +759,18 @@ body {
   padding: 0;
 }
 
+.carte > a {
+  font-size: 0.75rem;
+}
+
+.carte .post-categories li {
+  font-size: 0.75rem;
+  line-height: 0.2rem;
+}
+
 .carte .post-categories li::after {
   content: " | ";
-  color: hsl(210, 10%, 95%);
+  color: hsl(210, 90%, 10%);
 }
 
 .carte .post-categories li:last-of-type:after {
@@ -748,11 +816,7 @@ body {
 }
 
 .entete__contact:hover .btn_menu {
-  text-decoration: underline;
-}
-
-#burger:hover .btn_menu {
-  text-decoration: underline;
+  color: hsl(210, 10%, 95%);
 }
 
 #menu .entete__contact {
@@ -797,9 +861,9 @@ body {
   width: 100vw;
   height: 100vh;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   padding: 5rem;
-  background-color: hsla(var(--hu1), var(--s-couleur-arriere), var(--l1), 0.8);
+  background-color: hsla(210, 97%, 20%, 0.8);
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
   backdrop-filter: blur(10px);
@@ -813,9 +877,7 @@ body {
   width: 100%;
   max-width: 1500px;
   padding: 0;
-  margin: 0 auto;
 }
-
 .menu-item {
   height: 100%;
   display: flex;
@@ -825,24 +887,37 @@ body {
 }
 
 .menu-item::after {
-  color: white;
+  color: hsl(210, 10%, 95%);
   content: "➜";
   margin-left: auto;
 }
 
 .menu-item a {
+  position: relative;
   margin: 1rem;
   text-decoration: none;
   text-align: center;
-  color: white;
+  color: hsl(210, 10%, 95%);
+}
+.menu-item a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: hsl(30, 80%, 50%);
+  transition: width 0.3s;
+}
+.menu-item a:hover::after {
+  width: 100%;
 }
 
 .menu-item:hover::after {
-  color: var(--couleur-arriere-galerie);
+  color: hsl(30, 80%, 50%);
 }
 
 .menu-item a:hover {
-  text-decoration: underline;
   text-decoration-thickness: 1px;
 }
 

@@ -11,7 +11,7 @@
                 <h1 class="bgc-texte"><?= get_bloginfo("name"); ?> </h1>
                 <h4 class="bgc-texte"><?= get_bloginfo("description"); ?> </span></h4>
                 <a href="#accueil">
-                    <button class="entete__button bck-secondaire-200">Voir plus</button>
+                    <button class="entete__button">Voir plus&emsp;➜</button>
                 </a>
             </section>
             <?php
@@ -34,40 +34,49 @@
                         $image_url = get_template_directory_uri() . '/images/categories/' . strtolower($category->slug) . ".jpg";
                         ?>
 
-                            <div class="carte" style="background-image: url('<?php echo $image_url; ?>');">
-                            <h2><a href="<?php echo esc_url($cat_liens); ?>"><?php echo $category->name; ?></a></h2>
-                            <p><?php echo $cat_desc_trimmed; ?></p>
-                            <p><a href="<?php echo esc_url($cat_liens); ?>">
-                            <?php
-                                if($post_compte>1){
-                                    echo "Voir les " . $post_compte . " destinations";
-                                } else {
-                                    echo "Voir la destination";
-                                }
-                            ?>
-                        </a></p>
-                        </div>
-                        
-                    <?php } ?>
-
+<div class="carte" style="background-image: url('<?php echo $image_url; ?>');">
+    <h2><a href="<?php echo esc_url($cat_liens); ?>"><?php echo $category->name; ?></a></h2>
+    <p><?php echo $cat_desc_trimmed; ?></p>
+    <a href="<?php echo esc_url($cat_liens); ?>">
+        <button>
+            <?php
+                                    if($post_compte>1){
+                                        echo "Voir les " . $post_compte . " destinations&emsp;➜";
+                                    } else {
+                                        echo "Voir la destination&emsp;➜";
+                                    }
+                                    ?>    
+                        </button>
+                    </a>
                 </div>
-                <h2>Destinations populaires</h2>
-                <div class="section__destinations">
+                
+                <?php } ?>
+                
+            </div>
+            <h2>Destinations populaires</h2>
+            <div class="section__destinations">
                 <!-- 
                     get_the_title(); // retourne une chaine qui contient le titre
                     the_title(); // echo du titre
-                 -->
-
-                    <?php if(have_posts()):
-                        while(have_posts()): the_post();?>
-                            <div class="carte">
-                                <h4><?php the_title(); ?></h4>
-                                <?php the_category() ?>
-                                <p><?= wp_trim_words(get_the_content(), 10); ?></p>
-                                <p><a href="<?= get_permalink() ?>">Voir plus</a></p>
-                            </div>
-                        <?php endwhile; ?>
-                    <?php endif; ?>
+                -->
+                
+                <?php if(have_posts()):
+                    while(have_posts()): the_post();
+                        // Récupérer le slug de l'article
+                        $slug = basename(get_permalink());
+                        // Construire l'URL de l'image en utilisant le slug
+                        $image_url = get_template_directory_uri() . '/images/populaires/' . $slug . '.jpg';
+                    ?>
+                        <div class="carte">
+                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
+                            <h4><?php the_title(); ?></h4>
+                            <?php the_category() ?>
+                            <!-- Afficher l'image avec l'URL construite -->
+                            <p><?= wp_trim_words(get_the_content(), 10); ?></p>
+                            <a href="<?= get_permalink() ?>">Voir plus</a>
+                        </div>
+                    <?php endwhile;
+                endif; ?>
 
             </section>
         </div>

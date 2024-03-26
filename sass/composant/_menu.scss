@@ -31,11 +31,7 @@
 }
 .entete__contact:hover .btn_menu {
     // Effet hover bouton contact
-    text-decoration: underline;
-}
-#burger:hover .btn_menu {
-    // Effet hover bouton menu
-    text-decoration: underline;
+    color: $--clr-bleu-tres-pale;
 }
 
 #menu .entete__contact {
@@ -83,9 +79,9 @@
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     padding: 5rem;
-    background-color: hsla(var(--hu1), var(--s-couleur-arriere), var(--l1), 0.8);
+    background-color: hsla(210, 97%, 20%, 0.8);
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     backdrop-filter: blur(10px);
@@ -110,15 +106,15 @@
     width: 100%;
     max-width: 1500px;
     padding: 0;
-    margin: 0 auto;
 
-    // @media screen and (min-width: 700px) {
-    //     flex-direction: row;
-    //     justify-content: space-between;
-    //     align-items: center;
-    //     height: 7vw;
-    //     width: 100%;
-    // }
+    @media screen and (min-width: 700px) {
+        // width: 50%;
+        // flex-direction: row;
+        // justify-content: space-between;
+        // align-items: center;
+        // height: 7vw;
+        // width: 100%;
+    }
 }
 .menu-item {
     // li
@@ -134,29 +130,44 @@
 }
 .menu-item::after {
     // li
-    color: white;
+    color: $--clr-bleu-tres-pale;
     content: "\279C";
     margin-left: auto;
 }
 
 .menu-item a {
     // li a
+    position: relative;
     margin: 1rem;
     text-decoration: none;
     text-align: center;
     // color: var(--couleur-arriere-footer);
-    color: white;
+    color: $--clr-bleu-tres-pale;
     // font-weight: bold;
     // @media screen and (min-width: 700px) {
     //     font-size: clamp(1rem, 1.5vw, 1.5rem);
     // }
+    &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: $--clr-contraste;
+        transition: width 0.3s;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
 }
+
 .menu-item:hover::after {
     // li a hover
-    color: var(--couleur-arriere-galerie);
+    color: $--clr-contraste;
 }
 .menu-item a:hover {
-    text-decoration: underline;
     text-decoration-thickness: 1px;
 }
 

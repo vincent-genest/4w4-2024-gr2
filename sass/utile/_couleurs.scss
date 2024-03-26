@@ -21,6 +21,7 @@
 // $--clr-vert-moyen: hsl(70, 100%, 30%);
 // $--clr-vert-fonce: hsl(70, 100%, 15%);
 $--hu1: 210;
+$--hu2: calc($--hu1 - 180);
 $--nb-element: 5;
 $--l-initial: 95%; // luminosité
 $--increment-angle: 15%;
@@ -35,9 +36,11 @@ $--l6: calc($--l5 - $--increment-angle);
 $--clr-bleu-tres-pale: hsl($--hu1, 10%, 95%);
 $--clr-bleu-pale: hsl($--hu1, 30%, 85%);
 $--clr-bleu-leger: hsl($--hu1, 30%, $--l3);
-$--clr-bleu-moyen: hsl($--hu1, 30%, $--l4);
+$--clr-bleu-moyen: hsl($--hu1, 70%, 50%);
 $--clr-bleu-fonce: hsl($--hu1, 97%, 20%);
 $--clr-bleu-tres-fonce: hsl($--hu1, 90%, 10%);
+
+$--clr-contraste: hsl($--hu2, 80%, $--l4);
 
 // Création du mapping des couleurs
 $defaut: (
@@ -175,5 +178,5 @@ $agencement-couleur: (
 }
 
 #evenement {
-    --_couleur-arriere-vague: hsl(var(--hu1), var(--s-couleur-arriere), var(--l5));
+    --_couleur-arriere-vague: hsl(210, 97%, 20%);
 }
