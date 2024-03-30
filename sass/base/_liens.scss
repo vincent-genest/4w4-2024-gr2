@@ -6,6 +6,9 @@ a {
         // text-decoration: underline;
         color: $--clr-bleu-fonce;
     }
+    &:visited {
+        color: $--clr-bleu-fonce;
+    }
 }
 
 .ligne-hover {

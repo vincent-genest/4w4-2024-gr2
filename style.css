@@ -279,6 +279,9 @@ a {
 a:hover, a:focus {
   color: hsl(210, 97%, 20%);
 }
+a:visited {
+  color: hsl(210, 97%, 20%);
+}
 
 .ligne-hover {
   position: relative;
@@ -584,7 +587,7 @@ body {
   color: hsl(210, 10%, 95%);
   background-color: transparent;
   display: block;
-  width: 10rem;
+  width: calc(30vw - (2rem + 24px));
   transition: width 0.5s ease-in-out;
 }
 .recherche__input:focus {
@@ -593,6 +596,11 @@ body {
 .recherche__input:focus + button {
   border-bottom: 2px solid hsl(30, 80%, 50%);
 }
+@media screen and (max-width: 700px) {
+  .recherche__input {
+    width: calc(70vw - (2rem + 24px));
+  }
+}
 
 .recherche__input::placeholder {
   color: hsl(210, 30%, 85%);
@@ -600,7 +608,7 @@ body {
 
 .recherche__input:focus {
   outline: none;
-  width: 30vw;
+  width: 40vw;
 }
 .recherche__input:focus::placeholder {
   color: hsl(210, 10%, 95%);
@@ -608,6 +616,11 @@ body {
 .recherche__input:focus + .recherche__button > svg {
   stroke: hsl(210, 10%, 95%);
   transition: transform 0.25s;
+}
+@media screen and (max-width: 700px) {
+  .recherche__input:focus {
+    width: 73vw;
+  }
 }
 
 .recherche__input::-webkit-search-cancel-button {
@@ -636,8 +649,13 @@ body {
 
 .sociaux {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: space-between;
+  width: 30vw;
+}
+@media screen and (max-width: 700px) {
+  .sociaux {
+    width: 70vw;
+  }
 }
 
 .sociaux path {
@@ -668,6 +686,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+  margin-bottom: 5rem;
 }
 
 .carte {
@@ -775,10 +794,6 @@ body {
 
 .carte .post-categories li:last-of-type:after {
   content: "";
-}
-
-.carte .post-categories a {
-  text-decoration: none;
 }
 
 .carte .post-categories a:hover {

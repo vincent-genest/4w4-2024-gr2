@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-    // margin-bottom: 5rem;
+    margin-bottom: 5rem;
 }
 
 .carte {
@@ -110,9 +110,6 @@
 }
 .carte .post-categories li:last-of-type:after {
     content: "";
-}
-.carte .post-categories a {
-    text-decoration: none;
 }
 .carte .post-categories a:hover {
     text-decoration: underline;
