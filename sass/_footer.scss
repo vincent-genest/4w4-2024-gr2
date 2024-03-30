@@ -3,5 +3,59 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    gap: 3rem;
+}
+.footer__liens {
+    display: flex;
+    // justify-content: space-between;
+    width: 100%;
     gap: 2rem;
+}
+.footer__liens .bloc__liens {
+    // width: 20%;
+    flex: 1;
+    & h5 {
+        text-transform: uppercase;
+        color: $--clr-bleu-pale;
+        margin: 1.5rem 0;
+    }
+    & ul {
+        list-style-type: none;
+        padding: 0;
+        & li {
+            margin: 1rem 0;
+        }
+        & a {
+            color: $--clr-bleu-tres-pale;
+            font-weight: 200;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: $--clr-contraste;
+                transition: width 0.3s;
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+        }
+    }
+}
+.footer__liens .bloc__logo {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & img {
+        // width: 1rem;
+        // height: auto;
+        bottom: 50%;
+        right: 50%;
+    }
 }

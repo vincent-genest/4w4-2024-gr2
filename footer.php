@@ -1,5 +1,35 @@
 <div id="footer" class="global">
             <footer class="footer__section">
+                <div class="footer__liens">
+                    <div class="bloc__liens">
+                        <h5>Catégories</h5>
+                        <ul>
+                            <li><a href="#">Catégorie 1</a></li>
+                            <li><a href="#">Catégorie 2</a></li>
+                            <li><a href="#">Catégorie 3</a></li>
+                            <li><a href="#">Catégorie 4</a></li>
+                        </ul>
+                    </div >
+                    <div class="bloc__liens">
+                        <h5>Liens utiles</h5>
+                        <ul>
+                            <li><a href="#">Lien 1</a></li>
+                            <li><a href="#">Lien 2</a></li>
+                            <li><a href="#">Lien 3</a></li>
+                            <li><a href="#">Lien 4</a></li>
+                        </ul>
+                    </div>
+                    <div class="bloc__liens">
+                        <h5>À propos</h5>
+                        <ul>
+                            <li><a href="#">À propos de nous</a></li>
+                            <li><a href="#">Contactez-nous</a></li>
+                            <li><a href="#">Politique de confidentialité</a></li>
+                            <li><a href="#">Termes et conditions</a></li>        
+                        </ul>
+                    </div>
+                    <div class="bloc__logo"> <?= get_custom_logo(); ?> </div>
+                </div>
                 <form class="recherche" action="">
                     <input class="recherche__input" type="search" name="" placeholder="Recherche" />
                     <button class="recherche__button">
