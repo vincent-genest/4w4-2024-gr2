@@ -23,10 +23,8 @@
                 <h2>Catégories</h2>
                 <div class="section__categories">
                     <?php
-                      
-                        $categories = get_categories();
-                    
-                        foreach ($categories as $category) {
+                    $categories = get_categories();
+                    foreach ($categories as $category) :
                         $cat_liens = get_term_link($category);
                         $cat_desc = $category->description;
                         $cat_desc_trimmed = wp_trim_words($cat_desc, 10);
@@ -34,25 +32,25 @@
                         $image_url = get_template_directory_uri() . '/images/categories/' . strtolower($category->slug) . ".jpg";
                         ?>
 
-<div class="carte" style="background-image: url('<?php echo $image_url; ?>');">
-    <h2><a href="<?php echo esc_url($cat_liens); ?>"><?php echo $category->name; ?></a></h2>
-    <p><?php echo $cat_desc_trimmed; ?></p>
-    <a href="<?php echo esc_url($cat_liens); ?>">
-        <button>
-            <?php
-                                    if($post_compte>1){
+                        <div class="carte" style="background-image: url('<?php echo $image_url; ?>');">
+                            <h2><a href="<?php echo esc_url($cat_liens); ?>"><?php echo $category->name; ?></a></h2>
+                            <p><?php echo $cat_desc_trimmed; ?></p>
+                            <a href="<?php echo esc_url($cat_liens); ?>">
+                                <button>
+                                    <?php
+                                    if ($post_compte > 1) {
                                         echo "Voir les " . $post_compte . " destinations&emsp;➜";
                                     } else {
                                         echo "Voir la destination&emsp;➜";
                                     }
-                                    ?>    
-                        </button>
-                    </a>
+                                    ?>
+                                </button>
+                            </a>
+                        </div>
+                                
+                    <?php endforeach; ?>
                 </div>
                 
-                <?php } ?>
-                
-            </div>
             <h2>Destinations populaires</h2>
             <div class="section__destinations">
                 <!-- 

@@ -4,28 +4,29 @@
                     <div class="bloc__liens">
                         <h5>Catégories</h5>
                         <ul>
-                            <li><a href="#">Catégorie 1</a></li>
-                            <li><a href="#">Catégorie 2</a></li>
-                            <li><a href="#">Catégorie 3</a></li>
-                            <li><a href="#">Catégorie 4</a></li>
+                            <?php
+                            $categories = get_categories();
+                            foreach ($categories as $category) :
+                                $cat_liens = get_term_link($category);
+                            ?>
+                                <li><a href="<?php echo esc_url($cat_liens); ?>"><?php echo $category->name; ?></a></li>
+                            <?php endforeach; ?>
                         </ul>
-                    </div >
+                    </div>
                     <div class="bloc__liens">
-                        <h5>Liens utiles</h5>
+                        <h5>Ressources</h5>
                         <ul>
-                            <li><a href="#">Lien 1</a></li>
-                            <li><a href="#">Lien 2</a></li>
-                            <li><a href="#">Lien 3</a></li>
-                            <li><a href="#">Lien 4</a></li>
+                            <li><a href="#">Nous contacter</a></li>
+                            <li><a href="#">Termes et conditions</a></li>
+                            <li><a href="#">Politique de confidentialité</a></li>
                         </ul>
                     </div>
                     <div class="bloc__liens">
                         <h5>À propos</h5>
                         <ul>
                             <li><a href="#">À propos de nous</a></li>
-                            <li><a href="#">Contactez-nous</a></li>
-                            <li><a href="#">Politique de confidentialité</a></li>
-                            <li><a href="#">Termes et conditions</a></li>        
+                            <li><a href="#">Notre équipe</a></li>
+                            <li><a href="#">Partenariats</a></li>
                         </ul>
                     </div>
                     <div class="bloc__logo"> <?= get_custom_logo(); ?> </div>

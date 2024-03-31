@@ -380,7 +380,7 @@ body {
 }
 
 #menu {
-  z-index: 2;
+  z-index: 10;
   position: fixed;
   width: 100vw;
   padding: 0 1rem;
@@ -951,13 +951,14 @@ body {
 
 .menu-principal-container {
   position: fixed;
-  top: 0;
+  top: 80px;
   right: 0;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 80px);
   display: flex;
-  justify-content: flex-end;
-  padding: 5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0 4rem;
   background-color: hsla(210, 97%, 20%, 0.8);
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
@@ -973,6 +974,7 @@ body {
   max-width: 1500px;
   padding: 0;
 }
+
 .menu-item {
   height: 100%;
   display: flex;
