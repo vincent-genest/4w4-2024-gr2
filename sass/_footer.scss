@@ -1,4 +1,5 @@
 .footer__section {
+    // Footer avec marge
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -6,8 +7,8 @@
     gap: 3rem;
 }
 .footer__liens {
+    // Partie avec les blocs de liens et le logo
     display: flex;
-    // justify-content: space-between;
     width: 100%;
     gap: 2rem;
     flex-direction: column;
@@ -16,25 +17,30 @@
     }
 }
 .footer__liens .bloc__liens {
-    // width: 20%;
+    // Bloc contenant les liste de liens
     flex: 1;
     & h5 {
+        // Titre des listes de liens
         text-transform: uppercase;
         color: $--clr-bleu-pale;
         margin: 1.5rem 0;
     }
     & ul {
+        // Liste de liens
         list-style-type: none;
         padding: 0;
         & li {
+            // Liens
             margin: 1rem 0;
         }
         & a {
+            // Textes des liens
             color: $--clr-bleu-tres-pale;
             font-weight: 200;
             position: relative;
 
             &::after {
+                //Ligne de hover
                 content: "";
                 position: absolute;
                 width: 0;
@@ -46,12 +52,14 @@
             }
 
             &:hover::after {
+                // Ligne en hover
                 width: 100%;
             }
         }
     }
 }
 .footer__liens .bloc__logo {
+    // Bloc contenant le logo
     flex: 2;
     display: flex;
     justify-content: center;
@@ -64,6 +72,7 @@
         right: 50%;
     }
     @media screen and (min-width: 700px) {
+        // En mode desktop, le logo n'as plus de marges
         margin: 0;
     }
 }

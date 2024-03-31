@@ -19,10 +19,7 @@
         <div id="accueil" class="global accueil__category bck-primaire-100">
 
             <section class="accueil__section">
-                <!-- img de la catégorie -->
-                <!-- <img src="" alt="image de la catégorie" class="category__img"> -->
-                <!-- <h2>La catégorie</h2> -->
-                <!-- <div class="entete__category" style="background-image: url:('<?= $image_url ?>');"> -->
+            
                 <div class="entete__category" style="background-image: url('<?= $image_url ?>');">
                 <h2><?php  echo single_cat_title(); ?></h2>
                 </div>
@@ -31,7 +28,6 @@
         
                 
                     <?php if(have_posts()):
-                                // Construire l'URL de l'image en utilisant le slug
                         while(have_posts()): the_post();?>
                             <div class="carte">
                                 <h4><?php the_title(); ?></h4>

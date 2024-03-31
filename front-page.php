@@ -38,6 +38,7 @@
                             <a href="<?php echo esc_url($cat_liens); ?>">
                                 <button>
                                     <?php
+                                    // On change le message du bouton selon le nombre de destinations
                                     if ($post_compte > 1) {
                                         echo "Voir les " . $post_compte . " destinations&emsp;➜";
                                     } else {
@@ -53,10 +54,6 @@
                 
             <h2>Destinations populaires</h2>
             <div class="section__destinations">
-                <!-- 
-                    get_the_title(); // retourne une chaine qui contient le titre
-                    the_title(); // echo du titre
-                -->
                 
                 <?php if(have_posts()):
                     while(have_posts()): the_post();
