@@ -347,6 +347,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "Merriweather", arial, sans-serif;
+  overflow-x: hidden;
 }
 
 .global {
@@ -516,6 +517,12 @@ body {
   display: flex;
   width: 100%;
   gap: 2rem;
+  flex-direction: column;
+}
+@media screen and (min-width: 700px) {
+  .footer__liens {
+    flex-direction: row;
+  }
 }
 
 .footer__liens .bloc__liens {
@@ -557,10 +564,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 4rem 0;
 }
 .footer__liens .bloc__logo img {
   bottom: 50%;
   right: 50%;
+}
+@media screen and (min-width: 700px) {
+  .footer__liens .bloc__logo {
+    margin: 0;
+  }
 }
 
 .galerie__img {
@@ -581,6 +594,26 @@ body {
 
 .galerie__section img:active {
   width: 35%;
+}
+
+.entete__category {
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: -80px;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 5rem;
+}
+.entete__category h2 {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  margin: 0;
+  line-height: 10rem;
+  color: hsl(210, 10%, 95%);
+  padding: 0 5%;
 }
 
 /* ////////////////////////////////////////////////////////// */
@@ -880,6 +913,12 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   font-size: clamp(1rem, 2vw, 1.3rem);
+  display: none;
+}
+@media screen and (min-width: 700px) {
+  .btn_menu {
+    display: block;
+  }
 }
 
 .entete__contact:hover .btn_menu {
@@ -1008,7 +1047,12 @@ body {
 }
 
 .icone {
-  height: 4vw;
+  height: 10vw;
+}
+@media screen and (min-width: 700px) {
+  .icone {
+    height: 4vw;
+  }
 }
 
 .icone_burger {

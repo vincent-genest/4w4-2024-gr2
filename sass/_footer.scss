@@ -10,6 +10,10 @@
     // justify-content: space-between;
     width: 100%;
     gap: 2rem;
+    flex-direction: column;
+    @media screen and (min-width: 700px) {
+        flex-direction: row;
+    }
 }
 .footer__liens .bloc__liens {
     // width: 20%;
@@ -52,10 +56,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 4rem 0;
     & img {
         // width: 1rem;
         // height: auto;
         bottom: 50%;
         right: 50%;
+    }
+    @media screen and (min-width: 700px) {
+        margin: 0;
     }
 }

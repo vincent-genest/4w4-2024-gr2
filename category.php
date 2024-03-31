@@ -5,12 +5,33 @@
     get_header();
 ?>
         <!-- <h1>category</h1> -->
-        <div id="accueil" class="global">
+                <?php
+                    // Obtenir l'objet de la catégorie en cours
+                    $category = get_queried_object();
+                    // Obtenir le slug de la catégorie
+                    $category_slug = $category->slug;
+                    // afficher l'image en utilisant le slug de la catégorie
+                    $image_url = get_template_directory_uri() . '/images/categories/' . strtolower($category_slug) . ".jpg";
+                ?>
+                <!-- affiche l'image de la caté.gore -->
+                
+        <!-- <div id="accueil" class="global"> -->
+        <div id="accueil" class="global accueil__category">
+
             <section class="accueil__section">
-                <h2>La catégorie</h2>
+                <!-- img de la catégorie -->
+                <!-- <img src="" alt="image de la catégorie" class="category__img"> -->
+                <!-- <h2>La catégorie</h2> -->
+                <!-- <div class="entete__category" style="background-image: url:('<?= $image_url ?>');"> -->
+                <div class="entete__category" style="background-image: url('<?= $image_url ?>');">
+                <h2><?php  echo single_cat_title(); ?></h2>
+                </div>
+
                 <div class="section__destinations">
         
+                
                     <?php if(have_posts()):
+                                // Construire l'URL de l'image en utilisant le slug
                         while(have_posts()): the_post();?>
                             <div class="carte">
                                 <h4><?php the_title(); ?></h4>
@@ -20,7 +41,7 @@
                         <?php endwhile; ?>
                         <?php endif; ?>
 
-                </div>
+
             </section>
         </div>
         <div id="evenement" class="global">
