@@ -23,7 +23,7 @@
 
 .btn_menu {
     // Boutons du menu
-    color: white;
+    // color: white;
     font-family: "raleway", arial, sans-serif;
     text-decoration: none;
     text-transform: uppercase;
@@ -46,6 +46,9 @@
     // Contact
     display: flex;
     align-items: center;
+    &:hover p {
+        color: $--clr-bleu-tres-fonce;
+    }
 }
 #menu .icone_contact {
     // Icone contact
@@ -55,7 +58,7 @@
 }
 #menu .icone_contact path {
     // Icone contact
-    stroke: white;
+    // stroke: white;
     stroke-width: 0.8;
 }
 #menu img {
@@ -64,7 +67,7 @@
     max-width: 150px;
     min-width: 80px;
     height: auto;
-    // filter: invert(1);
+    filter: invert(1);
 }
 
 .entete__menu {
@@ -203,6 +206,7 @@
     // height: auto;
     // height: 100%;
     height: 10vw;
+    stroke: $--clr-bleu-tres-fonce;
     @media screen and (min-width: 700px) {
         height: 4vw;
     }
@@ -228,7 +232,7 @@
     // trait burger
     fill: none;
     transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-    stroke: white;
+    // stroke: white;
     stroke-width: 2;
     stroke-linecap: round;
 }

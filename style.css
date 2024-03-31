@@ -118,48 +118,53 @@ Ce thème a été développé dans le cadre du cours 4w4
   color: hsl(210, 10%, 95%);
 }
 
-.bck-primaire-100 {
-  background-color: hsl(210, 10%, 95%);
-}
-
 .clr-primaire-200 {
   color: hsl(210, 30%, 85%);
-}
-
-.bck-primaire-200 {
-  background-color: hsl(210, 30%, 85%);
 }
 
 .clr-primaire-300 {
   color: hsl(210, 30%, 65%);
 }
 
-.bck-primaire-300 {
-  background-color: hsl(210, 30%, 65%);
-}
-
 .clr-primaire-400 {
   color: hsl(210, 70%, 50%);
-}
-
-.bck-primaire-400 {
-  background-color: hsl(210, 70%, 50%);
 }
 
 .clr-primaire-500 {
   color: hsl(210, 97%, 20%);
 }
 
-.bck-primaire-500 {
-  background-color: hsl(210, 97%, 20%);
-}
-
 .clr-primaire-600 {
   color: hsl(210, 90%, 10%);
 }
 
+.bck-primaire-100 {
+  background-color: hsl(210, 10%, 95%);
+}
+
+.bck-primaire-200 {
+  background-color: hsl(210, 30%, 85%);
+}
+
+.bck-primaire-300 {
+  background-color: hsl(210, 30%, 65%);
+}
+
+.bck-primaire-400 {
+  background-color: hsl(210, 70%, 50%);
+}
+
+.bck-primaire-500 {
+  background-color: hsl(210, 97%, 20%);
+}
+
 .bck-primaire-600 {
   background-color: hsl(210, 90%, 10%);
+}
+
+.clr-agencement-primaire {
+  color: hsl(210, 10%, 95%);
+  background-image: linear-gradient(90deg, hsl(210, 30%, 85%), hsl(210, 30%, 65%));
 }
 
 :root {
@@ -243,23 +248,13 @@ blockquote span {
 
 ::-moz-selection {
   /* Code for Firefox */
-  color: white;
-  background: var(--couleur-arriere-galerie);
+  color: hsl(210, 10%, 95%);
+  background: hsl(30, 80%, 50%);
 }
 
 ::selection {
-  color: white;
-  background: var(--couleur-arriere-galerie);
-}
-
-#galerie *::selection {
-  color: white;
-  background: var(--couleur-arriere-accueil);
-}
-
-#galerie *::-moz-selection {
-  color: white;
-  background: var(--couleur-arriere-accueil);
+  color: hsl(210, 10%, 95%);
+  background: hsl(30, 80%, 50%);
 }
 
 h1,
@@ -389,7 +384,7 @@ body {
   position: fixed;
   width: 100vw;
   padding: 0 1rem;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid hsl(210, 10%, 95%);
 }
 
 #menu .entete__contenu {
@@ -400,23 +395,15 @@ body {
   max-width: var(--flex-basis-haut-de-pli);
 }
 
-#accueil {
-  background-color: hsl(210, 10%, 95%);
-}
-
 #galerie {
-  background-color: hsl(210, 10%, 95%);
   z-index: 1;
 }
 
 #evenement {
-  background-color: hsl(210, 10%, 95%);
-  color: var(--couleur-evenement);
   position: relative;
 }
 
 #footer {
-  background-color: hsl(210, 97%, 20%);
   color: hsl(210, 10%, 95%);
 }
 
@@ -908,7 +895,6 @@ body {
 }
 
 .btn_menu {
-  color: white;
   font-family: "raleway", arial, sans-serif;
   text-decoration: none;
   text-transform: uppercase;
@@ -934,6 +920,9 @@ body {
   display: flex;
   align-items: center;
 }
+#menu .entete__contact a:hover p {
+  color: hsl(210, 90%, 10%);
+}
 
 #menu .icone_contact {
   margin: 0.5rem;
@@ -942,7 +931,6 @@ body {
 }
 
 #menu .icone_contact path {
-  stroke: white;
   stroke-width: 0.8;
 }
 
@@ -951,6 +939,7 @@ body {
   max-width: 150px;
   min-width: 80px;
   height: auto;
+  filter: invert(1);
 }
 
 .entete__menu {
@@ -1048,6 +1037,7 @@ body {
 
 .icone {
   height: 10vw;
+  stroke: hsl(210, 90%, 10%);
 }
 @media screen and (min-width: 700px) {
   .icone {
@@ -1074,7 +1064,6 @@ body {
 .trait {
   fill: none;
   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-  stroke: white;
   stroke-width: 2;
   stroke-linecap: round;
 }

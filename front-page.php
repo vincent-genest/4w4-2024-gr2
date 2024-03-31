@@ -5,7 +5,7 @@
     get_header();
 ?>
         <!-- <h1>Front-page.php</h1> -->
-        <div id="entete" class="global clr-agencement-primaire">
+        <div id="entete" class="global">
 
             <section class="entete__header">
                 <h1 class="bgc-texte"><?= get_bloginfo("name"); ?> </h1>
@@ -18,7 +18,7 @@
                 get_template_part('gabarit/vague')
             ?>
         </div>
-        <div id="accueil" class="global">
+        <div id="accueil" class="global bck-primaire-100">
             <section class="accueil__section">
                 <h2>Catégories</h2>
                 <div class="section__categories">
@@ -80,7 +80,7 @@
 
             </section>
         </div>
-        <div id="galerie" class="global diagonal">
+        <div id="galerie" class="global diagonal bck-primaire-100">
             <section class="galerie__section">
                 <h2>Galerie (h2)</h2>
                 <p>
@@ -109,7 +109,7 @@
                 </blockquote>
             </section>
         </div>
-        <div id="evenement" class="global">
+        <div id="evenement" class="global bck-primaire-100">
             <section class="evenement__section">
                 <h2>Événement (h2)</h2>
                 <details>

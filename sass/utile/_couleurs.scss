@@ -1,25 +1,6 @@
 // https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 
 // Défnition des variables de couleurs pour la palette de couleurs
-// $--clr-bleu-pale: hsl(220, 100%, 85%);
-// $--clr-bleu-leger: hsl(220, 100%, 60%);
-// $--clr-bleu-moyen: hsl(220, 100%, 30%);
-// $--clr-bleu-fonce: hsl(220, 100%, 15%);
-
-// $--clr-orange-pale: hsl(40, 100%, 85%);
-// $--clr-orange-leger: hsl(40, 100%, 50%);
-// $--clr-orange-moyen: hsl(40, 100%, 30%);
-// $--clr-orange-fonce: hsl(40, 100%, 15%);
-
-// $--clr-rouge-pale: hsl(10, 100%, 85%);
-// $--clr-rouge-leger: hsl(10, 100%, 50%);
-// $--clr-rouge-moyen: hsl(10, 100%, 30%);
-// $--clr-rouge-fonce: hsl(10, 100%, 15%);
-
-// $--clr-vert-pale: hsl(70, 100%, 85%);
-// $--clr-vert-leger: hsl(70, 100%, 50%);
-// $--clr-vert-moyen: hsl(70, 100%, 30%);
-// $--clr-vert-fonce: hsl(70, 100%, 15%);
 $--hu1: 210;
 $--hu2: calc($--hu1 - 180);
 $--nb-element: 5;
@@ -44,59 +25,21 @@ $--clr-contraste: hsl($--hu2, 80%, $--l4);
 
 // Création du mapping des couleurs
 $defaut: (
-    /* primaire: (
-        100: $--clr-bleu-pale,
-        200: $--clr-bleu-leger,
-        300: $--clr-bleu-moyen,
-        400: $--clr-bleu-fonce,
+    primaire: (
+        100: $--clr-bleu-tres-pale,
+        200: $--clr-bleu-pale,
+        300: $--clr-bleu-leger,
+        400: $--clr-bleu-moyen,
+        500: $--clr-bleu-fonce,
+        600: $--clr-bleu-tres-fonce,
     ),
-    secondaire: (
-        100: $--clr-orange-pale,
-        200: $--clr-orange-leger,
-        300: $--clr-orange-moyen,
-        400: $--clr-orange-fonce,
-    ),
-    ternaire: (
-        100: $--clr-rouge-pale,
-        200: $--clr-rouge-leger,
-        300: $--clr-rouge-moyen,
-        400: $--clr-rouge-fonce,
-    ),
-    vert: (
-        100: $--clr-vert-pale,
-        200: $--clr-vert-leger,
-        300: $--clr-vert-moyen,
-        400: $--clr-vert-fonce,
-    ),*/
-        primaire:
-        (
-            100: $--clr-bleu-tres-pale,
-            200: $--clr-bleu-pale,
-            300: $--clr-bleu-leger,
-            400: $--clr-bleu-moyen,
-            500: $--clr-bleu-fonce,
-            600: $--clr-bleu-tres-fonce,
-        )
 );
 
 $agencement-couleur: (
-    /*primaire: (
-        $--clr-bleu-pale,
-        ($--clr-bleu-fonce, $--clr-bleu-leger),
+    primaire: (
+        $--clr-bleu-tres-pale,
+        ($--clr-bleu-pale, $--clr-bleu-leger),
     ),
-    secondaire: (
-        $--clr-orange-fonce,
-        $--clr-orange-pale,
-    ),
-    ternaire: (
-        $--clr-rouge-fonce,
-        $--clr-rouge-pale,
-    ),
-    vert: (
-        $--clr-vert-pale,
-        ($--clr-vert-fonce, $--clr-vert-moyen),
-    ),*/
-        // primaire: ($--clr-bleu-tres-pale, $--clr-bleu-pale, $--clr-bleu-leger, $--clr-bleu-moyen, $--clr-bleu-fonce, $--clr-bleu-tres-fonce)
 );
 
 /*:root {

@@ -69,23 +69,13 @@ blockquote span {
 
 ::-moz-selection {
     /* Code for Firefox */
-    color: white;
-    background: var(--couleur-arriere-galerie);
+    color: $--clr-bleu-tres-pale;
+    background: $--clr-contraste;
 }
 
 ::selection {
-    color: white;
-    background: var(--couleur-arriere-galerie);
-}
-
-#galerie *::selection {
-    color: white;
-    background: var(--couleur-arriere-accueil);
-}
-
-#galerie *::-moz-selection {
-    color: white;
-    background: var(--couleur-arriere-accueil);
+    color: $--clr-bleu-tres-pale;
+    background: $--clr-contraste;
 }
 
 h1,

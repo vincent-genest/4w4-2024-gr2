@@ -16,7 +16,7 @@
                 <!-- affiche l'image de la caté.gore -->
                 
         <!-- <div id="accueil" class="global"> -->
-        <div id="accueil" class="global accueil__category">
+        <div id="accueil" class="global accueil__category bck-primaire-100">
 
             <section class="accueil__section">
                 <!-- img de la catégorie -->
@@ -44,7 +44,7 @@
 
             </section>
         </div>
-        <div id="evenement" class="global">
+        <div id="evenement" class="global bck-primaire-100">
             <section class="evenement__section">
                 <h2>Événement (h2)</h2>
                 <details>

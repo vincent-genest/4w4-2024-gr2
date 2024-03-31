@@ -6,7 +6,7 @@
 ?>
         <!-- <h1>Single.php</h1> -->
         
-        <div id="accueil" class="global">
+        <div id="accueil" class="global bck-primaire-100">
             <section class="accueil__section">
                 <div class="section__cours">
         
@@ -23,7 +23,7 @@
             </section>
         </div>
 
-        <div id="evenement" class="global">
+        <div id="evenement" class="global bck-primaire-100">
             <section class="evenement__section">
                 <h2>Événement (h2)</h2>
                 <details>

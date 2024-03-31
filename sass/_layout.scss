@@ -48,7 +48,7 @@ body {
     position: fixed;
     width: 100vw;
     padding: 0 1rem;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid $--clr-bleu-tres-pale;
 }
 
 #menu .entete__contenu {
@@ -59,21 +59,13 @@ body {
     width: 100%;
     max-width: var(--flex-basis-haut-de-pli);
 }
-#accueil {
-    background-color: $--clr-bleu-tres-pale;
-}
 #galerie {
-    // background: linear-gradient(180deg, $--clr-bleu-tres-pale 50%, $--clr-bleu-leger 00%);
-    background-color: $--clr-bleu-tres-pale;
     z-index: 1;
 }
 #evenement {
-    background-color: $--clr-bleu-tres-pale;
-    color: var(--couleur-evenement);
     position: relative;
 }
 #footer {
-    background-color: $--clr-bleu-fonce;
     color: $--clr-bleu-tres-pale;
 }
 .footer__section {

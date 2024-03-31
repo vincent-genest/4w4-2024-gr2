@@ -1,4 +1,4 @@
-<div id="footer" class="global">
+<div id="footer" class="global bck-primaire-500">
             <footer class="footer__section">
                 <div class="footer__liens">
                     <div class="bloc__liens">

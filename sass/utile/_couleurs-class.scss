@@ -9,6 +9,9 @@
         .clr-#{$nom}-#{$valeur} {
             color: #{$couleur};
         }
+    }
+
+    @each $valeur, $couleur in $couleurs {
         .bck-#{$nom}-#{$valeur} {
             background-color: #{$couleur};
         }
