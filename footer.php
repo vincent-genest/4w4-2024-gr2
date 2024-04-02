@@ -1,29 +1,42 @@
 <div id="footer" class="global bck-primaire-500">
             <footer class="footer__section">
                 <div class="footer__liens">
-                    <div class="bloc__liens">
-                        <h5>Catégories</h5>
-                        <ul>
-                            <?php
-                            $categories = get_categories();
-                            foreach ($categories as $category) :
-                                $cat_liens = get_term_link($category);
-                            ?>
-                                <li><a href="<?php echo esc_url($cat_liens); ?>"><?php echo $category->name; ?></a></li>
-                            <?php endforeach; ?>
-                        </ul>
-                    </div>
-                    <div class="bloc__liens">
-                        <h5>Ressources</h5>
-                        <ul>
+                    <!-- On génère un bloc lien pour chaque catégorie parent -->
+                    <?php
+                        $categories_parents = get_categories(array('parent' => 0)); // Récupère toutes les catégories parentes
+                        
+                        foreach ($categories_parents as $categorie_parente) {
+                            $nom_categorie_parente = $categorie_parente->name;
+                            
+                            // Obtenez l'ID de la catégorie parent avec le nom spécifié
+                            $categorie_parente_trouvee = get_category_by_slug($categorie_parente->slug);
+                            
+                            // Si la catégorie parente est trouvée, récupérez ses catégories enfants
+                            if ($categorie_parente_trouvee) {
+                                $id_categorie_parente = $categorie_parente_trouvee->term_id;
+                                $categories_enfants = get_categories(array('parent' => $id_categorie_parente));
+                                
+                                echo '<div class="bloc__liens">';
+                                echo '<h5>' . $nom_categorie_parente . '</h5>'; // Utilisez le nom du parent comme titre
+                                echo '<ul>';
+                                
+                                foreach ($categories_enfants as $categorie_enfant) {
+                                    $lien_categorie_enfant = get_term_link($categorie_enfant);
+                                    echo '<li><a href="' . esc_url($lien_categorie_enfant) . '">' . $categorie_enfant->name . '</a></li>';
+                                }
+                                
+                                echo '</ul>';
+                                echo '</div>';
+                            }
+                        }
+                    ?>
+              
+                        <div class="bloc__liens">
+                            <h5>À propos</h5>
+                            <ul>
                             <li><a href="#">Nous contacter</a></li>
                             <li><a href="#">Termes et conditions</a></li>
                             <li><a href="#">Politique de confidentialité</a></li>
-                        </ul>
-                    </div>
-                    <div class="bloc__liens">
-                        <h5>À propos</h5>
-                        <ul>
                             <li><a href="#">À propos de nous</a></li>
                             <li><a href="#">Notre équipe</a></li>
                             <li><a href="#">Partenariats</a></li>
