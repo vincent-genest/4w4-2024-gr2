@@ -951,7 +951,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 4rem;
+  padding: 0 3rem;
   background-color: hsla(210, 97%, 20%, 0.8);
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
@@ -967,6 +967,11 @@ body {
   max-width: 1500px;
   padding: 0;
 }
+@media screen and (min-width: 700px) {
+  #menu-principal {
+    width: 50%;
+  }
+}
 
 .menu-item {
   height: 100%;
@@ -980,14 +985,20 @@ body {
   color: hsl(210, 10%, 95%);
   content: "➜";
   margin-left: auto;
+  font-size: clamp(0.75rem, 1.75vw, 2rem);
 }
 
 .menu-item a {
   position: relative;
-  margin: 1rem;
+  margin: 0.5rem;
   text-decoration: none;
-  text-align: center;
   color: hsl(210, 10%, 95%);
+  font-size: clamp(1rem, 2vw, 2.5rem);
+}
+@media screen and (min-width: 700px) {
+  .menu-item a {
+    font-size: clamp(0.75rem, 1.75vw, 2rem);
+  }
 }
 .menu-item a::after {
   content: "";

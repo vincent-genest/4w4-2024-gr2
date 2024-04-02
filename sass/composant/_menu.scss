@@ -87,7 +87,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 4rem;
+    padding: 0 3rem;
     background-color: hsla(210, 97%, 20%, 0.8);
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
@@ -102,6 +102,9 @@
     width: 100%;
     max-width: 1500px;
     padding: 0;
+    @media screen and (min-width: 700px) {
+        width: 50%;
+    }
 }
 .menu-item {
     // li
@@ -116,16 +119,19 @@
     color: $--clr-bleu-tres-pale;
     content: "\279C";
     margin-left: auto;
+    font-size: clamp(0.75rem, 1.75vw, 2rem);
 }
 
 .menu-item a {
     // li a
     position: relative;
-    margin: 1rem;
+    margin: 0.5rem;
     text-decoration: none;
-    text-align: center;
     color: $--clr-bleu-tres-pale;
-
+    font-size: clamp(1rem, 2vw, 2.5rem);
+    @media screen and (min-width: 700px) {
+        font-size: clamp(0.75rem, 1.75vw, 2rem);
+    }
     &::after {
         content: "";
         position: absolute;
