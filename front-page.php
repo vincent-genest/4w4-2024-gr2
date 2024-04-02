@@ -20,40 +20,68 @@
         </div>
         <div id="accueil" class="global bck-primaire-100">
             <section class="accueil__section">
-                <h2>Catégories</h2>
-                <div class="section__categories">
-                    <?php
-                    $categories = get_categories();
-                    foreach ($categories as $category) :
-                        $cat_liens = get_term_link($category);
-                        $cat_desc = $category->description;
-                        $cat_desc_trimmed = wp_trim_words($cat_desc, 10);
-                        $post_compte = $category->count;
-                        $image_url = get_template_directory_uri() . '/images/categories/' . strtolower($category->slug) . ".jpg";
-                        ?>
 
-                        <div class="carte" style="background-image: url('<?php echo $image_url; ?>');">
-                            <h2><a href="<?php echo esc_url($cat_liens); ?>"><?php echo $category->name; ?></a></h2>
-                            <p><?php echo $cat_desc_trimmed; ?></p>
-                            <a href="<?php echo esc_url($cat_liens); ?>">
-                                <button>
-                                    <?php
-                                    // On change le message du bouton selon le nombre de destinations
-                                    if ($post_compte > 1) {
-                                        echo "Voir les " . $post_compte . " destinations&emsp;➜";
-                                    } else {
-                                        echo "Voir la destination&emsp;➜";
-                                    }
-                                    ?>
-                                </button>
-                            </a>
-                        </div>
-                                
-                    <?php endforeach; ?>
-                </div>
-                
-            <h2>Destinations populaires</h2>
-            <div class="section__destinations">
+                <!-- CATÉGORIES -->
+                <?php
+                    //Fonction pour afficher les types de catégories 
+                    function afficher_categories_parents() {
+                        $parents = get_categories(array(
+                            'parent' => 0, // Seulement les catégories sans parent
+                        ));
+                    
+                        foreach ($parents as $parent) {
+                            $parent_name = $parent->name;
+                            afficher_categories($parent_name);
+                        }
+                    }
+
+                    // Fonction pour afficher les catégories enfants
+                    function afficher_categories($parent_name) {
+                        $parent_id = get_term_by('name', $parent_name, 'category')->term_id;
+
+                        $categories = get_categories(array(
+                            'parent' => $parent_id // Seules les catégories avec le nom de parent spécifié
+                        ));
+
+                        echo '<h2>' . $parent_name . '</h2>';
+                        echo '<div class="section__categories">';
+
+                        foreach ($categories as $category) :
+                            $cat_liens = get_term_link($category);
+                            $cat_desc = $category->description;
+                            $cat_desc_trimmed = wp_trim_words($cat_desc, 10);
+                            $post_compte = $category->count;
+                            $image_url = get_template_directory_uri() . '/images/categories/' . strtolower($category->slug) . ".jpg";
+                    ?>
+                            <div class="carte" style="background-image: url('<?php echo $image_url; ?>');">
+                                <h2><a href="<?php echo esc_url($cat_liens); ?>"><?php echo $category->name; ?></a></h2>
+                                <p><?php echo $cat_desc_trimmed; ?></p>
+                                <a href="<?php echo esc_url($cat_liens); ?>">
+                                    <button>
+                                        <?php
+                                        // On change le message du bouton selon le nombre de destinations
+                                        if ($post_compte > 1) {
+                                            echo "Voir les " . $post_compte . " destinations&emsp;➜";
+                                        } else {
+                                            echo "Voir la destination&emsp;➜";
+                                        }
+                                        ?>
+                                    </button>
+                                </a>
+                            </div>
+                    <?php
+                        endforeach;
+
+                        echo '</div>';
+                    }
+
+                // On affiche les catégories
+                afficher_categories_parents();
+                ?>
+
+                <!-- ARTICLE POPULAIRE -->
+                <h2>Destinations populaires</h2>
+                <div class="section__destinations">
                 
                 <?php if(have_posts()):
                     while(have_posts()): the_post();
@@ -73,6 +101,7 @@
                     <?php endwhile;
                 endif; ?>
 
+                </div>
             </section>
         </div>
         <div id="galerie" class="global diagonal bck-primaire-100">
