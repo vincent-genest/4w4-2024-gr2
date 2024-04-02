@@ -8,8 +8,7 @@
         
         <div id="accueil" class="global bck-primaire-100">
             <section class="accueil__section">
-                <div class="section__cours">
-        
+                <div>
                     <?php if(have_posts()):
                         while(have_posts()): the_post();?>
                             <div class="carte">
