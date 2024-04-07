@@ -7,7 +7,7 @@
         <!-- <h1>Single.php</h1> -->
         
         <div id="accueil" class="global bck-primaire-100">
-            <section class="accueil__section">
+            <section class="accueil__section flexbox">
                 <div>
                     <?php if(have_posts()):
                         while(have_posts()): the_post();?>

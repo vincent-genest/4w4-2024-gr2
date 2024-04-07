@@ -18,7 +18,7 @@
         <!-- <div id="accueil" class="global"> -->
         <div id="accueil" class="global accueil__category bck-primaire-100">
 
-            <section class="accueil__section">
+            <section class="accueil__section flexbox">
             
                 <div class="entete__category" style="background-image: url('<?= $image_url ?>');">
                 <h2><?php  echo single_cat_title(); ?></h2>

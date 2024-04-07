@@ -87,6 +87,7 @@
     }
     img {
         width: 100%;
+        height: auto;
         margin-bottom: 1rem;
     }
 }
@@ -95,6 +96,8 @@
     list-style-type: none;
     display: flex;
     padding: 0;
+    flex-wrap: wrap;
+    // height: 1.7rem;
 }
 .carte > a {
     font-size: 0.75rem;
@@ -102,7 +105,6 @@
 .carte .post-categories li {
     // margin-right: 0.5rem;
     font-size: 0.75rem;
-    line-height: 0.2rem;
 }
 .carte .post-categories li::after {
     content: "\00a0|\00a0";

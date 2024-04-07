@@ -16,6 +16,7 @@
         flex-direction: row;
     }
 }
+
 .footer__liens .bloc__liens {
     // Bloc contenant les liste de liens
     flex: 1;
@@ -25,7 +26,8 @@
         color: $--clr-bleu-pale;
         margin: 1.5rem 0;
     }
-    & ul {
+    & ul,
+    & .menu-footer {
         // Liste de liens
         list-style-type: none;
         padding: 0;

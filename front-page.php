@@ -19,16 +19,36 @@
             ?>
         </div>
         <div id="accueil" class="global bck-primaire-100">
-            <section class="accueil__section">
+            <section class="accueil__section flexbox">
 
+            
                 <!-- CATÉGORIES -->
                 <?php
+                /*
+                get_categories() : Est l'ensemble des catégories du site
+                get_category() : Est l'ensemble des catégories d'un post
+
+                $categories = get_categories();
+                foreach($categories as $elm_categorie){
+                    $nom = $elm_categorie->name;
+                    $description = $elm_categorie->description;
+                    $nombre_destinations = $elm_categorie->count;
+                    $url_categorie = get_term_link($elm_categorie->id);
+                    ?>
+
+                    <article>
+                    <h3> php echo nom; </h3>
+                    <p> php echo description; </p>
+                    <p> Nombre de destination : php echo nombre_destinations; </p>
+                }
+                */
                     //Fonction pour afficher les types de catégories 
                     function afficher_categories_parents() {
                         $parents = get_categories(array(
                             'parent' => 0, // Seulement les catégories sans parent
                         ));
-                    
+
+                        // On appel la fonction pour afficher pour chaque catégories parents
                         foreach ($parents as $parent) {
                             $parent_name = $parent->name;
                             afficher_categories($parent_name);
@@ -47,21 +67,21 @@
                         echo '<div class="section__categories">';
 
                         foreach ($categories as $category) :
-                            $cat_liens = get_term_link($category);
-                            $cat_desc = $category->description;
-                            $cat_desc_trimmed = wp_trim_words($cat_desc, 10);
-                            $post_compte = $category->count;
+                            $description_categories = wp_trim_words($category->description, 10);
+                            $nombre_destinations = $category->count;
+                            $url_categories = get_term_link($category);
                             $image_url = get_template_directory_uri() . '/images/categories/' . strtolower($category->slug) . ".jpg";
                     ?>
-                            <div class="carte" style="background-image: url('<?php echo $image_url; ?>');">
-                                <h2><a href="<?php echo esc_url($cat_liens); ?>"><?php echo $category->name; ?></a></h2>
-                                <p><?php echo $cat_desc_trimmed; ?></p>
-                                <a href="<?php echo esc_url($cat_liens); ?>">
+
+                            <div class="carte" style="background-image: url('<?= $image_url; ?>');">
+                                <h2><a href="<?= esc_url($url_categories); ?>"><?= $category->name; ?></a></h2>
+                                <p><?= $description_categories; ?></p>
+                                <a href="<?= esc_url($url_categories); ?>">
                                     <button>
                                         <?php
                                         // On change le message du bouton selon le nombre de destinations
-                                        if ($post_compte > 1) {
-                                            echo "Voir les " . $post_compte . " destinations&emsp;➜";
+                                        if ($nombre_destinations > 1) {
+                                            echo "Voir les " . $nombre_destinations . " destinations&emsp;➜";
                                         } else {
                                             echo "Voir la destination&emsp;➜";
                                         }
@@ -81,17 +101,18 @@
 
                 <!-- ARTICLE POPULAIRE -->
                 <h2>Destinations populaires</h2>
-                <div class="section__destinations">
+                <div class="section__destinations flexbox">
                 
                 <?php if(have_posts()):
                     while(have_posts()): the_post();
                         // Récupérer le slug de l'article
                         $slug = basename(get_permalink());
                         // Construire l'URL de l'image en utilisant le slug
-                        $image_url = get_template_directory_uri() . '/images/populaires/' . $slug . '.jpg';
+                        // $image_url = get_template_directory_uri() . '/images/populaires/' . $slug . '.jpg';
                     ?>
                         <div class="carte">
-                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title(); ?>">
+                            <!-- <img src="<php echo esc_url($image_url); ?>" alt="<php the_title(); ?>"> -->
+                            <?= the_post_thumbnail(); ?>
                             <h4><?php the_title(); ?></h4>
                             <?php the_category() ?>
                             <!-- Afficher l'image avec l'URL construite -->

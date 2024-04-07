@@ -106,7 +106,7 @@
         width: 50%;
     }
 }
-.menu-item {
+#menu .menu-item {
     // li
     height: 100%;
     display: flex;
@@ -114,7 +114,7 @@
     flex: 1 1 auto;
     font-size: clamp(1.5rem, 3vw, 1.75rem);
 }
-.menu-item::after {
+#menu .menu-item::after {
     // li
     color: $--clr-bleu-tres-pale;
     content: "\279C";
@@ -122,7 +122,7 @@
     font-size: clamp(0.75rem, 1.75vw, 2rem);
 }
 
-.menu-item a {
+#menu .menu-item a {
     // li a
     position: relative;
     margin: 0.5rem;

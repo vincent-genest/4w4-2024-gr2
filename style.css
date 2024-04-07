@@ -513,19 +513,19 @@ body {
   color: hsl(210, 30%, 85%);
   margin: 1.5rem 0;
 }
-.footer__liens .bloc__liens ul {
+.footer__liens .bloc__liens ul, .footer__liens .bloc__liens .menu-footer {
   list-style-type: none;
   padding: 0;
 }
-.footer__liens .bloc__liens ul li {
+.footer__liens .bloc__liens ul li, .footer__liens .bloc__liens .menu-footer li {
   margin: 1rem 0;
 }
-.footer__liens .bloc__liens ul a {
+.footer__liens .bloc__liens ul a, .footer__liens .bloc__liens .menu-footer a {
   color: hsl(210, 10%, 95%);
   font-weight: 200;
   position: relative;
 }
-.footer__liens .bloc__liens ul a::after {
+.footer__liens .bloc__liens ul a::after, .footer__liens .bloc__liens .menu-footer a::after {
   content: "";
   position: absolute;
   width: 0;
@@ -535,7 +535,7 @@ body {
   background-color: hsl(30, 80%, 50%);
   transition: width 0.3s;
 }
-.footer__liens .bloc__liens ul a:hover::after {
+.footer__liens .bloc__liens ul a:hover::after, .footer__liens .bloc__liens .menu-footer a:hover::after {
   width: 100%;
 }
 
@@ -834,6 +834,7 @@ body {
 }
 .section__destinations .carte img {
   width: 100%;
+  height: auto;
   margin-bottom: 1rem;
 }
 
@@ -841,6 +842,7 @@ body {
   list-style-type: none;
   display: flex;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 .carte > a {
@@ -849,7 +851,6 @@ body {
 
 .carte .post-categories li {
   font-size: 0.75rem;
-  line-height: 0.2rem;
 }
 
 .carte .post-categories li::after {
@@ -973,7 +974,7 @@ body {
   }
 }
 
-.menu-item {
+#menu .menu-item {
   height: 100%;
   display: flex;
   align-items: center;
@@ -981,14 +982,14 @@ body {
   font-size: clamp(1.5rem, 3vw, 1.75rem);
 }
 
-.menu-item::after {
+#menu .menu-item::after {
   color: hsl(210, 10%, 95%);
   content: "➜";
   margin-left: auto;
   font-size: clamp(0.75rem, 1.75vw, 2rem);
 }
 
-.menu-item a {
+#menu .menu-item a {
   position: relative;
   margin: 0.5rem;
   text-decoration: none;
@@ -996,11 +997,11 @@ body {
   font-size: clamp(1rem, 2vw, 2.5rem);
 }
 @media screen and (min-width: 700px) {
-  .menu-item a {
+  #menu .menu-item a {
     font-size: clamp(0.75rem, 1.75vw, 2rem);
   }
 }
-.menu-item a::after {
+#menu .menu-item a::after {
   content: "";
   position: absolute;
   width: 0;
@@ -1010,7 +1011,7 @@ body {
   background-color: hsl(30, 80%, 50%);
   transition: width 0.3s;
 }
-.menu-item a:hover::after {
+#menu .menu-item a:hover::after {
   width: 100%;
 }
 

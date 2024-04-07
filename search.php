@@ -8,7 +8,7 @@ get_header();
     
     <div id="accueil" class="global bck-primaire-100">
         <section class="accueil__section">
-        <div class="section__destinations">
+        <div class="section__destinations flexbox">
         <?php if (have_posts()) : ?>
                     <h1>Résultats de recherche pour : "<?php echo esc_html(get_search_query()); ?>"</h1>
                     <?php while (have_posts()) : the_post(); ?>
@@ -18,7 +18,6 @@ get_header();
                             <p><a href="<?php echo get_permalink(); ?>">Voir plus</a></p>
                         </div>
                     <?php endwhile; ?>
-                    <?php the_posts_pagination(); ?>
                 <?php else : ?>
                     <h1>Aucun résultat trouvé pour : "<?php echo esc_html(get_search_query()); ?>"</h1>
                 <?php endif; ?>

@@ -46,7 +46,9 @@
                                   d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
                         </svg>
                     </label>
-                    <?php wp_nav_menu(array("container" => "nav")); ?>
+                    <?php wp_nav_menu(array(
+                        "menu"=> "principal",
+                        "container" => "nav")); ?>
                 </div>
             </div>
         </header>
