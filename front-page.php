@@ -112,7 +112,7 @@
                     ?>
                         <div class="carte">
                             <!-- <img src="<php echo esc_url($image_url); ?>" alt="<php the_title(); ?>"> -->
-                            <?= the_post_thumbnail(); ?>
+                            <?= the_post_thumbnail("medium"); ?>
                             <h4><?php the_title(); ?></h4>
                             <?php the_category() ?>
                             <!-- Afficher l'image avec l'URL construite -->
