@@ -596,6 +596,18 @@ body {
   padding: 0 5%;
 }
 
+.image-404 {
+  width: auto;
+  height: 90%;
+}
+
+.acceuil__404 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+}
+
 /* ////////////////////////////////////////////////////////// */
 /*                    Règles des effets                       */
 /* ////////////////////////////////////////////////////////// */
