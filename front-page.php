@@ -11,7 +11,7 @@
                 <h1 class="bgc-texte"><?= get_bloginfo("name"); ?> </h1>
                 <h4 class="bgc-texte"><?= get_bloginfo("description"); ?> </span></h4>
                 <a href="#accueil">
-                    <button class="entete__button">Voir plus&emsp;➜</button>
+                    <button class="entete__button">Décourvir&emsp;➜</button>
                 </a>
             </section>
             <?php
