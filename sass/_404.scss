@@ -64,7 +64,7 @@
 }
 
 .liste__404 {
-    // Bloc contenant les liste de liens
+    // Bloc contenant la liste de liens
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -75,7 +75,7 @@
     @media screen and (min-width: 700px) {
         flex-direction: row;
         & div {
-            // listes de liens
+            // Listes de liens
             width: 45%;
         }
         & div:last-of-type ul {
