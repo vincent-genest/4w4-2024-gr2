@@ -28,7 +28,7 @@ get_header();
     <!-- Le reste du contenu du modèle single.php après la section accueil__section -->
     <div id="evenement" class="global bck-primaire-100">
         <section class="evenement__section">
-            <h2>Événement (h2)</h2>
+            <h2>Événements</h2>
             <details>
                 <summary>Lorem Ipsum</summary>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, reprehenderit corporis consequatur culpa odit quam nulla facere dolorum impedit quidem animi, minus quas molestiae repellat necessitatibus atque doloribus laborum cum.

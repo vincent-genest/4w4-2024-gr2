@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme Name: theme-gr2
+Theme Name: tp2
 Theme URI: https://referenced.ca
 Author: Vincent Genest
 Author URI: https://wordpress.org/
@@ -10,7 +10,7 @@ Version: 1.0
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: theme-gr2
+Text Domain: tp2
 Ce thème a été développé dans le cadre du cours 4w4
 */
 /* ////////////////////////////////////////////////////////// */
@@ -302,7 +302,6 @@ button {
   font-size: clamp(0.625rem, 0.4688rem + 0.5vw, 0.9375rem);
   border-radius: 50px;
   border: hsl(210, 10%, 95%) 2px solid;
-  background-color: hsl(210, 10%, 95%);
   color: hsl(210, 90%, 10%);
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -322,6 +321,17 @@ button:active {
 }
 #entete button:hover {
   color: hsl(210, 10%, 95%);
+  background-color: transparent;
+}
+
+.erreur404__button {
+  border: hsl(210, 90%, 10%) 2px solid;
+  background-color: hsl(210, 90%, 10%);
+  color: hsl(210, 10%, 95%);
+  transition: color 0.1s, background-color 0.1s;
+}
+.erreur404__button:hover {
+  color: hsl(210, 90%, 10%);
   background-color: transparent;
 }
 
@@ -596,27 +606,125 @@ body {
   padding: 0 5%;
 }
 
-.image-404 {
-  margin-top: 2rem;
-  width: 80%;
-  height: auto;
-}
-
 .acceuil__404 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 100vh;
+  height: 100%;
 }
 @media screen and (min-width: 700px) {
   .acceuil__404 {
     flex-direction: row;
   }
   .acceuil__404 .image-404 {
-    width: 50%;
+    width: 40%;
     margin-top: 0;
   }
+}
+
+.section__404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.section__404 h1 {
+  font-size: clamp(3.2rem, 2.5rem + 3.2vw, 5.3rem);
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 700px) {
+  .section__404 h1 {
+    margin: 0;
+    margin-top: 2rem;
+  }
+}
+
+.section__404 h5 {
+  font-size: clamp(0.75rem, 0.6rem + 1vw, 2rem);
+  margin-bottom: 1rem;
+}
+
+.section__404 p {
+  font-size: clamp(0.75rem, 0.6rem + 0.5vw, 1rem);
+  margin: 0;
+  margin-bottom: 1.5rem;
+}
+
+.section__404 a button {
+  margin-bottom: 3rem;
+  padding: 1rem 2rem;
+  border: hsl(210, 90%, 10%) 2px solid;
+  background-color: hsl(210, 90%, 10%);
+  color: hsl(210, 10%, 95%);
+  transition: color 0.1s, background-color 0.1s;
+}
+.section__404 a button:hover {
+  color: hsl(210, 90%, 10%);
+  background-color: transparent;
+}
+
+.acceuil__404 img {
+  display: none;
+}
+@media screen and (min-width: 700px) {
+  .acceuil__404 img {
+    display: block;
+  }
+}
+
+.liste__404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+}
+@media screen and (min-width: 700px) {
+  .liste__404 {
+    flex-direction: row;
+  }
+  .liste__404 div {
+    width: 45%;
+  }
+}
+.liste__404 h5 {
+  text-transform: uppercase;
+  color: hsl(210, 90%, 10%);
+  margin: 1.5rem 0;
+}
+.liste__404 ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+@media screen and (min-width: 700px) {
+  .liste__404 ul {
+    height: 100px;
+  }
+}
+.liste__404 ul, .liste__404 .menu-footer {
+  list-style-type: none;
+  padding: 0;
+}
+.liste__404 ul a, .liste__404 .menu-footer a {
+  color: hsl(210, 90%, 10%);
+  font-weight: 200;
+  position: relative;
+}
+.liste__404 ul a::after, .liste__404 .menu-footer a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: hsl(30, 80%, 50%);
+  transition: width 0.3s;
+}
+.liste__404 ul a:hover::after, .liste__404 .menu-footer a:hover::after {
+  width: 100%;
 }
 
 /* ////////////////////////////////////////////////////////// */
@@ -671,12 +779,12 @@ body {
 
 .recherche__input {
   border: none;
-  border-bottom: 2px solid hsl(210, 70%, 50%);
   color: hsl(210, 10%, 95%);
   background-color: transparent;
   display: block;
   width: calc(30vw - (2rem + 24px));
   transition: width 0.5s ease-in-out;
+  border-bottom: 2px solid hsl(210, 70%, 50%);
 }
 .recherche__input:focus {
   border-bottom: 2px solid hsl(30, 80%, 50%);
@@ -721,10 +829,10 @@ body {
 .recherche__button {
   border: none;
   border-radius: 0;
-  border-bottom: 2px solid hsl(210, 70%, 50%);
   background-color: transparent;
   padding: 1rem;
   transition: background-color 0.2s ease-in-out;
+  border-bottom: 2px solid hsl(210, 70%, 50%);
 }
 
 .recherche__button svg {
@@ -733,6 +841,46 @@ body {
 
 .recherche__button:hover svg {
   transform: scale(1.2);
+}
+
+.section__404 .recherche {
+  margin-bottom: 1rem;
+}
+
+.section__404 .recherche__input {
+  color: hsl(210, 90%, 10%);
+  width: 40vw;
+}
+@media screen and (min-width: 700px) {
+  .section__404 .recherche__input {
+    width: 20vw;
+  }
+}
+.section__404 .recherche__input:focus {
+  border-bottom: 2px solid hsl(30, 80%, 50%);
+  width: 60vw;
+}
+.section__404 .recherche__input:focus + .recherche__button > svg {
+  stroke: hsl(210, 90%, 10%);
+  transition: transform 0.25s;
+}
+@media screen and (min-width: 700px) {
+  .section__404 .recherche__input:focus {
+    width: 30vw;
+  }
+}
+.section__404 .recherche__input:focus + button {
+  border-bottom: 2px solid hsl(30, 80%, 50%);
+}
+.section__404 .recherche__input::placeholder {
+  color: hsl(210, 90%, 10%);
+}
+
+.section__404 .recherche__button {
+  color: hsl(210, 90%, 10%);
+}
+.section__404 .recherche__button svg {
+  stroke: hsl(210, 90%, 10%);
 }
 
 .sociaux {

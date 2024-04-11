@@ -1,20 +1,124 @@
-.image-404 {
-    margin-top: 2rem;
-    width: 80%;
-    height: auto;
-}
 .acceuil__404 {
+    // Section principale contenant tout les boutons et l'images
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 100vh;
+    height: 100%;
 
     @media screen and (min-width: 700px) {
         flex-direction: row;
         & .image-404 {
-            width: 50%;
+            width: 40%;
             margin-top: 0;
+        }
+    }
+}
+.section__404 {
+    // Section principale contenant tout les boutons
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.section__404 h1 {
+    // Titre de la page 404
+    font-size: clamp(3.2rem, 2.5rem + 3.2vw, 5.3rem);
+    margin-bottom: 1rem;
+    @media screen and (min-width: 700px) {
+        margin: 0;
+        margin-top: 2rem;
+    }
+}
+.section__404 h5 {
+    // Sous-titre de la page 404
+    font-size: clamp(0.75rem, 0.6rem + 1vw, 2rem);
+    margin-bottom: 1rem;
+}
+.section__404 p {
+    // Texte de la page 404
+    font-size: clamp(0.75rem, 0.6rem + 0.5vw, 1rem);
+    margin: 0;
+    margin-bottom: 1.5rem;
+}
+.section__404 a button {
+    // Bouton pour revenir au menu
+    margin-bottom: 3rem;
+    padding: 1rem 2rem;
+    border: $--clr-bleu-tres-fonce 2px solid;
+    background-color: $--clr-bleu-tres-fonce;
+    color: $--clr-bleu-tres-pale;
+    transition: color 0.1s, background-color 0.1s;
+    &:hover {
+        // button:hover
+        color: $--clr-bleu-tres-fonce;
+        background-color: transparent;
+    }
+}
+.acceuil__404 img {
+    // Image de la page 404
+    display: none;
+    @media screen and (min-width: 700px) {
+        display: block;
+    }
+}
+
+.liste__404 {
+    // Bloc contenant les liste de liens
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    @media screen and (min-width: 700px) {
+        flex-direction: row;
+        & div {
+            // listes de liens
+            width: 45%;
+        }
+    }
+    & h5 {
+        // Titre des listes de liens
+        text-transform: uppercase;
+        color: $--clr-bleu-tres-fonce;
+        margin: 1.5rem 0;
+    }
+    & ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 0.5rem 1.5rem;
+        @media screen and (min-width: 700px) {
+            height: 100px;
+        }
+    }
+    & ul,
+    & .menu-footer {
+        // Liste de liens
+        list-style-type: none;
+        padding: 0;
+
+        & a {
+            // Textes des liens
+            color: $--clr-bleu-tres-fonce;
+            font-weight: 200;
+            position: relative;
+
+            &::after {
+                //Ligne de hover
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: $--clr-contraste;
+                transition: width 0.3s;
+            }
+
+            &:hover::after {
+                // Ligne en hover
+                width: 100%;
+            }
         }
     }
 }
