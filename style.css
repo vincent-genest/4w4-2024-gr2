@@ -680,12 +680,18 @@ body {
   justify-content: space-between;
   width: 80%;
 }
+.liste__404 > div:last-of-type ul {
+  height: 110px;
+}
 @media screen and (min-width: 700px) {
   .liste__404 {
     flex-direction: row;
   }
   .liste__404 div {
     width: 45%;
+  }
+  .liste__404 div:last-of-type ul {
+    height: auto;
   }
 }
 .liste__404 h5 {

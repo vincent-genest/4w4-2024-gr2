@@ -69,11 +69,17 @@
     flex-direction: column;
     justify-content: space-between;
     width: 80%;
+    & > div:last-of-type ul {
+        height: 110px;
+    }
     @media screen and (min-width: 700px) {
         flex-direction: row;
         & div {
             // listes de liens
             width: 45%;
+        }
+        & div:last-of-type ul {
+            height: auto;
         }
     }
     & h5 {
