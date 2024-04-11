@@ -127,7 +127,7 @@
         </div>
         <div id="galerie" class="global diagonal bck-primaire-100">
             <section class="galerie__section">
-                <h2>Galerie (h2)</h2>
+                <h2>Galerie</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="">Culpa</a> qui nulla dolore provident dicta nam nemo corrupti ipsa beatae
                     voluptatem? Expedita officiis repellendus in dicta molestiae voluptatibus veniam eaque ipsa!
@@ -156,7 +156,7 @@
         </div>
         <div id="evenement" class="global bck-primaire-100">
             <section class="evenement__section">
-                <h2>Événement (h2)</h2>
+                <h2>Événements</h2>
                 <details>
                     <summary>Lorem Ipsum</summary>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, reprehenderit corporis consequatur culpa odit quam nulla facere dolorum impedit quidem animi, minus quas molestiae repellat necessitatibus atque doloribus laborum cum.
