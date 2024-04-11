@@ -866,7 +866,7 @@ body {
 }
 @media screen and (min-width: 700px) {
   .section__404 .recherche__input:focus {
-    width: 30vw;
+    width: 20vw;
   }
 }
 .section__404 .recherche__input:focus + button {
