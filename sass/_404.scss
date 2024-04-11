@@ -84,6 +84,7 @@
     }
     & h5 {
         // Titre des listes de liens
+        font-size: clamp(1rem, 1rem + 0.66vw, 1.5rem);
         text-transform: uppercase;
         color: $--clr-bleu-tres-fonce;
         margin: 1.5rem 0;

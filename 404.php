@@ -11,7 +11,7 @@
             <div class="section__404">
                     <h1>Erreur 404</h1>
                     <h5>La page que vous cherchez n'existe pas.</h5>
-                    <p>Pour revenir à la page d'acceuil, cliquez sur "Retourner à l'accueil"</p>
+                    <p>Pour revenir à la page d'acceuil, cliquez sur le bouton</p>
                     <a href="<?php echo get_home_url(); ?>">
                         <button class="erreur404__button">Retourner à l'accueil&emsp;➜</button>
                     </a>

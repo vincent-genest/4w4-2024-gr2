@@ -695,6 +695,7 @@ body {
   }
 }
 .liste__404 h5 {
+  font-size: clamp(1rem, 1rem + 0.66vw, 1.5rem);
   text-transform: uppercase;
   color: hsl(210, 90%, 10%);
   margin: 1.5rem 0;
