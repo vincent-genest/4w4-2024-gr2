@@ -11,17 +11,15 @@
             <div class="section__404">
                     <h1>Erreur 404</h1>
                     <h5>La page que vous cherchez n'existe pas.</h5>
-                    <p>Pour revenir à la page d'acceuil, cliquez sur le bouton.</p>
-                    <!-- <a class="ligne-hover" href="<= get_home_url(); ?>">Retourner à l'accueil</a> -->
-                    <!-- bouton "button" pour retourer au menu -->
+                    <p>Pour revenir à la page d'acceuil, cliquez sur "Retourner à l'accueil"</p>
                     <a href="<?php echo get_home_url(); ?>">
                         <button class="erreur404__button">Retourner à l'accueil&emsp;➜</button>
                     </a>
                     
+                    <!-- La barre de recherche -->
                     <?php get_search_form() ?>
-                    
+
                     <div class="liste__404">
-                        <!-- afficher toutes les sections automatiquement avec wp-->
                         <?php
                         $categories_parents = get_categories(array('parent' => 0)); // Récupère toutes les catégories parentes
                         
@@ -52,9 +50,7 @@
                         ?>
                     </div>
 
-
                 </div>
-                <!-- <img class="image-404" src="<php echo get_template_directory_uri() . '/images/404.png';?>" alt="illustration d'erreur 404"> -->
                     <img class="image-404" src="http://localhost/4w4/wp-content/uploads/2024/04/404.png" alt="illustration d'erreur 404">
                 </section>
             </div>
