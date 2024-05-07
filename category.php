@@ -20,7 +20,7 @@
 
             <section class="accueil__section flexbox">
             
-                <div class="entete__category" style="background-image: url('<?= $image_url ?>');">
+                <div class="entete__article" style="background-image: url('<?= $image_url ?>');">
                 <h2><?php  echo single_cat_title(); ?></h2>
                 </div>
 

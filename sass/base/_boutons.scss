@@ -26,6 +26,16 @@ button {
         color: $--clr-bleu-tres-pale;
         background-color: transparent;
     }
+    &::after {
+        display: inline-flex;
+        content: "\00a0➜";
+        // width: 1.2rem;
+        // height: 100%;
+        // overflow: hidden;
+        // justify-content: flex-end;
+        // margin-left: 0.8rem;
+        // transition: justify-content 1s;
+    }
 }
 .erreur404__button {
     border: $--clr-bleu-tres-fonce 2px solid;

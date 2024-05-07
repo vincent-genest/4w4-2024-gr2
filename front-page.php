@@ -11,7 +11,7 @@
                 <h1 class="bgc-texte"><?= get_bloginfo("name"); ?> </h1>
                 <h4 class="bgc-texte"><?= get_bloginfo("description"); ?> </span></h4>
                 <a href="#accueil">
-                    <button class="entete__button">Décourvir&emsp;➜</button>
+                    <button class="entete__button">Décourvir </button>
                 </a>
             </section>
             <?php
@@ -81,9 +81,9 @@
                                         <?php
                                         // On change le message du bouton selon le nombre de destinations
                                         if ($nombre_destinations > 1) {
-                                            echo "Voir les " . $nombre_destinations . " destinations&emsp;➜";
+                                            echo "Voir les " . $nombre_destinations . " destinations";
                                         } else {
-                                            echo "Voir la destination&emsp;➜";
+                                            echo "Voir la destination";
                                         }
                                         ?>
                                     </button>

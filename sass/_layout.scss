@@ -12,6 +12,9 @@ body {
     font-family: "Merriweather", arial, sans-serif;
     overflow-x: hidden;
 }
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24;
+}
 .global {
     // Fil
     display: flex;
@@ -62,6 +65,9 @@ body {
     align-items: center;
     width: 100%;
     max-width: var(--flex-basis-haut-de-pli);
+}
+.global .accueil__section {
+    padding-bottom: 0;
 }
 #galerie {
     z-index: 1;
