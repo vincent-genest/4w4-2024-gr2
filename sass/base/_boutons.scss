@@ -26,6 +26,8 @@ button {
         color: $--clr-bleu-tres-pale;
         background-color: transparent;
     }
+}
+.bouton__lien{
     &::after {
         display: inline-flex;
         content: "\00a0➜";

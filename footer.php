@@ -3,52 +3,64 @@
                 <div class="footer__liens">
                     <!-- On génère un bloc lien pour chaque catégorie parent -->
                     <?php
-                        $categories_parents = get_categories(array('parent' => 0)); // Récupère toutes les catégories parentes
+                        // $categories_parents = get_categories(array('parent' => 0)); // Récupère toutes les catégories parentes
 
-                        foreach ($categories_parents as $categorie_parente) {
-                            $nom_categorie_parente = $categorie_parente->name;
+                        // foreach ($categories_parents as $categorie_parente) {
+                        //     $nom_categorie_parente = $categorie_parente->name;
 
-                            // Obtenez l'ID de la catégorie parent avec le nom spécifié
-                            $categorie_parente_trouvee = get_category_by_slug($categorie_parente->slug);
+                        //     // Obtenez l'ID de la catégorie parent avec le nom spécifié
+                        //     $categorie_parente_trouvee = get_category_by_slug($categorie_parente->slug);
 
-                            // Si la catégorie parente est trouvée, récupérez ses catégories enfants
-                            if ($categorie_parente_trouvee) {
-                                $id_categorie_parente = $categorie_parente_trouvee->term_id;
-                                $categories_enfants = get_categories(array('parent' => $id_categorie_parente));
+                        //     // Si la catégorie parente est trouvée, récupérez ses catégories enfants
+                        //     if ($categorie_parente_trouvee) {
+                        //         $id_categorie_parente = $categorie_parente_trouvee->term_id;
+                        //         $categories_enfants = get_categories(array('parent' => $id_categorie_parente));
 
-                                echo '<div class="bloc__liens">';
-                                echo '<h5>' . $nom_categorie_parente . '</h5>'; // Utilisez le nom du parent comme titre
-                                echo '<ul>';
+                        //         echo '<div class="bloc__liens">';
+                        //         echo '<h5>' . $nom_categorie_parente . '</h5>'; // Utilisez le nom du parent comme titre
+                        //         echo '<ul>';
 
-                                foreach ($categories_enfants as $categorie_enfant) {
-                                    $lien_categorie_enfant = get_term_link($categorie_enfant);
-                                    echo '<li><a href="' . esc_url($lien_categorie_enfant) . '">' . $categorie_enfant->name . '</a></li>';
-                                }
+                        //         foreach ($categories_enfants as $categorie_enfant) {
+                        //             $lien_categorie_enfant = get_term_link($categorie_enfant);
+                        //             echo '<li><a href="' . esc_url($lien_categorie_enfant) . '">' . $categorie_enfant->name . '</a></li>';
+                        //         }
 
-                                echo '</ul>';
-                                echo '</div>';
-                            }
-                        }
+                        //         echo '</ul>';
+                        //         echo '</div>';
+                        //     }
+                        // }
                     ?>
-                     <div class="bloc__liens">
-                        <h5>Ressources</h5>
-                    <?php wp_nav_menu(array(
-                        "menu"=> "piedpage")); ?>
+                    <!-- A PROPOS -->
+                    <div class="bloc__liens deux__espaces">
+                        <h5>À propos</h5>
+                        <p>Horizon - club de voyage est un site de voyage réalisé pour le cours 4w4 à Maisonneuve par l'introduction à Wordpress. À l'aide de thèmes et de plugins, nous avons pu créer un site web complet et fonctionnel styliser à note goût pour simuler une réelle expérience web.</p>
                     </div>
-                        <!-- <div class="bloc__liens">
-                            <h5>À propos</h5>
-                            <ul>
-                            <li><a href="#">Nous contacter</a></li>
-                            <li><a href="#">Termes et conditions</a></li>
-                            <li><a href="#">Politique de confidentialité</a></li>
-                            <li><a href="#">À propos de nous</a></li>
-                            <li><a href="#">Notre équipe</a></li>
-                            <li><a href="#">Partenariats</a></li>
+
+                    <!-- RESSOURCES -->
+                    <div class="bloc__liens">
+                        <h5>Ressources</h5>
+                        <?php wp_nav_menu(array(
+                            "menu"=> "piedpage")); ?>
+                    </div>
+
+                    <!-- LIENS -->
+                    <div class="bloc__liens">
+                        <h5>Liens</h5>
+                        <ul>
+                            <li><a href="https://github.com/vincent-genest/4w4-2024-gr2">Repository GitHub</a></li>
+                            <li><a href="https://vincent-genest.github.io/4w4-2024-gr2/">Page GitHub</a></li>
+                            <li><a href="https://gftnth00.mywhc.ca/tim41/">Page Wordpress</a></li>
                         </ul>
-                    </div> -->
-                    <div class="bloc__logo"> <?= get_custom_logo(); ?> </div>
+                    </div>
+
+                    <!-- LOGO -->
+                    <div class="bloc__logo deux__espaces"> <?= get_custom_logo(); ?> </div>
                 </div>
+                
+                <!-- RECHERCHE -->
                 <?php get_search_form() ?>
+
+                <!-- RÉSEAUX SOCIAUX -->
                 <div class="sociaux">
                     <a target="_blank" href="https://www.facebook.com/"><svg width="24" height="24" role="img" viewBox="0 0 24 24" fill="currentColor" color="#fff" xmlns="http://www.w3.org/2000/svg"><title>Facebook icon</title><path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"></path></svg> </a>
                     <a target="_blank" href="https://www.instagram.com/"><svg width="24" height="24" role="img" viewBox="0 0 24 24" fill="currentColor" color="#fff" xmlns="http://www.w3.org/2000/svg"><title>Instagram icon</title><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"></path></svg></a>                    
@@ -57,7 +69,14 @@
                     <a target="_blank" href="https://www.youtube.com/"><svg width="24" height="24" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" color="#fff"><title>YouTube icon</title><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"></path></svg></a>
                     <a target="_blank" href="https://www.pinterest.ca/"><svg width="24" height="24" role="img" viewBox="0 0 24 24" fill="currentColor" color="#fff" xmlns="http://www.w3.org/2000/svg"><title>Pinterest icon</title><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"></path></svg></a>
                     <a target="_blank" href="https://www.google.ca/"><svg width="24" height="24" role="img" viewBox="0 0 24 24" fill="currentColor" color="#fff" xmlns="http://www.w3.org/2000/svg"><title>Google icon</title><path d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z"></path></svg></a>                
-                </footer>
+                </div>
+
+                <!-- DROITS -->
+                <div class="droits">
+                    <p>© 2024 Horizon - club de voyage | Vincent Genest </p>
+                </div>
+
+            </footer>
         </div>
         <?php wp_footer(); ?>
     </body>

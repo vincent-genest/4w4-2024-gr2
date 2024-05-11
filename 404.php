@@ -13,7 +13,7 @@
                     <h5>La page que vous cherchez n'existe pas.</h5>
                     <p>Pour revenir à la page d'acceuil, cliquez sur le bouton</p>
                     <a href="<?php echo get_home_url(); ?>">
-                        <button class="erreur404__button">Retourner à l'accueil&emsp;➜</button>
+                        <button class="erreur404__button bouton__lien">Retourner à l'accueil</button>
                     </a>
                     
                     <!-- La barre de recherche -->

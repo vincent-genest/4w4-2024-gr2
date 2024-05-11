@@ -10,8 +10,9 @@
             <section class="entete__header">
                 <h1 class="bgc-texte"><?= get_bloginfo("name"); ?> </h1>
                 <h4 class="bgc-texte"><?= get_bloginfo("description"); ?> </span></h4>
+                    
                 <a href="#accueil">
-                    <button class="entete__button">Décourvir </button>
+                    <button class="entete__button bouton__lien">Décourvir </button>
                 </a>
             </section>
             <?php
@@ -24,24 +25,7 @@
             
                 <!-- CATÉGORIES -->
                 <?php
-                /*
-                get_categories() : Est l'ensemble des catégories du site
-                get_category() : Est l'ensemble des catégories d'un post
-
-                $categories = get_categories();
-                foreach($categories as $elm_categorie){
-                    $nom = $elm_categorie->name;
-                    $description = $elm_categorie->description;
-                    $nombre_destinations = $elm_categorie->count;
-                    $url_categorie = get_term_link($elm_categorie->id);
-                    ?>
-
-                    <article>
-                    <h3> php echo nom; </h3>
-                    <p> php echo description; </p>
-                    <p> Nombre de destination : php echo nombre_destinations; </p>
-                }
-                */
+            
                     //Fonction pour afficher les types de catégories 
                     function afficher_categories_parents() {
                         $parents = get_categories(array(
@@ -77,7 +61,7 @@
                                 <h2><a href="<?= esc_url($url_categories); ?>"><?= $category->name; ?></a></h2>
                                 <p><?= $description_categories; ?></p>
                                 <a href="<?= esc_url($url_categories); ?>">
-                                    <button>
+                                    <button class="bouton__lien">
                                         <?php
                                         // On change le message du bouton selon le nombre de destinations
                                         if ($nombre_destinations > 1) {
@@ -102,27 +86,35 @@
                 <!-- ARTICLE POPULAIRE -->
                 <h2>Destinations populaires</h2>
                 <div class="section__destinations flexbox">
-                
-                <?php if(have_posts()):
+                    
+                    <?php if(have_posts()):
                     while(have_posts()): the_post();
-                        // Récupérer le slug de l'article
-                        $slug = basename(get_permalink());
-                        // Construire l'URL de l'image en utilisant le slug
-                        // $image_url = get_template_directory_uri() . '/images/populaires/' . $slug . '.jpg';
+                    // Récupérer le slug de l'article
+                    $slug = basename(get_permalink());
+                    // Construire l'URL de l'image en utilisant le slug
+                    // $image_url = get_template_directory_uri() . '/images/populaires/' . $slug . '.jpg';
                     ?>
                         <div class="carte">
                             <!-- <img src="<php echo esc_url($image_url); ?>" alt="<php the_title(); ?>"> -->
-                            <?= the_post_thumbnail("medium"); ?>
-                            <h4><?php the_title(); ?></h4>
-                            <?php the_category() ?>
-                            <!-- Afficher l'image avec l'URL construite -->
-                            <p><?= wp_trim_words(get_the_content(), 10); ?></p>
-                            <a href="<?= get_permalink() ?>">Voir plus</a>
-                        </div>
-                    <?php endwhile;
+                                <?= the_post_thumbnail("medium"); ?>
+                                <h4><?php the_title(); ?></h4>
+                                <?php the_category() ?>
+                                <!-- Afficher l'image avec l'URL construite -->
+                                <p><?= wp_trim_words(get_the_content(), 10); ?></p>
+                                <a href="<?= get_permalink() ?>">Voir plus</a>
+                            </div>
+                            <?php endwhile;
                 endif; ?>
-
                 </div>
+
+                <h2>Destinations</h2>
+                    <?php
+                    // Appel du shortcode directement dans le fichier front-page.php
+                    echo do_shortcode('[em_destination]');
+                    ?>
+                <!-- <div class="section__destinations flexbox">
+                </div> -->
+
             </section>
         </div>
         <div id="galerie" class="global diagonal bck-primaire-100">
@@ -132,22 +124,6 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="">Culpa</a> qui nulla dolore provident dicta nam nemo corrupti ipsa beatae
                     voluptatem? Expedita officiis repellendus in dicta molestiae voluptatibus veniam eaque ipsa!
                 </p>
-                <div class="galerie__img">
-                    <img src="<?php echo get_template_directory_uri() . '/images/galerie1.webp';?>" alt="galerie 1">
-                    <img src="<?php echo get_template_directory_uri() . '/images/galerie2.webp';?>" alt="galerie 2">
-                    <img src="<?php echo get_template_directory_uri() . '/images/galerie3.webp';?>" alt="galerie 3">
-                    <img src="<?php echo get_template_directory_uri() . '/images/galerie4.webp';?>" alt="galerie 4">
-                    <img src="<?php echo get_template_directory_uri() . '/images/galerie5.webp';?>" alt="galerie 5">
-                    <img src="<?php echo get_template_directory_uri() . '/images/galerie6.webp';?>" alt="galerie 6">
-                    <!-- 
-                    <img src="images/galerie1.webp" alt="galerie 1">
-                    <img src="images/galerie2.webp" alt="galerie 2">
-                    <img src="images/galerie3.webp" alt="galerie 3">
-                    <img src="images/galerie4.webp" alt="galerie 4">
-                    <img src="images/galerie5.webp" alt="galerie 5">
-                    <img src="images/galerie6.webp" alt="galerie 6">
-                     -->
-                </div>
                 <blockquote>
                     Quelle galerie incroyable!
                     <span>Steve Jobs</span>

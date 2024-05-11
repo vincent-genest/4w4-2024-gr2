@@ -1,16 +1,17 @@
-.footer__section {
+#footer .footer__section {
     // Footer avec marge
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    padding-bottom: 3rem;
     gap: 3rem;
 }
 .footer__liens {
     // Partie avec les blocs de liens et le logo
     display: flex;
     width: 100%;
-    gap: 2rem;
+    gap: 3rem;
     flex-direction: column;
     @media screen and (min-width: 700px) {
         flex-direction: row;
@@ -23,8 +24,17 @@
     & h5 {
         // Titre des listes de liens
         text-transform: uppercase;
-        color: $--clr-bleu-pale;
+        color: $--clr-bleu-tres-pale;
         margin: 1.5rem 0;
+    }
+    & p {
+        // Texte des listes de liens
+        color: $--clr-bleu-tres-pale;
+        font-weight: 200;
+        font-size: 1rem;
+        line-height: 2rem;
+        text-align: justify;
+        width: 79%;
     }
     & ul,
     & .menu-footer {
@@ -60,18 +70,31 @@
         }
     }
 }
+#footer .deux__espaces {
+    flex: 2;
+}
+.droits {
+    // Bloc contenant les droits d'auteurs
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    & p {
+        // Texte des droits d'auteurs
+        margin: 0;
+        color: $--clr-bleu-tres-pale;
+        font-weight: 200;
+        font-size: 0.8rem;
+    }
+}
 .footer__liens .bloc__logo {
     // Bloc contenant le logo
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 4rem 0;
     & img {
-        // width: 1rem;
-        // height: auto;
-        bottom: 50%;
-        right: 50%;
+        width: 100%;
+        height: auto;
     }
     @media screen and (min-width: 700px) {
         // En mode desktop, le logo n'as plus de marges
