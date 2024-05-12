@@ -132,8 +132,8 @@
         </div>
         <div id="evenement" class="global bck-primaire-100">
             <section class="evenement__section">
-                <h2>Événements</h2>
-                <details>
+                <!-- <h2>À venir...</h2> -->
+                <!-- <details>
                     <summary>Lorem Ipsum</summary>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, reprehenderit corporis consequatur culpa odit quam nulla facere dolorum impedit quidem animi, minus quas molestiae repellat necessitatibus atque doloribus laborum cum.
                 </details>
@@ -142,7 +142,7 @@
                     dignissimos non, molestias laudantium illo praesentium maxime deleniti sed incidunt qui quia.
                     <span>une autre personne connue</span>
                 </blockquote>
-                <a href="#">Voir plus</a>
+                <a href="#">Voir plus</a> -->
             </section>
             <?php
                 get_template_part('gabarit/vague')
