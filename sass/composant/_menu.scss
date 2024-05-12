@@ -34,22 +34,57 @@
         display: block;
     }
 }
-.entete__contact:hover .btn_menu {
-    // Effet hover bouton contact
-    color: $--clr-bleu-tres-pale;
+.entete__recherche {
+    width: auto;
+    border: 0;
+    transition: border 0.5s;
 }
 
-#menu .entete__contact {
+#menu .entete__recherche .recherche {
     justify-content: flex-start;
-    align-items: flex-start;
-}
-#menu .entete__contact a {
-    // Contact
-    display: flex;
-    align-items: center;
-    &:hover p {
-        color: $--clr-bleu-tres-fonce;
+    height: 3rem;
+    position: relative;
+    &::after {
+        // ligne dessous animées
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: $--clr-contraste;
+        transition: width 0.5s;
     }
+}
+#menu .entete__recherche .recherche .recherche__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    border-bottom: 0;
+    & svg {
+        stroke: $--clr-bleu-tres-fonce;
+    }
+}
+
+#menu .entete__recherche input {
+    width: 0;
+    border: 0;
+    transition: width 0.3s;
+}
+#menu .entete__recherche:hover {
+    // border-bottom: 2px solid $--clr-bleu-moyen;
+    & .recherche::after {
+        width: 100%;
+    }
+    & input {
+        width: 100%;
+    }
+}
+#menu .entete__recherche {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
 }
 #menu .icone_contact {
     // Icone contact

@@ -1213,21 +1213,55 @@ body {
   }
 }
 
-.entete__contact:hover .btn_menu {
-  color: hsl(210, 10%, 95%);
+.entete__recherche {
+  width: auto;
+  border: 0;
+  transition: border 0.5s;
 }
 
-#menu .entete__contact {
+#menu .entete__recherche .recherche {
   justify-content: flex-start;
-  align-items: flex-start;
+  height: 3rem;
+  position: relative;
+}
+#menu .entete__recherche .recherche::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: hsl(30, 80%, 50%);
+  transition: width 0.5s;
 }
 
-#menu .entete__contact a {
+#menu .entete__recherche .recherche .recherche__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  border-bottom: 0;
+}
+#menu .entete__recherche .recherche .recherche__button svg {
+  stroke: hsl(210, 90%, 10%);
+}
+
+#menu .entete__recherche input {
+  width: 0;
+  border: 0;
+  transition: width 0.3s;
+}
+
+#menu .entete__recherche:hover .recherche::after {
+  width: 100%;
+}
+#menu .entete__recherche:hover input {
+  width: 100%;
+}
+
+#menu .entete__recherche {
   display: flex;
   align-items: center;
-}
-#menu .entete__contact a:hover p {
-  color: hsl(210, 90%, 10%);
 }
 
 #menu .icone_contact {
