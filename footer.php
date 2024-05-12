@@ -33,7 +33,12 @@
                     <!-- A PROPOS -->
                     <div class="bloc__liens deux__espaces">
                         <h5>À propos</h5>
-                        <p>Horizon - club de voyage est un site de voyage réalisé pour le cours 4w4 à Maisonneuve par l'introduction à Wordpress. À l'aide de thèmes et de plugins, nous avons pu créer un site web complet et fonctionnel styliser à note goût pour simuler une réelle expérience web.</p>
+                        <p class="justify">Horizon - club de voyage est un site de voyage réalisé pour le cours 4w4 à Maisonneuve par l'introduction à Wordpress. À l'aide de thèmes et de plugins, nous avons pu créer un site web complet et fonctionnel styliser à note goût pour simuler une réelle expérience web.</p>
+                    </div>
+
+                    <div class="bloc__liens">
+                        <h5>Adresse</h5>
+                        <p>3800 R. Sherbrooke E, Montréal, QC H1X 2A2</p>
                     </div>
 
                     <!-- RESSOURCES -->
@@ -42,6 +47,7 @@
                         <?php wp_nav_menu(array(
                             "menu"=> "piedpage")); ?>
                     </div>
+                    
 
                     <!-- LIENS -->
                     <div class="bloc__liens">

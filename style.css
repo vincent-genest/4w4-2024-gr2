@@ -529,6 +529,10 @@ body {
   }
 }
 
+.justify {
+  text-align: justify;
+}
+
 .footer__liens .bloc__liens {
   flex: 1;
 }
@@ -542,7 +546,6 @@ body {
   font-weight: 200;
   font-size: 1rem;
   line-height: 2rem;
-  text-align: justify;
   width: 79%;
 }
 .footer__liens .bloc__liens ul, .footer__liens .bloc__liens .menu-footer {
@@ -589,6 +592,7 @@ body {
 
 .footer__liens .bloc__logo {
   display: flex;
+  flex: 1;
   justify-content: center;
   align-items: center;
   margin: 4rem 0;
