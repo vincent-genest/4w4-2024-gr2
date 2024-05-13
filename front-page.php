@@ -88,23 +88,15 @@
                 <div class="section__destinations flexbox">
                     
                     <?php if(have_posts()):
-                    while(have_posts()): the_post();
-                    // Récupérer le slug de l'article
-                    $slug = basename(get_permalink());
-                    // Construire l'URL de l'image en utilisant le slug
-                    // $image_url = get_template_directory_uri() . '/images/populaires/' . $slug . '.jpg';
-                    ?>
-                        <div class="carte">
-                            <!-- <img src="<php echo esc_url($image_url); ?>" alt="<php the_title(); ?>"> -->
-                                <?= the_post_thumbnail("medium"); ?>
-                                <h4><?php the_title(); ?></h4>
-                                <?php the_category() ?>
-                                <!-- Afficher l'image avec l'URL construite -->
-                                <p><?= wp_trim_words(get_the_content(), 10); ?></p>
-                                <a href="<?= get_permalink() ?>">Voir plus</a>
-                            </div>
-                            <?php endwhile;
-                endif; ?>
+                        while(have_posts()): the_post();
+                            $ma_categorie = "carte";
+                            if(in_category("galerie")){
+                                $ma_categorie = "galerie";
+                            }
+                            get_template_part( 'gabarit/categorie', $ma_categorie );
+                            ?>
+                        <?php endwhile;
+                    endif; ?>
                 </div>
 
                 <h2>Destinations</h2>
