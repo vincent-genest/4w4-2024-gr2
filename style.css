@@ -311,7 +311,7 @@ button:hover {
   background-color: transparent;
 }
 button:active {
-  color: var(--couleur-arriere-entete);
+  color: var(--clr-contraste);
 }
 
 #entete button {
@@ -479,7 +479,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-position: 90% 100%;
+  background-position: 90% 10%;
   padding: 3rem 0;
 }
 #entete::before {
@@ -489,7 +489,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 #entete * {
   z-index: 1;
@@ -1068,6 +1068,9 @@ body {
 
 .carte {
   padding: 1.5rem;
+}
+
+.section__categories .carte {
   display: flex;
   flex-direction: column;
 }
@@ -1139,10 +1142,8 @@ body {
 }
 .section__destinations .carte p {
   margin: 0;
-  margin-top: 0.75rem;
-}
-.section__destinations .carte > a {
-  padding-top: 0.5rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 .section__destinations .carte img {
   position: relative;

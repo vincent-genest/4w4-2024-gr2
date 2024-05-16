@@ -13,7 +13,7 @@ button {
     }
 
     &:active {
-        color: var(--couleur-arriere-entete);
+        color: var(--clr-contraste);
     }
 }
 
@@ -27,7 +27,7 @@ button {
         background-color: transparent;
     }
 }
-.bouton__lien{
+.bouton__lien {
     &::after {
         display: inline-flex;
         content: "\00a0➜";

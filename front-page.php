@@ -47,6 +47,11 @@
                             'parent' => $parent_id // Seules les catégories avec le nom de parent spécifié
                         ));
 
+                        //Si la catéforie s'apelle galerie, on ne l'affiche pas
+                        if($parent_name == "Galerie"){
+                            return;
+                        }
+
                         echo '<h2>' . $parent_name . '</h2>';
                         echo '<div class="section__categories">';
 
@@ -89,11 +94,16 @@
                     
                     <?php if(have_posts()):
                         while(have_posts()): the_post();
-                            $ma_categorie = "carte";
-                            if(in_category("galerie")){
-                                $ma_categorie = "galerie";
+                            // $ma_categorie = "carte";
+                            // if(in_category("galerie")){
+                            //     $ma_categorie = "galerie";
+                            // }
+                            // get_template_part( 'gabarit/categorie', $ma_categorie );
+                            
+                            // afficher les carte populaires seulement
+                            if (in_category('populaire')) {
+                                get_template_part('gabarit/categorie', 'carte');
                             }
-                            get_template_part( 'gabarit/categorie', $ma_categorie );
                             ?>
                         <?php endwhile;
                     endif; ?>
@@ -104,26 +114,27 @@
                     // Appel du shortcode directement dans le fichier front-page.php
                     echo do_shortcode('[em_destination]');
                     ?>
-                <!-- <div class="section__destinations flexbox">
-                </div> -->
+
 
             </section>
         </div>
         <div id="galerie" class="global diagonal bck-primaire-100">
             <section class="galerie__section">
                 <h2>Galerie</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="">Culpa</a> qui nulla dolore provident dicta nam nemo corrupti ipsa beatae
-                    voluptatem? Expedita officiis repellendus in dicta molestiae voluptatibus veniam eaque ipsa!
-                </p>
-                <blockquote>
-                    Quelle galerie incroyable!
-                    <span>Steve Jobs</span>
-                </blockquote>
+
+                <?php if(have_posts()):
+                        while(have_posts()): the_post();
+                            if (in_category('galerie')) {
+                                get_template_part( 'gabarit/categorie', "galerie" );
+                            }
+                            ?>
+                        <?php endwhile;
+                    endif; ?>
             </section>
         </div>
         <div id="evenement" class="global bck-primaire-100">
             <section class="evenement__section">
+               
                 <!-- <h2>À venir...</h2> -->
                 <!-- <details>
                     <summary>Lorem Ipsum</summary>

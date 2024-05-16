@@ -9,6 +9,8 @@
 
 .carte {
     padding: 1.5rem;
+}
+.section__categories .carte {
     display: flex;
     flex-direction: column;
 }
@@ -80,10 +82,8 @@
     }
     p {
         margin: 0;
-        margin-top: 0.75rem;
-    }
-    & > a {
-        padding-top: 0.5rem;
+        margin-top: 1.2rem;
+        margin-bottom: 0.5rem;
     }
     img {
         position: relative;
