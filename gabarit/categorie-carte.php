@@ -6,7 +6,9 @@
 $slug = basename(get_permalink()); ?>
 
 <div class="carte">
-    <?= the_post_thumbnail("medium"); ?>
+    <div class="thumbnail">
+        <?= the_post_thumbnail("medium"); ?>
+    </div>
     <h4><?php the_title(); ?></h4>
     <?php the_category() ?>
     <!-- Afficher l'image avec l'URL construite -->
