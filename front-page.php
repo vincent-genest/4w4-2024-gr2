@@ -11,7 +11,7 @@
                 <h1 class="bgc-texte"><?= get_bloginfo("name"); ?> </h1>
                 <h4 class="bgc-texte"><?= get_bloginfo("description"); ?> </span></h4>
                     
-                <a href="#accueil">
+                <a href="#titre__pop">
                     <button class="entete__button bouton__lien">Décourvir </button>
                 </a>
                 <div class="entete__sociaux">
@@ -101,7 +101,7 @@
                 ?>
 
                 <!-- ARTICLE POPULAIRE -->
-                <h2>Destinations populaires</h2>
+                <h2 id="titre__pop">Destinations populaires</h2>
                 <div class="section__destinations flexbox">
                     
                     <?php if(have_posts()):
