@@ -1,4 +1,4 @@
-# TP2 Intra: Horizon - Club de voyage
+# TP2 : Horizon - Club de voyage
 
 ## Auteur
 

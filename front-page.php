@@ -42,8 +42,9 @@
                     function afficher_categories_parents() {
                         $parents = get_categories(array(
                             'parent' => 0, // Seulement les catégories sans parent
+                            // On affiche pas la catégorie non catégorisé
+                            'exclude' => get_cat_ID('Non catégorisé')
                         ));
-
                         // On appel la fonction pour afficher pour chaque catégories parents
                         foreach ($parents as $parent) {
                             $parent_name = $parent->name;
