@@ -11,8 +11,8 @@
                 <h1 class="bgc-texte"><?= get_bloginfo("name"); ?> </h1>
                 <h4 class="bgc-texte"><?= get_bloginfo("description"); ?> </span></h4>
                     
-                <!-- <a href="http://localhost/4w4/conferences/"> -->
-                <a href="<?= get_permalink(get_page_by_title('Conférences')); ?>">
+                <a href="http://localhost/4w4/conferences/">
+                <!-- <a href="<?= get_permalink(get_page_by_title('Conférences')); ?>"> -->
                     <button class="entete__button bouton__lien">Décourvir </button>
                 </a>
                 <div class="entete__sociaux">
