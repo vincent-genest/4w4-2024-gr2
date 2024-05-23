@@ -65,11 +65,16 @@
     }
 }
 .section__destinations .carte {
+    //display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     min-width: 200px;
     flex: 0 0 calc((var(--flex-basis-contenu) - 100px) / 3);
-
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 10px;
+    &:hover {
+        background-color: hsl(210, 30%, 92%);
+    }
     @media screen and (max-width: 700px) {
         flex: 1 0 calc(100vw - 3rem);
     }
@@ -117,10 +122,7 @@
     }
     &:hover {
         & img {
-            clip-path: inset(5px);
-        }
-        & .thumbnail {
-            border: 1px solid $--clr-bleu-tres-fonce;
+            clip-path: inset(5px round 5px);
         }
         // &::before {
         //     background-color: rgba(0, 0, 0, 0.5);
@@ -137,6 +139,9 @@
 }
 .carte > a {
     font-size: 0.75rem;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 .carte .post-categories li {
     // margin-right: 0.5rem;

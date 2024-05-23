@@ -1148,6 +1148,11 @@ body {
   align-items: flex-start;
   min-width: 200px;
   flex: 0 0 calc((var(--flex-basis-contenu) - 100px) / 3);
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 10px;
+}
+.section__destinations .carte:hover {
+  background-color: hsl(210, 30%, 92%);
 }
 @media screen and (max-width: 700px) {
   .section__destinations .carte {
@@ -1182,10 +1187,7 @@ body {
   transition: clip-path 0.3s ease-in-out;
 }
 .section__destinations .carte:hover img {
-  clip-path: inset(5px);
-}
-.section__destinations .carte:hover .thumbnail {
-  border: 1px solid hsl(210, 90%, 10%);
+  clip-path: inset(5px round 5px);
 }
 
 .carte .post-categories {
@@ -1197,6 +1199,9 @@ body {
 
 .carte > a {
   font-size: 0.75rem;
+}
+.carte > a:hover {
+  text-decoration: underline;
 }
 
 .carte .post-categories li {
