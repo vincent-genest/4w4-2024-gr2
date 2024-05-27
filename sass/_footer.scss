@@ -4,6 +4,8 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    padding-left: 0;
+    padding-right: 0;
     padding-bottom: 3rem;
     gap: 3rem;
 }
@@ -11,7 +13,7 @@
     // Partie avec les blocs de liens et le logo
     display: flex;
     width: 100%;
-    gap: 3rem;
+    gap: 2rem;
     flex-direction: column;
     @media screen and (min-width: 700px) {
         flex-direction: row;
@@ -35,7 +37,6 @@
         font-weight: 200;
         font-size: 1rem;
         line-height: 2rem;
-        width: 79%;
     }
     & ul,
     & .menu-footer {

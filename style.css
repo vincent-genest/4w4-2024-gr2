@@ -532,6 +532,8 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  padding-left: 0;
+  padding-right: 0;
   padding-bottom: 3rem;
   gap: 3rem;
 }
@@ -539,7 +541,7 @@ body {
 .footer__liens {
   display: flex;
   width: 100%;
-  gap: 3rem;
+  gap: 2rem;
   flex-direction: column;
 }
 @media screen and (min-width: 700px) {
@@ -565,7 +567,6 @@ body {
   font-weight: 200;
   font-size: 1rem;
   line-height: 2rem;
-  width: 79%;
 }
 .footer__liens .bloc__liens ul, .footer__liens .bloc__liens .menu-footer {
   list-style-type: none;
@@ -885,6 +886,46 @@ body {
   .carte__infos > p {
     margin-top: 0;
   }
+}
+
+.template h1 {
+  display: none;
+}
+
+.template .wp-block-image {
+  width: auto;
+}
+
+.template .img__accueil img {
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: -80px;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 5rem;
+}
+
+.template .bouton__inscription a {
+  font-size: 1.2rem;
+  background-color: hsl(210, 90%, 10%);
+  color: hsl(210, 10%, 95%);
+  border: 2px solid hsl(210, 90%, 10%);
+}
+.template .bouton__inscription a:hover {
+  background-color: hsl(210, 10%, 95%);
+  color: hsl(210, 90%, 10%);
+}
+
+.template h5 {
+  margin-bottom: 0.5rem;
+  font-weight: normal;
+}
+
+.template {
+  padding-bottom: 5rem;
 }
 
 /* ////////////////////////////////////////////////////////// */

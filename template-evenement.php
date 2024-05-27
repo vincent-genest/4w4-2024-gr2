@@ -5,16 +5,13 @@
  */
 ?>
 <?php get_header(); ?>
-<main class="global">
+<main class="template global">
     <section class="accueil__section flexbox">
             <?php
     if ( have_posts() ) : the_post(); ?>
     <h1><?= get_the_title(); ?></h1>
     <?php the_content();?>
     <?php endif;?>
-    <a href="#">
-        <button>S'inscrire</button>
-    </a>
     </section>
 </main><!-- #main -->
 <?php
