@@ -1,0 +1,122 @@
+.recherche {
+    display: flex;
+    justify-content: center;
+    // background-color: $--clr-bleu-moyen;
+    // border-radius: 10px;
+    // width: 30vw;
+}
+
+.recherche__input {
+    border: none;
+    // flex: 1 1 auto;
+    color: $--clr-bleu-tres-pale;
+    background-color: transparent;
+    display: block;
+    width: calc(30vw - (2rem + 24px) );
+    transition: width 0.5s ease-in-out;
+    border-bottom: 2px solid $--clr-bleu-moyen;
+
+    
+    &:focus{
+        border-bottom: 2px solid $--clr-contraste;
+    }
+    &:focus + button{
+        border-bottom: 2px solid $--clr-contraste;
+    }
+    @media screen and (max-width: 700px){
+        width: calc(70vw - (2rem + 24px) );
+    }
+}
+
+.recherche__input::placeholder {
+    color: $--clr-bleu-pale;
+}
+.recherche__input:focus {
+    outline: none;
+    width: 40vw;
+    &::placeholder {
+        color: $--clr-bleu-tres-pale;
+    }
+    & + .recherche__button > svg {
+        stroke: $--clr-bleu-tres-pale;
+        transition: transform 0.25s;
+    }
+    @media screen and (max-width: 700px){
+        width: 73vw;
+    }
+}
+.recherche__input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    content: URL(https://s2.svgbox.net/materialui.svg?ic=clear);
+    cursor: pointer;
+    color: $--clr-bleu-tres-pale;
+}
+
+
+.recherche__button {
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 1rem;
+    transition: background-color 0.2s ease-in-out;
+    border-bottom: 2px solid $--clr-bleu-moyen;
+
+}
+.recherche__button svg {
+    stroke: $--clr-bleu-pale;
+}
+
+.recherche__button:hover svg {
+    transform: scale(1.2);
+}
+
+
+
+
+// Barre de recherche pour la page 404
+.section__404 .recherche{
+    // Barre de recherche complète
+    margin-bottom: 1rem;
+}
+.section__404 .recherche__input{
+    // Champ de recherche
+    color: $--clr-bleu-tres-fonce;
+    width: 40vw;
+
+    @media screen and (min-width: 700px){
+        width: 20vw;
+    }
+
+    &:focus{
+        // Champ de reherche en focus
+        border-bottom: 2px solid $--clr-contraste;
+        width: 60vw;
+   
+        & + .recherche__button > svg {
+            // Icone de loupe
+            stroke: $--clr-bleu-tres-fonce;
+            transition: transform 0.25s;
+        }
+        @media screen and (min-width: 700px){
+            width: 20vw;
+        }
+    }
+    &:focus + button{
+        // Bouton recherche en focus
+        border-bottom: 2px solid $--clr-contraste;
+    }
+    &::placeholder {
+        // Texte de recherche
+        color: $--clr-bleu-tres-fonce;
+    }
+}
+
+.section__404 .recherche__button {
+    // Bouton de recherche
+    color: $--clr-bleu-tres-fonce;
+    & svg {
+        // Icone du bouton
+        stroke: $--clr-bleu-tres-fonce;
+    }
+}
+

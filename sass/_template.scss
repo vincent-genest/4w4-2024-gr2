@@ -1,0 +1,38 @@
+.template h1 {
+    display: none;
+}
+.template .wp-block-image {
+    width: auto;
+}
+.template .img__accueil img {
+    // Style propre à la page d'accueil des catégories (avec images)
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: -80px;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 5rem;
+}
+.template .bouton__inscription a {
+    font-size: 1.2rem;
+    background-color: $--clr-bleu-tres-fonce;
+    color: $--clr-bleu-tres-pale;
+    border: 2px solid $--clr-bleu-tres-fonce;
+
+    &:hover {
+        background-color: $--clr-bleu-tres-pale;
+        color: $--clr-bleu-tres-fonce;
+    }
+}
+
+.template h5 {
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+}
+
+.template {
+    padding-bottom: 5rem;
+}

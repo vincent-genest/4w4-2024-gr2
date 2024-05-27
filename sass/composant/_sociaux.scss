@@ -1,0 +1,29 @@
+.sociaux {
+    display: flex;
+    justify-content: space-between;
+    // gap: 2rem;
+    width: 30vw;
+    @media screen and (max-width: 700px) {
+        width: 70vw;
+    }
+}
+.sociaux path {
+    fill: $--clr-bleu-pale;
+    transition: fill 0.25s;
+}
+
+.sociaux svg {
+    transform: scale(1);
+    transition: transform 0.25s;
+}
+
+.sociaux svg:hover {
+    transform: scale(1.5);
+}
+
+.sociaux svg:hover path {
+    fill: $--clr-bleu-tres-pale;
+}
+.sociaux svg:active path {
+    fill: $--clr-bleu-moyen;
+}

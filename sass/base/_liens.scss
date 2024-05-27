@@ -1,0 +1,64 @@
+a {
+    text-decoration: none;
+    color: $--clr-bleu-leger;
+    &:hover,
+    &:focus {
+        // text-decoration: underline;
+        color: $--clr-bleu-fonce;
+    }
+    &:visited {
+        color: $--clr-bleu-fonce;
+    }
+}
+
+.ligne-hover {
+    position: relative;
+}
+.ligne-hover::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $--clr-contraste;
+    transition: width 0.3s;
+}
+
+.ligne-hover:hover::after {
+    width: 100%;
+}
+
+// #entete .entete__header a {
+// color: var(--couleur-liens-entete);
+//     &:visited {
+//         color: var(--couleur-liens-visited-entete);
+//     }
+// }
+
+// #accueil a {
+//     &:visited {
+//         color: var(--couleur-liens-visited-accueil);
+//     }
+// }
+
+// #galerie a {
+//     color: var(--couleur-liens-galerie);
+//     &:visited {
+//         color: var(--couleur-liens-visited-galerie);
+//     }
+// }
+
+// #evenement a {
+//     color: var(--couleur-liens-evenement);
+//     &:visited {
+//         color: var(--couleur-liens-visited-evenement);
+//     }
+// }
+
+// #footer a {
+//     color: var(--couleur-liens-footer);
+//     &:visited {
+//         color: var(--couleur-liens-visited-footer);
+//     }
+// }

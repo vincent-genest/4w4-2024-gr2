@@ -1,0 +1,52 @@
+button {
+    font-size: clamp(0.625rem, 0.4688rem + 0.5vw, 0.9375rem);
+    border-radius: 50px;
+    border: $--clr-bleu-tres-pale 2px solid;
+    color: $--clr-bleu-tres-fonce;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+
+    &:hover {
+        // button:hover
+        color: $--clr-bleu-tres-pale;
+        background-color: transparent;
+    }
+
+    &:active {
+        color: var(--clr-contraste);
+    }
+}
+
+#entete button {
+    padding: 1rem 2rem;
+    font-size: clamp(0.625rem, 0.1563rem + 1.5vw, 1.5625rem);
+    color: $--clr-bleu-tres-fonce;
+    &:hover {
+        // button:hover
+        color: $--clr-bleu-tres-pale;
+        background-color: transparent;
+    }
+}
+.bouton__lien {
+    &::after {
+        display: inline-flex;
+        content: "\00a0➜";
+        // width: 1.2rem;
+        // height: 100%;
+        // overflow: hidden;
+        // justify-content: flex-end;
+        // margin-left: 0.8rem;
+        // transition: justify-content 1s;
+    }
+}
+.erreur404__button {
+    border: $--clr-bleu-tres-fonce 2px solid;
+    background-color: $--clr-bleu-tres-fonce;
+    color: $--clr-bleu-tres-pale;
+    transition: color 0.1s, background-color 0.1s;
+    &:hover {
+        // button:hover
+        color: $--clr-bleu-tres-fonce;
+        background-color: transparent;
+    }
+}

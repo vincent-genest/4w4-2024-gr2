@@ -1,5 +1,5 @@
 /*
-Theme Name: theme-gr2
+Theme Name: tp2
 Theme URI: https://referenced.ca
 Author: Vincent Genest
 Author URI: https://wordpress.org/
@@ -9,28 +9,63 @@ Version: 1.0
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: theme-gr2
+Text Domain: tp2
 Ce thème a été développé dans le cadre du cours 4w4
 */
 
 // https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 
+// Références
+// https://www.ypiyachts.com/en
+// https://jannataresort.com/
+// https://www.sailingcollective.com/
+
 /* ////////////////////////////////////////////////////////// */
 /*                       Variables css                        */
 /* ////////////////////////////////////////////////////////// */
-@import "variables";
 
 /* ////////////////////////////////////////////////////////// */
-/*                  Règles de normalisation                   */
+/*                 Règles des trucs utiles                    */
 /* ////////////////////////////////////////////////////////// */
-@import "normalize";
+@import "utile/local";
+@import "utile/couleurs";
+@import "utile/couleurs-class";
+@import "utile/variables";
 
 /* ////////////////////////////////////////////////////////// */
 /*                      Règles de base                        */
 /* ////////////////////////////////////////////////////////// */
 @import "base/h";
+@import "base/images";
+@import "base/liens";
+@import "base/boutons";
 
 /* ////////////////////////////////////////////////////////// */
-/*                 Règles de la pagination                    */
+/*                    Règles de pagination                    */
 /* ////////////////////////////////////////////////////////// */
 @import "layout";
+
+/* ////////////////////////////////////////////////////////// */
+/*                    Règles des sections                     */
+/* ////////////////////////////////////////////////////////// */
+@import "entete";
+@import "footer";
+@import "galerie";
+@import "category";
+@import "404";
+@import "single";
+@import "template";
+
+/* ////////////////////////////////////////////////////////// */
+/*                    Règles des effets                       */
+/* ////////////////////////////////////////////////////////// */
+@import "effet/vague";
+@import "effet/diagonal";
+
+/* ////////////////////////////////////////////////////////// */
+/*                  Règles des composants                     */
+/* ////////////////////////////////////////////////////////// */
+@import "composant/recherche";
+@import "composant/sociaux";
+@import "composant/carte";
+@import "composant/menu";

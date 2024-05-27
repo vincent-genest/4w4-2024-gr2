@@ -1,0 +1,106 @@
+#footer .footer__section {
+    // Footer avec marge
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 3rem;
+    gap: 3rem;
+}
+.footer__liens {
+    // Partie avec les blocs de liens et le logo
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    flex-direction: column;
+    @media screen and (min-width: 700px) {
+        flex-direction: row;
+    }
+}
+.justify {
+    text-align: justify;
+}
+.footer__liens .bloc__liens {
+    // Bloc contenant les liste de liens
+    flex: 1;
+    & h5 {
+        // Titre des listes de liens
+        text-transform: uppercase;
+        color: $--clr-bleu-tres-pale;
+        margin: 1.5rem 0;
+    }
+    & p {
+        // Texte des listes de liens
+        color: $--clr-bleu-tres-pale;
+        font-weight: 200;
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+    & ul,
+    & .menu-footer {
+        // Liste de liens
+        list-style-type: none;
+        padding: 0;
+        & li {
+            // Liens
+            margin: 1rem 0;
+        }
+        & a {
+            // Textes des liens
+            color: $--clr-bleu-tres-pale;
+            font-weight: 200;
+            position: relative;
+
+            &::after {
+                //Ligne de hover
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: $--clr-contraste;
+                transition: width 0.3s;
+            }
+
+            &:hover::after {
+                // Ligne en hover
+                width: 100%;
+            }
+        }
+    }
+}
+#footer .deux__espaces {
+    flex: 2;
+}
+.droits {
+    // Bloc contenant les droits d'auteurs
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    & p {
+        // Texte des droits d'auteurs
+        margin: 0;
+        color: $--clr-bleu-tres-pale;
+        font-weight: 200;
+        font-size: 0.8rem;
+    }
+}
+.footer__liens .bloc__logo {
+    // Bloc contenant le logo
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 0;
+    & img {
+        width: 100%;
+        height: auto;
+    }
+    @media screen and (min-width: 700px) {
+        // En mode desktop, le logo n'as plus de marges
+        margin: 0;
+    }
+}

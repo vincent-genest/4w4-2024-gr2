@@ -1,0 +1,125 @@
+// https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+
+// Défnition des variables de couleurs pour la palette de couleurs
+$--hu1: 210;
+$--hu2: calc($--hu1 - 180);
+$--nb-element: 5;
+$--l-initial: 95%; // luminosité
+$--increment-angle: 15%;
+
+$--l1: $--l-initial;
+$--l2: calc($--l1 - $--increment-angle);
+$--l3: calc($--l2 - $--increment-angle);
+$--l4: calc($--l3 - $--increment-angle);
+$--l5: calc($--l4 - $--increment-angle);
+$--l6: calc($--l5 - $--increment-angle);
+
+$--clr-bleu-tres-pale: hsl($--hu1, 10%, 95%);
+$--clr-bleu-pale: hsl($--hu1, 30%, 85%);
+$--clr-bleu-leger: hsl($--hu1, 30%, $--l3);
+$--clr-bleu-moyen: hsl($--hu1, 70%, 50%);
+$--clr-bleu-fonce: hsl($--hu1, 97%, 20%);
+$--clr-bleu-tres-fonce: hsl($--hu1, 90%, 10%);
+
+$--clr-contraste: hsl($--hu2, 80%, $--l4);
+
+// Création du mapping des couleurs
+$defaut: (
+    primaire: (
+        100: $--clr-bleu-tres-pale,
+        200: $--clr-bleu-pale,
+        300: $--clr-bleu-leger,
+        400: $--clr-bleu-moyen,
+        500: $--clr-bleu-fonce,
+        600: $--clr-bleu-tres-fonce,
+    ),
+);
+
+$agencement-couleur: (
+    primaire: (
+        $--clr-bleu-tres-pale,
+        ($--clr-bleu-pale, $--clr-bleu-leger),
+    ),
+);
+
+/*:root {
+    --nb-element: 5;
+    --l-initial: 80%; // luminosité
+    --increment-angle: 15%;
+    //  360/5 = 72
+    //  Couleur arrière plan
+    --hu1: 200;
+    --hu2: calc(var(--hu1) + 180);
+    --s-couleur-arriere: 100%; // saturation
+
+    --l1: var(--l-initial);
+    --l2: calc(var(--l1) - var(--increment-angle));
+    --l3: calc(var(--l2) - var(--increment-angle));
+    --l4: calc(var(--l3) - var(--increment-angle));
+    --l5: calc(var(--l4) - var(--increment-angle));
+
+    //  Couleur texte
+    --s-couleur: 70%; // saturation
+    --l-couleur: 15%; // luminosité
+    --couleur-arriere-entete: hsl(var(--hu1), var(--s-couleur-arriere), var(--l1));
+    --couleur-arriere-accueil: hsl(var(--hu1), var(--s-couleur-arriere), var(--l2));
+    --couleur-arriere-galerie: hsl(var(--hu2), var(--s-couleur-arriere), var(--l3));
+    --couleur-arriere-evenement: hsl(var(--hu1), var(--s-couleur-arriere), var(--l4));
+    --couleur-arriere-footer: hsl(var(--hu1), var(--s-couleur-arriere), var(--l5));
+    --couleur-entete: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l1)));
+    --couleur-accueil: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l2)));
+    --couleur-galerie: hsl(var(--hu2), var(--s-couleur), calc(100% - var(--l5)));
+    --couleur-evenement: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l4)));
+    --couleur-footer: hsl(var(--hu1), var(--s-couleur), calc(100% - var(--l5)));
+    --couleur-liens-entete: hsl(var(--hu1), var(--s-couleur), 80%);
+    --couleur-liens-accueil: hsl(var(--hu1), var(--s-couleur), 80%);
+    --couleur-liens-galerie: hsl(var(--hu2), var(--s-couleur), 80%);
+    --couleur-liens-evenement: hsl(var(--hu1), var(--s-couleur), 80%);
+    --couleur-liens-footer: hsl(var(--hu1), var(--s-couleur), 80%);
+    --couleur-liens-visited-entete: hsl(var(--hu1), var(--s-couleur), 20%);
+    --couleur-liens-visited-accueil: hsl(var(--hu1), var(--s-couleur), 20%);
+    --couleur-liens-visited-galerie: hsl(var(--hu2), var(--s-couleur), 20%);
+    --couleur-liens-visited-evenement: hsl(var(--hu1), var(--s-couleur), 20%);
+    --couleur-liens-visited-footer: hsl(var(--hu1), var(--s-couleur), 20%);
+
+    --nb-element: 5;
+    --increment-angle: calc(360 / var(--nb-element));
+    // 360/5 = 72
+    --angle-initial: 180;
+    // Couleur arrière plan
+    --s-couleur-arriere: 100%; // saturation
+    --l-couleur-arriere: 50%; // luminosité
+    // Couleur texte
+    --s-couleur: 100%; // saturation
+    --l-couleur: 80%; // luminosité
+
+    --hu1: var(--angle-initial);
+    --hu2: calc(var(--hu1) + 180);
+    --hu3: calc(var(--hu2) + var(--increment-angle));
+    --hu4: calc(var(--hu3) + var(--increment-angle));
+    --hu5: calc(var(--hu4) + var(--increment-angle));
+
+    --couleur-arriere-entete: hsl(var(--hu1), var(--s-couleur-arriere), 60%);
+    --couleur-arriere-accueil: hsl(var(--hu1), var(--s-couleur-arriere), 65%);
+    --couleur-arriere-galerie: hsl(var(--hu2), var(--s-couleur-arriere), 70%);
+    --couleur-arriere-evenement: hsl(var(--hu1), var(--s-couleur-arriere), 75%);
+    --couleur-arriere-footer: hsl(var(--hu1), var(--s-couleur-arriere), 80%);
+
+    --couleur-entete: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
+    --couleur-accueil: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
+    --couleur-galerie: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
+    --couleur-evenement: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
+    --couleur-footer: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
+
+    --couleur-arriere-contenu: hsl(300, 100%, 50%);
+    --transparence-arriere-contenu: 0.3;
+    --flex-basis-contenu: 900px;
+}
+*/
+#entete {
+    --_couleur-arriere-vague: hsl(200, 17%, 95%);
+}
+
+#evenement {
+    --_couleur-arriere-vague: hsl(210, 97%, 20%);
+}

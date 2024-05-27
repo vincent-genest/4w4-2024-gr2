@@ -1,0 +1,20 @@
+.entete__article {
+    // Style propre à la page d'accueil des catégories (avec images)
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: -80px;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 5rem;
+    & h2 {
+        background-color: rgba(0, 0, 0, 0.3);
+        width: 100%;
+        margin: 0;
+        line-height: 10rem;
+        color: $--clr-bleu-tres-pale;
+        padding: 0 5%;
+    }
+}

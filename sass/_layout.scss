@@ -1,29 +1,121 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
 body {
     display: flex;
     flex-direction: column;
+    font-family: "Merriweather", arial, sans-serif;
+    overflow-x: hidden;
+}
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24;
 }
 .global {
+    // Fil
     display: flex;
     justify-content: center;
+    // min-height: 30vh;
 }
 .global > section,
-.global > header,
 .global > footer {
-    width: 1100px;
-    border: 1px dotted var(--couleur-arriere-entete);
+    // Fil des sections et du footer
+    flex: 0 1 var(--flex-basis-contenu);
+    padding: 5rem 1.5rem;
+}
+.entete__menu {
+    // Menu
+    padding-top: 0;
+    position: relative;
+}
+.global .entete__header {
+    // Hero avec marge
+    padding-left: 1rem;
+    padding-right: 1rem;
+    flex: 0 1 var(--flex-basis-haut-de-pli);
+    height: 100vh;
+    padding-top: 0;
+    padding-bottom: 5rem;
 }
 #entete {
-    background-color: var(--couleur-arriere-entete);
+    // Hero
+    position: relative;
+    line-height: 1.5;
 }
-#accueil {
-    background-color: var(--couleur-arriere-accueil);
+#entete * {
+    color: $--clr-bleu-tres-pale;
+}
+#menu {
+    // Header menu
+    z-index: 10;
+    position: fixed;
+    width: 100vw;
+    padding: 0 1rem;
+    border-bottom: 1px solid $--clr-bleu-tres-fonce;
+}
+
+#menu .entete__contenu {
+    // Entete avec marge
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: var(--flex-basis-haut-de-pli);
+}
+.global .accueil__section {
+    padding-bottom: 0;
 }
 #galerie {
-    background-color: var(--couleur-arriere-accueil);
+    z-index: 1;
 }
 #evenement {
-    background-color: var(--couleur-arriere-evenement);
+    position: relative;
 }
 #footer {
-    background-color: var(--couleur-arriere-footer);
+    color: $--clr-bleu-tres-pale;
+}
+.footer__section {
+    // Footer avec marge
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 700px) {
+    .entete__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .entete__header * {
+        text-align: center;
+    }
+    .entete__header {
+        align-items: center !important;
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: $--clr-bleu-tres-pale;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: lightgray;
+    height: 80px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: gray;
 }
