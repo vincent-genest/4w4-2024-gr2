@@ -19,15 +19,6 @@ Ce thème a été développé dans le cadre du cours 4w4
 /* ////////////////////////////////////////////////////////// */
 /*                 Règles des trucs utiles                    */
 /* ////////////////////////////////////////////////////////// */
-.bgc-texte {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-@media screen and (min-width: 1100px) {
-  .bgc-texte {
-    background-color: transparent;
-  }
-}
-
 /*:root {
     --nb-element: 5;
     --l-initial: 80%; // luminosité
@@ -316,8 +307,13 @@ button:active {
 
 #entete button {
   padding: 1rem 2rem;
-  font-size: clamp(0.625rem, 0.1563rem + 1.5vw, 1.5625rem);
+  font-size: clamp(0.9rem, -0.7188rem + 3.5vw, 1.675rem);
   color: hsl(210, 90%, 10%);
+}
+@media screen and (min-width: 700px) {
+  #entete button {
+    font-size: clamp(0.625rem, 0.1563rem + 1.5vw, 1.5625rem);
+  }
 }
 #entete button:hover {
   color: hsl(210, 10%, 95%);
@@ -510,6 +506,12 @@ body {
 
 #entete h1 {
   margin-top: 2rem;
+  font-size: clamp(3.0625rem, 1.5938rem + 1.5vw, 4rem);
+}
+@media screen and (min-width: 700px) {
+  #entete h1 {
+    font-size: clamp(4.0625rem, 3.5938rem + 1.5vw, 5rem);
+  }
 }
 
 #entete h4 {
@@ -518,7 +520,12 @@ body {
 }
 
 .entete__sociaux {
-  margin-top: 7rem;
+  margin-top: 3.5rem;
+}
+@media screen and (min-width: 700px) {
+  .entete__sociaux {
+    margin-top: 7rem;
+  }
 }
 .entete__sociaux .sociaux svg path {
   fill: hsl(210, 10%, 95%);

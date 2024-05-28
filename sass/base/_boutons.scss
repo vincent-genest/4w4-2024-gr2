@@ -19,7 +19,11 @@ button {
 
 #entete button {
     padding: 1rem 2rem;
-    font-size: clamp(0.625rem, 0.1563rem + 1.5vw, 1.5625rem);
+
+    font-size: clamp(0.9rem, -0.7188rem + 3.5vw, 1.675rem);
+    @media screen and (min-width: 700px) {
+        font-size: clamp(0.625rem, 0.1563rem + 1.5vw, 1.5625rem);
+    }
     color: $--clr-bleu-tres-fonce;
     &:hover {
         // button:hover
