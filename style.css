@@ -532,10 +532,14 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 0;
-  padding-right: 0;
   padding-bottom: 3rem;
   gap: 3rem;
+}
+@media screen and (min-width: 700px) {
+  #footer .footer__section {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .footer__liens {
@@ -596,6 +600,28 @@ body {
 
 #footer .deux__espaces {
   flex: 2;
+}
+
+.recompense {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+.recompense img {
+  width: auto;
+  height: 8rem;
+}
+@media screen and (min-width: 700px) {
+  .recompense {
+    flex-direction: row;
+  }
+}
+
+.recompense .petite-recompense {
+  height: 6rem;
 }
 
 .droits {
@@ -778,6 +804,10 @@ body {
 .accueil_single .carte {
   padding-left: 0;
   padding-right: 0;
+}
+
+.accueil_single .carte > p {
+  display: none;
 }
 
 .accueil_single .entete__article {

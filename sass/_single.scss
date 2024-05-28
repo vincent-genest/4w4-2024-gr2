@@ -2,6 +2,9 @@
     padding-left: 0;
     padding-right: 0;
 }
+.accueil_single .carte > p {
+    display: none;
+}
 .accueil_single .entete__article {
     // Style propre à la page d'accueil des catégories (avec images)
     height: 40vh;

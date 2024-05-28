@@ -4,8 +4,10 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 0;
-    padding-right: 0;
+    @media screen and (min-width: 700px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
     padding-bottom: 3rem;
     gap: 3rem;
 }
@@ -74,6 +76,25 @@
 }
 #footer .deux__espaces {
     flex: 2;
+}
+
+.recompense {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 2rem;
+    & img {
+        width: auto;
+        height: 8rem;
+    }
+    @media screen and (min-width: 700px) {
+        flex-direction: row;
+    }
+}
+.recompense .petite-recompense {
+    height: 6rem;
 }
 .droits {
     // Bloc contenant les droits d'auteurs

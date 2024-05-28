@@ -20,7 +20,7 @@
                         while(have_posts()): the_post();?>
                             <div class="carte">
                                 <h2><?php the_title(); ?></h2>
-                                <?php the_content(); ?>          
+                                <?php the_content(); ?>
                                 <div class="carte__contenu">
                                     <div class="carte__infos">
                                         <?php the_category() ?>

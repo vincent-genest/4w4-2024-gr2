@@ -6,18 +6,35 @@
 -   582-4W4-MA CONCEPTION D'INTERFACES ET DÉVELOPPEMENT WEB
 -   gr. 00002
 
+### Objectif général :
+
+Créer un site web pour un club de voyage qui permettra de mettre en valeur les différentes destinations de voyage pour le cours de 4W4
+
 ### Description du site :
 
-Amélioration de la page 404 lors d'un URL non-fonctionnel. On veut ajouter ler éléments suivant :
+Horizon : club do voyage offre une plateforme dynamique et conviviale permettant aux membres de découvrir des destinations de voyage uniques à travers le monde. Grâce à une organisation par catégories telles que la grandeur du groupe et les types de voyages, les utilisateurs peuvent facilement trouver des offres correspondant à leurs préférences et à leur style de voyage. Le style du site cherche à offrir une expérience hors du commun et à communiquer la luxure et la longue histoire de l'entreprise. Le choix des couleurs et des formes n'est pas sans rappeler la mer et l'horizon, la promesse de notre entreprise lorsque vous partez en voyage.
 
--   Titre
--   Sous-titre
--   Texte
--   Bouton de retour à l'acceuil
--   Barre de recherche
--   Liens des catégories
+### Description du projet :
 
-On veut également respecter la structure de la maquette fournie, tout en conservant notre identité visuelle propre, ce que je fais à l'aide des couleurs, des fontes et de la réutilisation générale du style de certains éléments déjà existant comme la barre de recherche ou comment j'affiche mes listes de liens
+Objectifs
+
+-   Un carrousel d’images qui affiche les images d’une galerie.
+-   Des champs personnalisés qui permettront de décrire les destinations de façon plus précises
+-   Des filtres utilisant la REST API de Wordpress permettant d’extraire les destinations répondant à certains critères
+-   Des animations permettant de rehausser le niveau d’interactivité du site
+-   De nouveaux gabarits pour organiser efficacement le contenu
+
+Améliorations du Projet:
+
+-   L'entête contien désormais une barre de recherche dynamique en plus du logo et du menu
+-   La section héro contient maintenant le liens vers la page de conférence ainsi que les icones de réseaux sociaux
+-   L'accueil a les catégories, les destinations populaires puis le filtre rest API par catégorie, ainsi qu'une galerie
+-   Le footer à le nom de l'auteur, les adresses github et WHC, l'adresse du cégep et les prix remporés (images)
+
+Déroulement du Projet:
+
+-   20 commits pour le thème
+-   20 commits pour le carrousel
 
 ### Liens supplémentaires :
 

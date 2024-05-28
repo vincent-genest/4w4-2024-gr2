@@ -76,7 +76,11 @@
                     <a target="_blank" href="https://www.pinterest.ca/"><svg width="24" height="24" role="img" viewBox="0 0 24 24" fill="currentColor" color="#fff" xmlns="http://www.w3.org/2000/svg"><title>Pinterest icon</title><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"></path></svg></a>
                     <a target="_blank" href="https://www.google.ca/"><svg width="24" height="24" role="img" viewBox="0 0 24 24" fill="currentColor" color="#fff" xmlns="http://www.w3.org/2000/svg"><title>Google icon</title><path d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z"></path></svg></a>                
                 </div>
-
+                <div class="recompense">
+                    <img src="http://localhost/4w4/wp-content/uploads/2024/05/Award2.png" alt="recompense 2">
+                    <img src="http://localhost/4w4/wp-content/uploads/2024/05/Award3.png" class="petite-recompense" alt="recompense 3">
+                    <img src="http://localhost/4w4/wp-content/uploads/2024/05/Award1.png" alt="recompense 1">
+                </div>
                 <!-- DROITS -->
                 <div class="droits">
                     <p>© 2024 Horizon - club de voyage | Vincent Genest </p>
