@@ -40,3 +40,4 @@ Déroulement du Projet:
 
 -   Lien vers le serveur distant WHC : [Serveur WHC](https://gftnth00.mywhc.ca/tim41/)
 -   Lien vers ma GitHub page de la page d'accueil : [Page GitHub](https://vincent-genest.github.io/4w4-2024-gr2/)
+-   Lien vers le le dépôt Github : [Dépôt GitHub](https://github.com/vincent-genest/4w4-wp-content)
