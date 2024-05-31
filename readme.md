@@ -1,4 +1,4 @@
-# TP2 : Horizon - Club de voyage
+# Épreuve finale
 
 ## Auteur
 
@@ -8,33 +8,39 @@
 
 ### Objectif général :
 
-Créer un site web pour un club de voyage qui permettra de mettre en valeur les différentes destinations de voyage pour le cours de 4W4
-
-### Description du site :
-
-Horizon : club do voyage offre une plateforme dynamique et conviviale permettant aux membres de découvrir des destinations de voyage uniques à travers le monde. Grâce à une organisation par catégories telles que la grandeur du groupe et les types de voyages, les utilisateurs peuvent facilement trouver des offres correspondant à leurs préférences et à leur style de voyage. Le style du site cherche à offrir une expérience hors du commun et à communiquer la luxure et la longue histoire de l'entreprise. Le choix des couleurs et des formes n'est pas sans rappeler la mer et l'horizon, la promesse de notre entreprise lorsque vous partez en voyage.
+À l'aide de wordpress, créer un plug in rest API et une template de page pour afficher les destinations par leur pays
 
 ### Description du projet :
 
 Objectifs
 
--   Un carrousel d’images qui affiche les images d’une galerie.
--   Des champs personnalisés qui permettront de décrire les destinations de façon plus précises
--   Des filtres utilisant la REST API de Wordpress permettant d’extraire les destinations répondant à certains critères
--   Des animations permettant de rehausser le niveau d’interactivité du site
--   De nouveaux gabarits pour organiser efficacement le contenu
+Page :
 
-Améliorations du Projet:
+-   Titre
+-   Introduction
+-   Galerie d’images
+-   Une vague sépare la section intro et la section REST-API
+-   Une vague sépare la section REST-API et le pied de page
 
--   L'entête contien désormais une barre de recherche dynamique en plus du logo et du menu
--   La section héro contient maintenant le liens vers la page de conférence ainsi que les icones de réseaux sociaux
--   L'accueil a les catégories, les destinations populaires puis le filtre rest API par catégorie, ainsi qu'une galerie
--   Le footer à le nom de l'auteur, les adresses github et WHC, l'adresse du cégep et les prix remporés (images)
+La section REST API
 
-Déroulement du Projet:
+-   Un menu affichant l’ensemble des pays comme sur la maquette
+-   Le contenu par défaut est constitué des destinations de la France
+-   En cliquant sur un bouton « Pays » les nouvelles destination s’affichent
+-   Le format d’affichage est le même que celui décrit sur les maquettes
+-   L’image associée à une destination est une image mise en avant à partir de l’éditeur de Wordpress
+-   Si la destination ne contient pas d’image mise-en-avant on affiche une image temporaire « placeholder »
+-   Les destinations proviennent de votre base de données se trouvant sur votre compte WHC.CA
 
--   20 commits pour le thème
--   20 commits pour le carrousel
+Github
+
+-   Vous devez créer une branche EF sur votre dépôt de thème
+-   Vous devez créer un nouveau dépôt qui contiendra l’extension API-REST « Pays »
+-   Étalement des commits pendant les trois heures de EF (pas dans les 5 dernières minutes de l’EF)
+-   Chaque commit devrait contenir un état fonctionnel de votre développement
+-   Chaque commit est commenté et préfixé par «ef-vos initial» et un commentaire décrivant la modification
+-   Un readme.md contenant une description de l’épreuve et des modification apportés, le nom de l’auteur un lien vers votre site distant WHC.CA
+-   Le lien vers votre dépôt github est indiqué dans la section footer de votre site
 
 ### Liens supplémentaires :
 
