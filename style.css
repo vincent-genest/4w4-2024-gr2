@@ -976,6 +976,14 @@ body {
   padding-bottom: 5rem;
 }
 
+.template .galerie__pays {
+  padding-top: 2rem;
+  height: 15rem;
+}
+.template .galerie__pays img {
+  object-fit: cover;
+}
+
 /* ////////////////////////////////////////////////////////// */
 /*                    Règles des effets                       */
 /* ////////////////////////////////////////////////////////// */
