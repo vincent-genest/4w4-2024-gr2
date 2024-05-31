@@ -975,10 +975,14 @@ body {
 .template {
   padding-bottom: 5rem;
 }
+.template .accueil__section {
+  height: auto;
+}
 
 .template .galerie__pays {
   padding-top: 2rem;
   height: 15rem;
+  flex-wrap: nowrap;
 }
 .template .galerie__pays img {
   object-fit: cover;
