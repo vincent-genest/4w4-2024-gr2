@@ -13,7 +13,7 @@
                     
                 <!-- <a href="http://localhost/4w4/conferences/"> -->
                 <a href="<?= get_permalink(get_page_by_title('Conférence')); ?>">
-                    <button class="entete__button bouton__lien">Décourvir </button>
+                    <button class="entete__button bouton__lien">Découvrir </button>
                 </a>
                 <div class="entete__sociaux">
                     <p>Suivez-nous sur nos réseaux sociaux!</p>

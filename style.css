@@ -531,7 +531,7 @@ body {
   fill: hsl(210, 10%, 95%);
 }
 .entete__sociaux .sociaux svg:hover path {
-  fill: hsl(210, 70%, 50%);
+  fill: hsl(30, 80%, 50%);
 }
 
 #footer .footer__section {
