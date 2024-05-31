@@ -5,7 +5,7 @@
  */
 ?>
 <?php get_header(); ?>
-<main class="template global">
+<div class="template global">
     <section class="accueil__section flexbox">
         <?php
             if ( have_posts() ) : the_post(); ?>
@@ -13,6 +13,21 @@
             <?php the_content();?>
         <?php endif;?>
     </section>
-</main><!-- #main -->
-<?php
-get_footer();
+
+    <?php
+        get_template_part('gabarit/vague')
+    ?>
+</div>
+
+<div id="pays" class="template global bck-primaire-100">
+    <section class="">
+    <?php
+        // Appel du shortcode directement dans le fichier front-page.php
+        echo do_shortcode('[em_pays]');
+    ?>
+    </section>
+            <?php
+                get_template_part('gabarit/vague')
+            ?>
+</div>
+<?php get_footer(); ?>
